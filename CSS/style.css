@@ -120,7 +120,7 @@ html {
 }
 
 .nav-link:hover {
-  font-size: 20px;
+  border-bottom: 3px solid rgba(110, 196, 1, 1);
 }
 
 /* HOME SECTION */
