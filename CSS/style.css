@@ -21,7 +21,8 @@ html {
   --primary: #1f4e5f;
   --secondary: #79a8a9;
   --hover: rgba(0, 187, 255, 0.8);
-  --nav: rgba(243, 243, 243, 1);
+  --main: rgba(47, 47, 47, 0.9);
+  --nav-links: rgba(243, 243, 243, 1);
 }
 
 .page-container {
@@ -37,8 +38,8 @@ html {
   position: fixed;
   height: 65px;
   width: 100%;
-  background-color: rgba(47, 47, 47, 0.9);
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--main);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
   z-index: 2;
 }
 
@@ -69,14 +70,6 @@ html {
   padding: 0;
 }
 
-#logo-mobile {
-  position: absolute;
-  height: 55px;
-  width: 55px;
-  padding: 5px 0;
-  visibility: hidden;
-}
-
 .nav-links {
   display: flex;
   height: 65px;
@@ -86,7 +79,7 @@ html {
 }
 
 .nav-link {
-  color: var(--nav);
+  color: var(--nav-links);
   height: 65px;
   font-size: 14px;
   text-transform: uppercase;
@@ -112,7 +105,7 @@ html {
 }
 
 .burger div {
-  background-color: var(--nav);
+  background-color: var(--nav-links);
   width: 35px;
   height: 4px;
   border-radius: 10px;
@@ -571,12 +564,13 @@ html {
 }
 
 .copyright-mark {
-  color: rgba(47, 47, 47, 1);
+  color: var(--main);
+  font-size: 12px;
   padding: 12px;
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1220px) {
   .aboutme-grid {
     display: grid;
     grid-template-rows: [nav-start] 5rem [nav-end] 5rem [third-line] 1fr [fourth-line] 1fr [fifth-line] 10rem [last-line];
@@ -731,10 +725,10 @@ html {
     position: absolute;
     top: 80px;
     right: 0px;
-    width: 50%;
+    width: 35%;
     height: 450px;
     background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -742,6 +736,10 @@ html {
     transform: translateX(100%);
     transition: transform 0.8s ease-in;
     z-index: 1;
+  }
+
+  .nav-link {
+    color: var(--main);
   }
 
   .page-title {
@@ -757,14 +755,6 @@ html {
 
   #navbar {
     height: 65px;
-  }
-
-  .logos {
-    height: 65px;
-  }
-
-  #logo-mobile {
-    visibility: visible;
   }
 
   .burger {
