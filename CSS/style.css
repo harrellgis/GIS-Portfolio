@@ -147,7 +147,7 @@ html {
   width: 680px;
   height: 900px;
   z-index: 1;
-  transform: rotate(45deg);
+  transform: rotate(25deg);
 }
 
 .imageBox {
@@ -180,9 +180,9 @@ html {
 
 .home-title {
   position: absolute;
-  width: 420px;
+  width: 560px;
   height: 300px;
-  left: 790px;
+  left: 850px;
   top: 133px;
   grid-area: home-title;
   grid-row: 2 / 3;
@@ -209,7 +209,7 @@ html {
 
 .mtKenya-info {
   position: absolute;
-  width: 474px;
+  width: 580px;
   height: 130px;
   left: 520px;
   top: 857px;
@@ -219,7 +219,7 @@ html {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 15px;
-  line-height: 18px;
+  line-height: 25px;
   display: flex;
   align-items: center;
   letter-spacing: 0.2rem;
