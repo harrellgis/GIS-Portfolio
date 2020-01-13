@@ -23,6 +23,7 @@ html {
   --hover: rgba(0, 187, 255, 0.8);
   --main: rgba(47, 47, 47, 0.9);
   --nav-links: rgba(243, 243, 243, 1);
+  --accent: #6ec401;
 }
 
 .page-container {
@@ -122,13 +123,31 @@ html {
   padding: 0;
 }
 
+/*SOCIAL LINKS*/
+.social-links {
+  position: relative;
+  top: 90px;
+  left: 1150px;
+  height: 75px;
+  width: 30px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.social-links img {
+  height: 30px;
+  width: 30px;
+}
+
 .home-bg-image {
   position: absolute;
   top: 0;
-  left: 3rem;
   width: 680px;
   height: 900px;
   z-index: 1;
+  transform: rotate(45deg);
 }
 
 .imageBox {
@@ -141,7 +160,6 @@ html {
   width: 0;
   transition: 2s;
   overflow: hidden;
-  border-right: 10px solid red;
 }
 
 .home-bg-image:hover .imageAfter {
@@ -161,6 +179,11 @@ html {
 }
 
 .home-title {
+  position: absolute;
+  width: 420px;
+  height: 300px;
+  left: 790px;
+  top: 133px;
   grid-area: home-title;
   grid-row: 2 / 3;
   align-items: center;
@@ -169,15 +192,47 @@ html {
 }
 
 .home-title h1 {
+  font-family: Montseratte, sans-serif;
   font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 40px;
-  text-align: center;
-  letter-spacing: 0.03em;
+  font-weight: medium;
+  font-size: 50px;
+  line-height: 60px;
+  text-align: left;
+  letter-spacing: 0.5rem;
   padding: 0px 20px;
+  color: var(--main);
+}
+
+.home-title .green-title {
+  color: var(--accent);
+}
+
+.mtKenya-info {
+  position: absolute;
+  width: 474px;
+  height: 130px;
+  left: 520px;
+  top: 857px;
+
+  font-family: Lato;
+  font-style: normal;
   text-transform: uppercase;
-  color: var(--primary);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2rem;
+
+  color: #777777;
+}
+
+.projects-button {
+  position: absolute;
+  width: 500px;
+  height: 120px;
+  left: 700px;
+  top: 585px;
 }
 
 /* PRIMARY BUTTON */
@@ -188,20 +243,19 @@ html {
 }
 
 .primary-button {
-  height: 60px;
-  width: 250px;
-  border-radius: 50px;
+  height: 120px;
+  width: 500px;
   padding: 0px;
   text-align: center;
   text-decoration: none;
-  background-color: rgba(20, 20, 20, 0.8);
+  background-color: var(--main);
 }
 
 .primary-button a {
   font-style: normal;
-  font-weight: bold;
-  font-size: 19px;
-  line-height: 23px;
+  font-weight: medium;
+  font-size: 30px;
+  line-height: 36px;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
@@ -539,24 +593,6 @@ html {
   z-index: 2;
 }
 
-.social-links {
-  position: absolute;
-  top: 75px;
-  right: 20px;
-  height: 75px;
-  width: 30px;
-  padding: 5px;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.social-links img {
-  height: 30px;
-  width: 30px;
-}
-
 .copyright-mark {
   color: var(--main);
   font-size: 12px;
@@ -754,10 +790,6 @@ html {
   .burger {
     visibility: visible;
     cursor: pointer;
-  }
-
-  #logo-desktop {
-    visibility: hidden;
   }
 
   .nav-links {
