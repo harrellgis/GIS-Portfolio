@@ -119,22 +119,36 @@ html {
 }
 
 /* HOME SECTION */
-#home {
-  margin: 0;
-  padding: 0;
+
+.home-grid {
+  position: relative;
+  display: grid;
+  grid-template-rows: [nav-start] 4rem [nav-end] 5rem [third-line] auto [fourth-line] auto [fifth-line] 4rem [last-line];
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 1024px;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    "nav"
+    "social-links"
+    "home-title"
+    "view-projects"
+    "footer";
 }
 
 /*SOCIAL LINKS*/
 .social-links {
   position: relative;
-  top: 90px;
-  left: 1150px;
-  height: 75px;
+  height: 4.5rem;
   width: 30px;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  grid-row: 2 / 3;
+  grid-column: span 2 / auto;
+  justify-self: end;
+  margin: 0;
 }
 
 .social-links img {
@@ -142,9 +156,40 @@ html {
   width: 30px;
 }
 
+.home-title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 560px;
+  height: 300px;
+  grid-area: home-title;
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+  align-items: left;
+  align-self: start;
+  z-index: 1;
+}
+
+.home-title h1 {
+  font-family: Montseratte, sans-serif;
+  font-style: normal;
+  font-weight: medium;
+  font-size: 50px;
+  line-height: 60px;
+  text-align: left;
+  letter-spacing: 0.5rem;
+
+  color: var(--main);
+}
+
+.home-title .green-title {
+  color: var(--accent);
+}
+
 .home-bg-image {
-  position: absolute;
-  top: 0;
+  position: relative;
+  grid-column: 1 / 2;
+  grid-row: 3 / 5;
   width: 680px;
   height: 900px;
   z-index: 1;
@@ -167,54 +212,14 @@ html {
   width: 100%;
 }
 
-.home-grid {
-  position: relative;
-  display: grid;
-  grid-template-rows: [nav-start] 5rem [nav-end] auto [third-line] auto [fourth-line] 4rem [last-line];
-  min-height: 1024px;
-  justify-items: center;
-  grid-template-areas:
-    "nav"
-    "home-title"
-    "view-projects"
-    "footer";
-}
-
-.home-title {
-  position: absolute;
-  width: 560px;
-  height: 300px;
-  left: 850px;
-  top: 133px;
-  grid-area: home-title;
-  grid-row: 2 / 3;
-  align-items: center;
-  z-index: 1;
-  /*visibility: hidden;*/
-}
-
-.home-title h1 {
-  font-family: Montseratte, sans-serif;
-  font-style: normal;
-  font-weight: medium;
-  font-size: 50px;
-  line-height: 60px;
-  text-align: left;
-  letter-spacing: 0.5rem;
-  padding: 0px 20px;
-  color: var(--main);
-}
-
-.home-title .green-title {
-  color: var(--accent);
-}
-
 .mtKenya-info {
-  position: absolute;
+  position: relative;
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
   width: 580px;
   height: 130px;
-  left: 520px;
-  top: 857px;
+  right: 100px;
+  align-self: end;
 
   font-family: Lato;
   font-style: normal;
@@ -229,21 +234,17 @@ html {
   color: #777777;
 }
 
-.projects-button {
-  position: absolute;
+.button-wrapper {
+  position: relative;
+  left: 200px;
+  grid-row: 3 / 4;
+  grid-column: 1 / 3;
   width: 500px;
   height: 120px;
-  left: 700px;
-  top: 585px;
+  align-self: end;
 }
 
 /* PRIMARY BUTTON */
-.button-wrapper {
-  grid-area: view-projects;
-  height: 70px;
-  grid-row-start: third-line;
-}
-
 .primary-button {
   height: 120px;
   width: 500px;
