@@ -121,11 +121,10 @@ html {
 /* HOME SECTION */
 
 .home-grid {
-  position: relative;
   display: grid;
+  grid-gap: 20px;
   grid-template-rows: [nav-start] 4rem [nav-end] 5rem [third-line] auto [fourth-line] auto [fifth-line] 4rem [last-line];
   grid-template-columns: repeat(2, 1fr);
-  min-height: 1024px;
   justify-items: center;
   align-items: center;
   grid-template-areas:
@@ -148,7 +147,6 @@ html {
   grid-row: 2 / 3;
   grid-column: span 2 / auto;
   justify-self: end;
-  margin: 0;
 }
 
 .social-links img {
@@ -157,7 +155,7 @@ html {
 }
 
 .home-title {
-  position: relative;
+  /* position: relative; */
   display: flex;
   flex-direction: column;
   width: 560px;
@@ -193,7 +191,7 @@ html {
   width: 680px;
   height: 900px;
   z-index: 1;
-  transform: rotate(25deg);
+  /* transform: rotate(25deg); */
 }
 
 .imageBox {
