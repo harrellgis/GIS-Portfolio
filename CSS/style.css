@@ -95,23 +95,21 @@ html {
   letter-spacing: 3px;
   font-weight: normal;
   text-decoration: none;
-  margin-right: 15px;
-  margin-left: 15px;
+  margin: 0rem 0.75rem;
   padding: 25px 0px;
 }
 
+/* Navbar hover-pin animation */
 #hover-pin {
-  height: 20px;
+  height: 0px;
+  transition: 0.3s;
 }
 
 .nav-link:hover #hover-pin {
-  display: block;
-  /* border-bottom: 3px solid rgba(110, 196, 1, 1); */
+  height: 20px;
 }
 
 .nav-link #hover-pin {
-  display: none;
-  position: relative;
   background-color: none;
 }
 
@@ -207,7 +205,6 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   grid-column: 1 / 8;
   grid-row: 3 / 5;
   z-index: 1;
-  /* border: solid 2px black; */
   justify-self: start;
   transform: rotate(25deg);
 }
@@ -216,7 +213,11 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   position: absolute;
   top: 0;
   left: 0;
-  /* border: solid 2px red; */
+}
+
+.imageBefore img {
+  -webkit-filter: drop-shadow(5px 5px 10px #222);
+  filter: drop-shadow(5px 5px 5px #222);
 }
 
 .imageAfter {
