@@ -81,6 +81,12 @@ html {
 }
 
 .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-link a {
   color: var(--nav-links);
   height: 65px;
   font-size: 14px;
@@ -92,6 +98,21 @@ html {
   margin-right: 15px;
   margin-left: 15px;
   padding: 25px 0px;
+}
+
+#hover-pin {
+  height: 20px;
+}
+
+.nav-link:hover #hover-pin {
+  display: block;
+  /* border-bottom: 3px solid rgba(110, 196, 1, 1); */
+}
+
+.nav-link #hover-pin {
+  display: none;
+  position: relative;
+  background-color: none;
 }
 
 .burger {
@@ -114,39 +135,36 @@ html {
   transition: all 0.3s ease;
 }
 
-.nav-link:hover {
-  border-bottom: 3px solid rgba(110, 196, 1, 1);
-}
-
 /* HOME SECTION */
+/* Choose which elements span how far (title, call to action, mtKenya info, and give them all a span-property so
+each element doesn't need its own column and row property. Then this can be manipulated by media queries as found
+in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 
 .home-grid {
   display: grid;
   grid-gap: 20px;
   grid-template-rows: [nav-start] 4rem [nav-end] 5rem [third-line] auto [fourth-line] auto [fifth-line] 4rem [last-line];
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   justify-items: center;
   align-items: center;
   grid-template-areas:
-    "nav"
-    "social-links"
-    "home-title"
-    "view-projects"
-    "footer";
+    "nav nav"
+    "social-links social-links"
+    "bg-image home-title"
+    "bg-image view-projects"
+    "footer footer";
 }
 
 /*SOCIAL LINKS*/
 .social-links {
-  position: relative;
-  height: 4.5rem;
-  width: 30px;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   grid-row: 2 / 3;
-  grid-column: span 2 / auto;
-  justify-self: end;
+  grid-column: 12 / 13;
+  align-self: stretch;
 }
 
 .social-links img {
@@ -158,11 +176,9 @@ html {
   /* position: relative; */
   display: flex;
   flex-direction: column;
-  width: 560px;
-  height: 300px;
   grid-area: home-title;
   grid-row: 3 / 4;
-  grid-column: 2 / 3;
+  grid-column: 8 / 12;
   align-items: left;
   align-self: start;
   z-index: 1;
@@ -186,18 +202,21 @@ html {
 
 .home-bg-image {
   position: relative;
-  grid-column: 1 / 2;
-  grid-row: 3 / 5;
   width: 680px;
   height: 900px;
+  grid-column: 1 / 8;
+  grid-row: 3 / 5;
   z-index: 1;
-  /* transform: rotate(25deg); */
+  /* border: solid 2px black; */
+  justify-self: start;
+  transform: rotate(25deg);
 }
 
 .imageBox {
   position: absolute;
   top: 0;
   left: 0;
+  /* border: solid 2px red; */
 }
 
 .imageAfter {
@@ -211,9 +230,8 @@ html {
 }
 
 .mtKenya-info {
-  position: relative;
-  grid-column: 2 / 3;
   grid-row: 4 / 5;
+  grid-column: 8 / 12;
   width: 580px;
   height: 130px;
   right: 100px;
@@ -233,10 +251,8 @@ html {
 }
 
 .button-wrapper {
-  position: relative;
-  left: 200px;
   grid-row: 3 / 4;
-  grid-column: 1 / 3;
+  grid-column: 8 / 12;
   width: 500px;
   height: 120px;
   align-self: end;

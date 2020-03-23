@@ -21,10 +21,10 @@
                     />
                 </a>
                 <div class="nav-links"><!--Links-->
-                    <a href="#home" class="nav-link">home</a>
-                    <a href="#projects" class="nav-link">projects</a>
-                    <a href="#about-me" class="nav-link">about</a>
-                    <a href="#contact" class="nav-link">contact</a>            
+                    <div class="nav-link"><a href="#home">home</a><img id="hover-pin" src="./Images/Logo/location_pin.svg" alt="location pin"></div>
+                    <div class="nav-link"><a href="#projects">projects</a><img id="hover-pin" src="./Images/Logo/location_pin.svg" alt="location pin"></div>
+                    <div class="nav-link"><a href="#about-me">about</a><img id="hover-pin" src="./Images/Logo/location_pin.svg" alt="location pin"></div>
+                    <div class="nav-link"><a href="#contact">contact</a><img id="hover-pin" src="./Images/Logo/location_pin.svg" alt="location pin"></div>       
                 </div>
                 <div class="burger"><!--Mobile Burger-->
                     <div class="line1"></div>
@@ -37,7 +37,7 @@
         <section id="home"><!--Home Section-->
             <div class="page-container">
                     <main class="home-grid page-container"><!--Grid Container-->
-                        <div class="social-links page-container">
+                        <div class="social-links">
                             <a href="https://github.com/harrellgis" class="github">
                                 <img
                                 class="github-svg"
@@ -53,13 +53,14 @@
                                 alt="linkedin logo"/>
                             </a>
                         </div>
+                        <!--BG Image-->
                         <div class="home-bg-image">
                             <div class="imageBox imageBefore"><img class="mtKenya rgb" src="Images/Background/Sentinel2_mtKenya_orthoRGB.png" alt=""></div>
                             <div class="imageBox imageAfter"><img class="mtKenya fcc" src="Images/Background/Sentinel2_mtKenya_orthoFCC.png" alt=""></div>
                         </div>
                         <!--Github Link-->
                         <!--Main Header-->
-                        <div class="home-title">
+                        <div class="home-title span4">
                             <h1 class="green-title">geospatial<h1>
                             <h1 class="green-title">insights</h1> 
                             <h1>in
@@ -68,7 +69,7 @@
                                 development
                             </h1>
                         </div>
-                        <h1 class="mtKenya-info">
+                        <h1 class="mtKenya-info span5">
                         mt.kenya<br>
                         [37.30417488098317,-0.15358693248401328]<br>
                         CRS: WGS84 / UTM Zone 44N<br>
@@ -76,7 +77,7 @@
                         Sentinel-2 MSI: MultiSpectral Instrument 2A (RGB)
                         </h1>
                         <!--End of Main Header-->
-                        <div class="button-wrapper">
+                        <div class="button-wrapper span5">
                             <button class="primary-button projects-button">
                                 <a link href="#projects">View Projects</a>
                             </button>
