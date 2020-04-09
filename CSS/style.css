@@ -22,7 +22,7 @@ html {
   --secondary: #79a8a9;
   --hover: rgba(0, 187, 255, 0.8);
   --main: rgba(47, 47, 47, 0.9);
-  --nav-links: rgba(243, 243, 243, 1);
+  --links: rgba(243, 243, 243, 1);
   --accent: #6ec401;
 }
 
@@ -87,7 +87,7 @@ html {
 }
 
 .nav-link a {
-  color: var(--nav-links);
+  color: var(--links);
   height: 65px;
   font-size: 14px;
   text-transform: uppercase;
@@ -259,11 +259,16 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   align-self: end;
 }
 
+.primary-button.projects-button {
+  text-align: right;
+  padding-right: 3.5rem;
+}
+
 /* PRIMARY BUTTON */
 .primary-button {
   height: 120px;
   width: 500px;
-  padding: 0px;
+  padding: 0;
   text-align: center;
   text-decoration: none;
   background-color: var(--main);
@@ -276,9 +281,8 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   line-height: 36px;
   text-transform: uppercase;
   text-decoration: none;
-  text-align: center;
   letter-spacing: 0.2em;
-  color: #fff;
+  color: var(--links);
 }
 
 .primary-button:hover {
@@ -301,7 +305,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   font-size: 35px;
   line-height: 42px;
   text-transform: uppercase;
-  color: var(--secondary);
+  color: var(--main);
 }
 
 /* PROJECTS SECTION */
@@ -369,7 +373,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
 }
 
 .card-front {
@@ -407,10 +411,11 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   line-height: 23px;
   padding: 5px 0px;
   margin-left: 5px;
-  color: var(--primary);
+  color: var(--accent);
 }
 
 .proj-descr {
+  font-family: Montseratte, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -422,15 +427,14 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 /* ABOUT ME SECTION */
 .aboutme-grid {
   display: grid;
-  grid-template-rows: [nav-start] 5rem [nav-end] 5rem [third-line] 1fr [fourth-line] 1fr [fifth-line] 10rem [last-line];
+  grid-gap: 2rem;
+  grid-template-rows: [first-line] 5rem [nav-start] 5rem [nav-end] auto [fourth-line];
   grid-template-columns: repeat(3, 1fr);
   min-height: 1024px;
   grid-template-areas:
-    ". . ."
     "header header header"
-    "portrait text education"
-    "portrait text focus-tools"
-    ". . .";
+    "portrait text credentials"
+    "portrait text credentials";
   border-top: 2px rgba(0, 0, 0, 0.1) solid;
   border-bottom: 2px rgba(0, 0, 0, 0.1) solid;
 }
@@ -443,32 +447,38 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 }
 
 .portrait {
-  grid-area: portrait;
+  grid-row-start: nav-end;
   grid-row: span 2 / auto;
   justify-self: left;
   align-self: center;
   width: 280px;
   height: 280px;
-  margin: auto auto auto 0;
 }
 
 .aboutme-text {
-  grid-area: nav-end / 2 / last-line / 3;
-  grid-row: third-line / span 2;
+  grid-row-start: nav-end;
   grid-column: 2 / 3;
   display: block;
   justify-self: center;
   text-align: left;
-  padding: 3rem;
+  align-self: center;
+  /* padding: 0 5rem; */
 }
 
 .aboutme-text p {
+  font-family: Montseratte, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 1.6rem;
   padding: 1.5rem 0;
   min-width: 440px;
+}
+
+.aboutme-credentials {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
 
 .education-block {
@@ -490,7 +500,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   line-height: 26px;
   text-transform: uppercase;
   padding: 0.5rem 0;
-  color: var(--secondary);
+  color: var(--accent);
 }
 
 .degree {
@@ -498,7 +508,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
-  color: #1f4e5f;
+  color: var(--main);
   padding: 0.5rem 0;
 }
 
@@ -568,21 +578,19 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 }
 
 .contact-grid h1 {
-  grid-area: header;
-  grid-row-start: nav-end;
+  grid-row: 2 / 3;
   align-self: center;
 }
 
-.contact-grid h3 {
-  grid-area: subheader;
-  grid-row-start: third-line;
+.contact-grid .subheader {
+  grid-row: 3 / 4;
   align-self: center;
   font-style: normal;
   font-weight: 600;
   font-size: 28px;
   line-height: 36px;
   text-transform: none;
-  color: var(--primary);
+  color: var(--main);
   margin: 4rem 0;
 }
 
