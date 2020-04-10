@@ -58,7 +58,6 @@ html {
 }
 
 .logo-wrapper {
-  /* display: flex; */
   width: 25%;
   height: 65px;
   padding: 5px 0px;
@@ -67,9 +66,11 @@ html {
 
 #logo-desktop {
   position: absolute;
-  height: 53px;
-  width: 100px;
-  padding: 0;
+  height: 42px;
+  width: 80px;
+  /* height: 53px;
+  width: 100px; */
+  margin: 8px 0px;
 }
 
 .nav-links {
@@ -140,7 +141,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 
 .home-grid {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 1rem;
   grid-template-rows: [nav-start] 4rem [nav-end] 5rem [third-line] auto [fourth-line] auto [fifth-line] 4rem [last-line];
   grid-template-columns: repeat(12, 1fr);
   justify-items: center;
@@ -170,16 +171,22 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   width: 30px;
 }
 
+.home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-self: start;
+  grid-row: 3 / 4;
+  grid-column: 8 / 13;
+  padding: 0 2rem;
+}
+
 .home-title {
   /* position: relative; */
   display: flex;
   flex-direction: column;
   grid-area: home-title;
-  grid-row: 3 / 4;
-  grid-column: 8 / 12;
   align-items: left;
-  align-self: start;
-  z-index: 1;
 }
 
 .home-title h1 {
@@ -190,7 +197,6 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   line-height: 60px;
   text-align: left;
   letter-spacing: 0.5rem;
-
   color: var(--main);
 }
 
@@ -203,7 +209,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   width: 680px;
   height: 900px;
   grid-column: 1 / 8;
-  grid-row: 3 / 5;
+  grid-row: 2 / 4;
   z-index: 1;
   justify-self: start;
   transform: rotate(25deg);
@@ -232,7 +238,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 
 .mtKenya-info {
   grid-row: 4 / 5;
-  grid-column: 8 / 12;
+  grid-column: 4 / 6;
   width: 580px;
   height: 130px;
   right: 100px;
@@ -242,26 +248,29 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   font-style: normal;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 15px;
-  line-height: 25px;
+  font-size: 13px;
+  line-height: 20px;
   display: flex;
   align-items: center;
   letter-spacing: 0.2rem;
-
   color: #777777;
 }
 
-.button-wrapper {
-  grid-row: 3 / 4;
-  grid-column: 8 / 12;
-  width: 500px;
-  height: 120px;
-  align-self: end;
+.intro-text {
+  align-items: left;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.2rem;
+  color: #777777;
+  padding: 2.5rem 0;
 }
 
 .primary-button.projects-button {
-  text-align: right;
-  padding-right: 3.5rem;
+  text-align: center;
+  height: 80px;
+  width: 200px;
 }
 
 /* PRIMARY BUTTON */
@@ -277,8 +286,8 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 .primary-button a {
   font-style: normal;
   font-weight: medium;
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 20px;
+  line-height: 30px;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.2em;
@@ -409,7 +418,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   font-weight: bold;
   font-size: 19px;
   line-height: 23px;
-  padding: 5px 0px;
+  padding: 10px 5px;
   margin-left: 5px;
   color: var(--accent);
 }
@@ -420,7 +429,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   font-weight: normal;
   font-size: 15px;
   line-height: 20px;
-  padding: 5px 0px;
+  padding: 10px 5px;
   margin-left: 5px;
 }
 
