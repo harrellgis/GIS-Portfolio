@@ -21,7 +21,10 @@ html {
   --primary: #1f4e5f;
   --secondary: #79a8a9;
   --hover: rgba(0, 187, 255, 0.8);
+  --hover2: rgba(17, 120, 216, 0.9);
+  --hover3: rgba(26, 67, 81, 0.7);
   --main: rgba(47, 47, 47, 0.9);
+  --main2: rgba(47, 47, 47, 0.8);
   --links: rgba(243, 243, 243, 1);
   --accent: #6ec401;
 }
@@ -194,7 +197,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   font-style: normal;
   font-weight: medium;
   font-size: 50px;
-  line-height: 60px;
+  line-height: 55px;
   text-align: left;
   letter-spacing: 0.5rem;
   color: var(--main);
@@ -206,6 +209,8 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 
 .home-bg-image {
   position: relative;
+  /* width: 544px;
+  height: 720px; */
   width: 680px;
   height: 900px;
   grid-column: 1 / 8;
@@ -222,8 +227,8 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 }
 
 .imageBefore img {
-  -webkit-filter: drop-shadow(5px 5px 10px #222);
-  filter: drop-shadow(5px 5px 5px #222);
+  -webkit-filter: drop-shadow(0px 30px 30px #657a74);
+  filter: drop-shadow(0px 30px 30px #657a74);
 }
 
 .imageAfter {
@@ -259,35 +264,31 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 .intro-text {
   align-items: left;
   text-transform: uppercase;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 20px;
+  font-size: 15px;
+  line-height: 25px;
   letter-spacing: 0.2rem;
   color: #777777;
-  padding: 2.5rem 0;
-}
-
-.primary-button.projects-button {
-  text-align: center;
-  height: 80px;
-  width: 200px;
+  padding: 4rem 0;
 }
 
 /* PRIMARY BUTTON */
 .primary-button {
-  height: 120px;
-  width: 500px;
-  padding: 0;
+  height: 80px;
+  width: 200px;
+  border-radius: 20px;
+  padding: 8px;
   text-align: center;
   text-decoration: none;
-  background-color: var(--main);
+  background-color: var(--main2);
+  /* -webkit-filter: drop-shadow(0px 40px 40px #8a959e);
+  filter: drop-shadow(0px 40px 40px #8a959e); */
 }
 
 .primary-button a {
   font-style: normal;
   font-weight: medium;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 18px;
+  line-height: 25px;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.2em;
@@ -295,7 +296,9 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 }
 
 .primary-button:hover {
-  background-color: var(--hover);
+  background-color: var(--hover2);
+  -webkit-filter: drop-shadow(0px 40px 40px rgba(15, 104, 187, 0.5));
+  filter: drop-shadow(0px 40px 40px rgba(15, 104, 187, 0.5));
 }
 
 /* FOOTER */
@@ -349,19 +352,6 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   justify-content: center;
   align-self: center;
   /* margin: auto 0px; */
-}
-
-.view-more-button {
-  height: 100px;
-  width: 300px;
-  padding: 0px;
-  text-align: center;
-  text-decoration: none;
-  background-color: var(--main);
-}
-
-.view-more-button a {
-  font-size: 25px;
 }
 
 .proj {
