@@ -227,8 +227,8 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 }
 
 .imageBefore img {
-  -webkit-filter: drop-shadow(0px 30px 30px #657a74);
-  filter: drop-shadow(0px 30px 30px #657a74);
+  -webkit-filter: drop-shadow(0px 30px 10px rgba(146, 172, 158, 0.9));
+  filter: drop-shadow(0px 30px 10px rgba(146, 172, 158, 0.9));
 }
 
 .imageAfter {
@@ -297,8 +297,8 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 
 .primary-button:hover {
   background-color: var(--hover2);
-  -webkit-filter: drop-shadow(0px 40px 40px rgba(15, 104, 187, 0.5));
-  filter: drop-shadow(0px 40px 40px rgba(15, 104, 187, 0.5));
+  -webkit-filter: drop-shadow(0px 40px 35px rgba(15, 104, 187, 0.5));
+  filter: drop-shadow(0px 40px 35px rgba(15, 104, 187, 0.5));
 }
 
 /* FOOTER */
