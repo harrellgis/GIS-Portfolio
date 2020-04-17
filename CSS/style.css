@@ -143,7 +143,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 
 .home-grid {
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 1.3rem;
   grid-template-rows: [nav-start] 4rem [nav-end] 5rem [third-line] auto [fourth-line] auto [fifth-line] 4rem [last-line];
   grid-template-columns: repeat(12, 1fr);
   justify-items: center;
@@ -184,9 +184,9 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 }
 
 .home-title {
-  /* position: relative; */
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   grid-area: home-title;
   align-items: left;
 }
@@ -198,12 +198,23 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   font-size: 50px;
   line-height: 55px;
   text-align: left;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.4rem;
   color: var(--main);
 }
 
-.home-title .green-title {
+.home-title .green {
   color: var(--accent);
+  margin: 10px 0px;
+}
+
+.home-title .title1 {
+  text-transform: capitalize;
+  font-size: 65px;
+}
+
+.home-title .title2 {
+  text-transform: capitalize;
+  font-size: 65px;
 }
 
 .home-bg-image {
@@ -226,8 +237,8 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 }
 
 .imageBefore img {
-  -webkit-filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.4));
-  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.4));
+  -webkit-filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.4));
 }
 
 .imageAfter {
@@ -260,9 +271,12 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   color: #777777;
 }
 
+/* Line-height, also known as leading, controls the amount of space between baselines
+in a block of text. For paragraphs, the ideal line-height is usually between 1.3x and 1.7x the font size */
+
+/* Keep paragraph spacing between 0.75x and 1.25x of the type size*/
 .intro-text {
   align-items: left;
-  text-transform: uppercase;
   font-size: 15px;
   line-height: 20px;
   letter-spacing: 0.2rem;
@@ -278,7 +292,8 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   padding: 8px;
   text-align: center;
   text-decoration: none;
-  background-color: var(--main2);
+  background-color: #21383E;
+  /* var(--main2); */
   /* -webkit-filter: drop-shadow(0px 40px 40px #8a959e);
   filter: drop-shadow(0px 40px 40px #8a959e); */
 }
@@ -295,7 +310,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 }
 
 .primary-button:hover {
-  background-color: var(--hover2);
+  background-color: var(--hover2); 
   -webkit-filter: drop-shadow(0px 40px 35px rgba(15, 104, 187, 0.5));
   filter: drop-shadow(0px 40px 35px rgba(15, 104, 187, 0.5));
 }
@@ -460,16 +475,16 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   justify-self: center;
   text-align: left;
   align-self: center;
-  /* padding: 0 5rem; */
+  padding: 0 2rem;
 }
 
 .aboutme-text p {
-  font-family: Montseratte, sans-serif;
+  font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  line-height: 1.6rem;
-  padding: 1.5rem 0;
+  line-height: 24px;
+  padding: 1rem 0;
   min-width: 440px;
 }
 
@@ -491,12 +506,13 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 }
 
 .subheader {
-  font-family: Lato;
+  font-family: Montseratte, sans-serif;
   font-style: normal;
-  font-weight: bold;
-  font-size: 22px;
+  font-weight: medium;
+  font-size: 25px;
   line-height: 26px;
-  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-transform: capitalize;
   padding: 0.5rem 0;
   color: var(--accent);
 }
@@ -504,9 +520,10 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 .degree {
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 22px;
-  color: var(--primary);
+  color: #21383E;
+  /* var(--primary); */
   padding: 0.5rem 0;
 }
 
@@ -555,11 +572,20 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 .focus-list {
   list-style-position: inside;
   padding: 0.5rem;
+  white-space: nowrap;
+}
+
+.focus-list li {
+  padding: 2px 0;
 }
 
 .tools-list {
   list-style-position: inside;
   padding: 0.5rem;
+}
+
+.tools-list li {
+  padding: 2px;
 }
 
 /* CONTACT SECTION */
