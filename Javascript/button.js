@@ -1,5 +1,5 @@
 //Button animation
-const buttons = document.querySelectorAll(".primary-button a");
+const buttons = document.querySelectorAll(".primary-button");
 buttons.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     let x = e.clientX - e.target.offsetLeft;
