@@ -231,13 +231,17 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   grid-row: 2 / 4;
   z-index: 1;
   justify-self: start;
-  transform: rotate(25deg);
+  transform: rotate(20deg);
 }
 
 .imageBox {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.imageBox img {
+  transform: scale(0.9);
 }
 
 .imageBefore img {
@@ -252,7 +256,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 }
 
 .home-bg-image:hover .imageAfter {
-  width: 100%;
+  width: 50%;
 }
 
 .mtKenya-info {
@@ -289,13 +293,11 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 }
 
 .primary-button:hover {
-  background-color: var(--hover2); 
-  transform: scale(1.1);
+  background-color: var(--hover2);
 }
 
 .primary-button {
   position: relative;
-  display: inline-block;
   height: 65px;
   width: 200px;
   padding: 22px 20px;
@@ -324,7 +326,7 @@ span {
   0% {
     width: 0%;
     height: 0%;
-    opacity: 0.5;
+    opacity: 0.3;
   }
   100% {
     width: 500px;
