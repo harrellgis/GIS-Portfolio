@@ -144,7 +144,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 
 .home-grid {
   display: grid;
-  grid-gap: 1.3rem;
+  grid-gap: 1rem;
   grid-template-rows: [nav-start] 4rem [nav-end] 5rem [third-line] auto [fourth-line] auto [last-line];
   grid-template-columns: repeat(12, 1fr);
   justify-items: center;
@@ -153,7 +153,6 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
     "nav nav"
     "social-links social-links"
     "bg-image home-title"
-    "bg-image view-projects";
 }
 
 /*SOCIAL LINKS*/
@@ -161,7 +160,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 
   grid-row: 2 / 3;
   grid-column: 12 / 13;
@@ -223,11 +222,11 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 
 .home-bg-image {
   position: relative;
-  /* width: 544px;
-  height: 720px; */
-  width: 680px;
-  height: 900px;
-  grid-column: 1 / 8;
+  width: 612px;
+  height: 810px;
+  /* width: 680px;
+  height: 900px; */
+  grid-column: 1 / 6;
   grid-row: 2 / 4;
   z-index: 1;
   justify-self: start;
@@ -241,7 +240,12 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 }
 
 .imageBox img {
-  transform: scale(0.9);
+  width: 612px;
+  height: 810px;
+  padding: 1.5rem;
+  /* width: 680px;
+  height: 900px; */
+  /* transform: scale(0.9); */
 }
 
 .imageBefore img {
@@ -258,26 +262,6 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 .home-bg-image:hover .imageAfter {
   width: 50%;
 }
-
-/* .mtKenya-info {
-  grid-row: 4 / 5;
-  grid-column: 4 / 6;
-  width: 580px;
-  height: 130px;
-  right: 100px;
-  align-self: end;
-
-  font-family: Lato;
-  font-style: normal;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 20px;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.2rem;
-  color: #777777;
-} */
 
 /* Line-height, also known as leading, controls the amount of space between baselines
 in a block of text. For paragraphs, the ideal line-height is usually between 1.3x and 1.7x the font size */
@@ -314,28 +298,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   background: #21383E;
   /* background: rgba(22, 21, 59, 0.9);  */
 }
-
-/* span {
-  position: absolute;
-  background: #fff;
-  transform: translate(-50%,-50%);
-  pointer-events: none;
-  border-radius: 50%;
-  animation: animate 0.5s linear infinite;
-}
-
-@keyframes animate {
-  0% {
-    width: 0%;
-    height: 0%;
-    opacity: 0.3;
-  }
-  100% {
-    width: 500px;
-    height: 500px;
-    opacity: 0;
-  }
-} */
 
 .projects-button {
   padding: 12px 35px;
@@ -465,7 +427,7 @@ transform: scale(0.98);
 /* Project Containers */
 .projects-container {
   display: grid;
-  grid-gap: 0.5rem;
+  grid-gap: 0.4rem;
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -580,8 +542,6 @@ transform: scale(0.98);
     "header header header"
     "portrait text credentials"
     "portrait text credentials";
-  border-top: 2px rgba(0, 0, 0, 0.1) solid;
-  border-bottom: 2px rgba(0, 0, 0, 0.1) solid;
 }
 
 .aboutme-grid h1 {
@@ -846,7 +806,17 @@ transform: scale(0.98);
   }
 }
 
-/* @media screen and (max-width: 900px) */
+@media screen and (max-width: 1000px) {
+  .home-bg-image {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+  }
+  
+  .imageBox img {
+    transform: scale(0.80);
+    transition: 1s;
+  }
+}
 
 @media screen and (max-width: 840px) {
   /* HOMEPAGE */
