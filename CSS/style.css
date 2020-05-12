@@ -10,6 +10,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
+  background-color: #f1f3f6;
 }
 
 .site-wrapper {
@@ -40,7 +41,7 @@ html {
 /* NAVBAR */
 #nav-wrapper {
   position: fixed;
-  height: 65px;
+  height: 55px;
   width: 100%;
   background-color: var(--main);
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
@@ -49,7 +50,7 @@ html {
 
 #navbar {
   position: fixed;
-  height: 65px;
+  height: 55px;
   top: 0px;
   left: 0px;
   right: 0px;
@@ -144,7 +145,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 .home-grid {
   display: grid;
   grid-gap: 1.3rem;
-  grid-template-rows: [nav-start] 4rem [nav-end] 5rem [third-line] auto [fourth-line] auto [fifth-line] 4rem [last-line];
+  grid-template-rows: [nav-start] 4rem [nav-end] 5rem [third-line] auto [fourth-line] auto [last-line];
   grid-template-columns: repeat(12, 1fr);
   justify-items: center;
   align-items: center;
@@ -152,8 +153,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
     "nav nav"
     "social-links social-links"
     "bg-image home-title"
-    "bg-image view-projects"
-    "footer footer";
+    "bg-image view-projects";
 }
 
 /*SOCIAL LINKS*/
@@ -259,7 +259,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   width: 50%;
 }
 
-.mtKenya-info {
+/* .mtKenya-info {
   grid-row: 4 / 5;
   grid-column: 4 / 6;
   width: 580px;
@@ -277,7 +277,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   align-items: center;
   letter-spacing: 0.2rem;
   color: #777777;
-}
+} */
 
 /* Line-height, also known as leading, controls the amount of space between baselines
 in a block of text. For paragraphs, the ideal line-height is usually between 1.3x and 1.7x the font size */
@@ -288,6 +288,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   font-size: 15px;
   line-height: 20px;
   letter-spacing: 0.2rem;
+  line-height: 25px;
   color: #777777;
   padding: 4rem 0;
 }
@@ -340,16 +341,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   padding: 12px 35px;
 }
 
-/* FOOTER */
-.footer-wrapper {
-  position: fixed;
-  height: 50px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
 .page-title {
   font-style: normal;
   font-weight: bold;
@@ -360,9 +351,9 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 }
 
 /* PROJECT LINK CARDS */
-#proj-cards {
+/* #proj-cards {
   background: #ebf5fc;
-}
+} */
 
 .project-cards {
   display: grid;
@@ -370,7 +361,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   grid-gap: .5rem;
   justify-items: center;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  min-height: 30rem;
+  min-height: 40rem;
 }
 
 .container {
@@ -385,15 +376,16 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   width: 320px;
   margin: 20px;
   padding: 20px 30px;
-  background: #ebf5fc;
+  background-color: white;
   border-radius: 40px;
-  box-shadow: -6px -6px 20px rgba(255, 255, 255, .1),
-              6px 6px 20px rgba(0, 0, 0, .1);
+  box-shadow: 20px 20px 40px rgba(55, 84, 170, 0.1),
+              20px -20px 40px rgba(255, 255, 255, 1);
+              /* inset 4px 4px rgba(255, 255, 255, 0.5); */
 }
 
 .container .cards:hover {
-  box-shadow: inset -6px -6px 10px rgba(255, 255, 255, .5),
-              inset 6px 6px 20px rgba(0, 0, 0, .05);
+  box-shadow: inset -6px -6px 20px rgba(255, 255, 255, .5),
+              inset 6px 6px 20px rgba(55, 84, 170, 0.1);
 }
 
 .container .cards .imgBx {
@@ -433,13 +425,13 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   text-decoration: none;
   text-transform: capitalize;
   margin-top: 15px;
-  box-shadow: -4px -4px 20px rgba(255, 255, 255, .1),
-              4px 4px 20px rgba(0, 0, 0, .1);
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, .1),
+              4px 4px 10px rgba(55, 84, 170, 0.1);
 }
 
 .container .cards .contentBx a:hover {
   box-shadow: inset -4px -4px 10px rgba(255, 255, 255, .5),
-              inset 4px 4px 10px rgba(0, 0, 0, .1);
+              inset 4px 4px 10px rgba(55, 84, 170, 0.1);
 }
 
 .container .cards a:hover span {
@@ -473,8 +465,7 @@ transform: scale(0.98);
 /* Project Containers */
 .projects-container {
   display: grid;
-  padding: 1rem; 
-  grid-gap: 1rem;
+  grid-gap: 0.5rem;
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -488,8 +479,10 @@ transform: scale(0.98);
 .projects-container .card .face {
   width: 300px;
   height: 200px;
+  border-radius: 18px;
   transition: 0.5s;
 }
+
 
 .projects-container .card .face.face1 {
   position: relative;
@@ -502,8 +495,12 @@ transform: scale(0.98);
 }
 
 .projects-container .card:hover .face.face1 {
-  background: #ff0057;
+  /* background: #ff0057; */
+  background: #5c4afffb;
   transform: translateY(0px);
+  transform: scale(1.05);
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
 .projects-container .card .face.face1 .content {
@@ -518,39 +515,46 @@ transform: scale(0.98);
 .projects-container .card .face.face1 .content h3 {
   margin: 10px 0 0;
   padding: 0;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
   font-size: 1.5em;
 }
 
 .projects-container .card .face.face2 {
   position: relative;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: #ffffff;
   padding: 20px;
   box-sizing: border-box;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  box-shadow: 20px 20px 40px rgba(55, 84, 170, 0.1);
   transform: translateY(-100px);
+}
+
+.projects-container .card .face.face2 .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .projects-container .card:hover .face.face2 {
   transform: translateY(0px);
+  transform: scale(1.05);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
 }
 
 .projects-container .card .face.face2 .content p {
-  margin: 0;
-  padding: 0;
+  padding: 0.7rem 0;
 }
 
 .projects-container .card .face.face2 .content a {
-  margin: 15px 0 0;
+  margin: 15px 0;
+  align-self: center;
   display: inline-block;
   text-decoration: none;
   font-weight: 900;
   color: #333;
-  padding: 5px;
+  padding: 8px;
+  border-radius: 40px;
   border: 1px solid #333;
 }
 
@@ -758,14 +762,19 @@ transform: scale(0.98);
   box-shadow: 0px -3px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* Footer */
+/* FOOTER */
 .footer-wrapper {
-  z-index: 2;
+  position: fixed;
+  height: 30px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .footer {
   position: fixed;
-  height: 50px;
+  height: 30px;
   left: 0px;
   right: 0px;
   bottom: 0px;
