@@ -145,7 +145,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 .home-grid {
   display: grid;
   grid-gap: 0.5rem;
-  grid-template-rows: [first] 60px [one] 4.5rem [two] 35% [three] 35% [four] 5rem [five] 5rem [last];
+  grid-template-rows: [first] 60px [one] 4.5rem [two] 35% [three] 35% [four] 8rem [last];
   grid-template-columns: repeat(12, 1fr);
   justify-items: center;
   align-content: center;
@@ -285,8 +285,9 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 }
 
 .projects-button {
-  grid-area: 4 / 8 / 5 / 10;
+  grid-area: 4 / 8 / 5 / 13;
   padding: 12px 35px;
+  justify-self: start;
   align-self: center;
 }
 
@@ -306,12 +307,13 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 
 .project-cards {
   display: grid;
-  padding: 1rem;
+  margin-bottom: 4rem;
+  padding: 1.5rem;
   grid-gap: .5rem;
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  min-height: 40rem;
+  min-height: 35rem;
 }
 
 .container {
@@ -399,17 +401,12 @@ transform: scale(0.98);
 .projects-grid {
   display: grid;
   min-height: 1024px;
-  grid-template-rows: [nav-start] 1fr [nav-end] 1fr [third-line] auto [fourth-line] 1fr [last-line];
-  grid-template-areas:
-    "none"
-    "header"
-    "projects";
+  grid-template-rows: [first] 3rem [one] 10rem [two] auto [three] 8rem [last];
 }
 
 /* Projects Title */
 .projects-grid h1 {
-  grid-area: header;
-  grid-row-start: nav-end;
+  grid-row-start: 1;
   align-self: center;
 }
 
@@ -420,7 +417,7 @@ transform: scale(0.98);
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-row-start: third-line;
+  grid-row-start: 2;
 }
 
 .projects-container .card {
@@ -523,26 +520,19 @@ transform: scale(0.98);
 /* ABOUT ME SECTION */
 .aboutme-grid {
   display: grid;
-  grid-gap: 2rem;
-  grid-template-rows: [first-line] 5rem [nav-start] 5rem [nav-end] auto [fourth-line];
-  grid-template-columns: repeat(3, 1fr);
-  min-height: 1024px;
-  grid-template-areas:
-    "header header header"
-    "portrait text credentials"
-    "portrait text credentials";
+  grid-gap: 1rem;
+  grid-template-rows: [first] 5rem [one] 1fr [two] 1fr [three] 1fr[four] 8rem [last];
+  grid-template-columns: repeat(12, 1fr);
+  max-height: 1024px;
 }
 
 .aboutme-grid h1 {
-  grid-area: header;
-  grid-row-start: nav-end;
-  grid-column: span 3 / auto;
+  grid-area: 1 / 1 / 2 / -1;
   align-self: center;
 }
 
 .portrait {
-  grid-row-start: nav-end;
-  grid-row: span 2 / auto;
+  grid-area: 2 / 1 / 5 / 4;
   justify-self: left;
   align-self: center;
   width: 280px;
@@ -550,8 +540,7 @@ transform: scale(0.98);
 }
 
 .aboutme-text {
-  grid-row-start: nav-end;
-  grid-column: 2 / 3;
+  grid-area: 2 / 6 / 5 / 8;
   display: block;
   justify-self: center;
   text-align: left;
@@ -569,20 +558,126 @@ transform: scale(0.98);
   min-width: 440px;
 }
 
+
+
+
+
+
+
+
+
 .aboutme-credentials {
+  grid-area: 2 / 10 / 5 / 13;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.education-block {
-  grid-area: education;
-  grid-row: third-line / span 1;
-  grid-column: 3 / 4;
-  justify-self: right;
-  align-self: center;
-  min-width: 275px;
+.aboutme-card {
+  position: relative;
 }
+
+.aboutme-credentials .aboutme-card .face {
+  width: 150px;
+  height: 150px; 
+  border-radius: 100%;
+  transition: 0.5s;
+}
+
+.aboutme-credentials .aboutme-card .face.face1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+
+.aboutme-credentials .aboutme-card:hover .face.face1 {
+  background: #5c4afffb;
+  transform: translateY(0px);
+  transform: scale(1.05);
+}
+
+.aboutme-credentials .aboutme-card .face.face1 .content {
+  opacity: 0.2;
+  transition: 0.5s;
+}
+
+.abtme-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.aboutme-credentials .aboutme-card:hover .face.face1 .content {
+  opacity: 1;
+}
+
+.aboutme-credentials .aboutme-card .face.face1 .content h3 {
+  margin: 10px 0 0;
+  padding: 0;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.aboutme-credentials .aboutme-card .face.face2 {
+  display: none;
+  position: relative;
+  background: none;
+  width: 300px;
+  padding: 1.5rem 0;
+  box-sizing: border-box;
+  transform: translateY(-100px);
+}
+
+.aboutme-credentials .aboutme-card .face.face2 .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.aboutme-credentials .aboutme-card:hover .face.face2 {
+  display: inline-block;
+  transform: translateY(0px);
+  transform: scale(1.05);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.aboutme-credentials .aboutme-card .face.face2 .content p {
+  padding: 0.7rem 0;
+}
+
+.aboutme-credentials .aboutme-card .face.face2 .content a {
+  margin: 15px 0;
+  align-self: center;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  color: #333;
+  padding: 8px;
+  border-radius: 40px;
+  border: 1px solid #333;
+}
+
+.aboutme-credentials .aboutme-card .face.face2 .content a:hover {
+  background: #333;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .subheader {
   font-family: Montseratte, sans-serif;
@@ -636,19 +731,6 @@ transform: scale(0.98);
   font-size: 15px;
   line-height: 18px;
   padding: 0.5rem 0;
-}
-
-.focus-tools {
-  grid-area: focus-tools;
-  grid-row: 4 / 5;
-  grid-column: 3 / 4;
-  justify-self: right;
-  align-self: center;
-  min-width: 275px;
-}
-
-.focus-block {
-  padding: 1rem 0;
 }
 
 .focus-list {
@@ -809,14 +891,16 @@ transform: scale(0.98);
   .home-grid {
     display: grid;
     grid-gap: 0.5rem;
-    grid-template-rows: [first] 60px [one] 4.5rem [two] 18rem [three] 40rem [four] 5rem [five] 5rem [six] 5rem [seven] 8rem [last];
+    grid-template-rows: [first] 60px [one] 4rem [two] 17rem [three] 40rem [four] 5rem [five] 5rem [six] 5rem [seven] 8rem [last];
     grid-template-columns: repeat(12, 1fr);
     justify-items: center;
     align-content: center;
   }
 
   .home-title {
-    grid-area: 3 / 4 / 4 / 10;
+    grid-area: 3 / 1 / 4 / -1;
+    max-width: 480px;
+    padding: 0 2rem;
     align-self: start;
     justify-self: center;
   }
@@ -832,18 +916,20 @@ transform: scale(0.98);
   }
 
   .home-bg-image {
-    grid-area: 4 / 4 / 5 / 9;
+    grid-area: 4 / 1 / 5 / -1;
     place-self: center;
   }
 
   .intro-text {
-    grid-area: 5 / 4 / 7 / 10;
+    grid-area: 5 / 1 / 7 / -1;
     padding: 0;
-    place-self: center;
+    max-width: 500px;
+    justify-self: center;
+    align-self: start;
   }
 
   .projects-button {
-    grid-area: 7 / 1 / 8 / 13;
+    grid-area: 7 / 1 / 8 / -1;
     justify-self: center;
   }
 
@@ -855,7 +941,7 @@ transform: scale(0.98);
     max-width: 840px;
   }
 
-  .home-title {
+  /* .home-title {
     grid-area: home-title;
     display: flex;
     flex-direction: column;
@@ -873,7 +959,6 @@ transform: scale(0.98);
     text-align: center;
     letter-spacing: 0.03em;
     padding: 0px 10px;
-    /*margin: 10px 0px;*/
     text-transform: uppercase;
     color: #1a4351;
   }
@@ -884,7 +969,7 @@ transform: scale(0.98);
     margin: 5px;
     border-radius: 10px;
     background-color: #1f4e5f;
-  }
+  } */
 
   /* ABOUT ME PAGE */
   .aboutme-grid {
@@ -955,7 +1040,7 @@ transform: scale(0.98);
 
   .nav-links {
     position: absolute;
-    top: 65px;
+    top: 55px;
     right: 0px;
     width: 35%;
     height: 450px;
