@@ -72,6 +72,7 @@ html {
   position: absolute;
   height: 42px;
   width: 80px;
+  transform: scale(1.5);
 }
 
 .nav-links {
