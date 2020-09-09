@@ -20,9 +20,9 @@ html {
   --hover2: rgba(17, 120, 216, 0.9);
   --hover3: rgba(26, 67, 81, 0.7);
   --main: rgba(47, 47, 47, 0.9);
-  --main2: rgba(47, 47, 47, 0.8);
   --links: rgba(243, 243, 243, 1);
   --accent: #6ec401;
+  --accent2: #47d881;
 }
 
 .site-wrapper {
@@ -155,13 +155,15 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  grid-area: 2 / 12 / 3 / 13;
+  grid-area: 2 / 12 / 4 / 13;
   justify-self: end;
+  align-self: flex-start;
 }
 
 .social-links img {
-  height: 30px;
-  width: 30px;
+  height: 33px;
+  width: 33px;
+  margin: 0.3rem 0;
 }
 
 .social-links img:hover {
@@ -344,7 +346,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 }
 
 .container .cards .contentBx h2 {
-  color: #32a3b1;
+  color: var(--main);
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 2px;
@@ -353,7 +355,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 }
 
 .container .cards .contentBx p {
-  color: #32a3b1;
+  color: var(--main);
   padding: 15px 0;
   text-align: left;
 }
@@ -362,7 +364,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   display: inline-block;
   padding: 10px 20px;
   border-radius: 40px;
-  color: #32a3b1;
+  color: var(--main);
   font-size: 16px;
   text-decoration: none;
   text-transform: capitalize;
