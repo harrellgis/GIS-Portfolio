@@ -732,31 +732,44 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 
 /* CONTACT SECTION */
 
-/* .contact-grid {
-  display: grid;
-  grid-template-rows: [nav-start] 5rem [nav-end] 7.5rem [third-line] 1fr [fourth-line] 20rem [last-line];
-  grid-template-columns: repeat(12, 1fr);
-}
-
-.contact-grid .subheader {
-  grid-area: 3 / 1 / 4 / -1;
-  align-self: center;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 36px;
-  text-transform: none;
-  color: var(--main);
-  margin: 4rem 0;
-}
-
-.contact-grid div {
-  grid-area: 4 / 1 / 5 / -1;
-  justify-self: center;
-  margin: 5rem 0;
-} */
-
 .contact-content {
+  background-image: url(/Images/Background/Contact_Background.png);
+  background-size: cover;
+  min-height: 900px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4.5rem 0 3rem 0;
+}
+
+.contact-content h3 {
+  font-family: Lato;
+  width: 50rem;
+  text-transform: none;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+.contact-links {
+  width: 8rem;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contact-links img {
+  height: 33px;
+  width: 33px;
+  margin: 0.3rem 0;
+}
+
+.contact-links img:hover {
+  transform: scale(1.1);
 }
 
 /* FOOTER */
