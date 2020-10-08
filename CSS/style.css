@@ -200,11 +200,11 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 }
 
 .mtKenya-rgb {
-  box-shadow: inset 20px -20px 30px #434343;
+  box-shadow: inset 20px -20px 30px #434343, inset -20px -20px 30px #434343;
 }
 
 .mtKenya-fcc {
-  box-shadow: inset 20px 20px 30px black;
+  box-shadow: inset 20px 20px 30px #ffffff;
 }
 
 .imageAfter {
@@ -213,6 +213,16 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   overflow: hidden;
 }
 
+.home-banner {
+  position: absolute;
+  height: 33rem;
+  top: 36.45rem;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  background-color: 434343;
+  z-index: -1;
+}
 /*Controls the image slider effect*/
 /* .home-bg-image:hover .imageAfter {
   width: 50%;
