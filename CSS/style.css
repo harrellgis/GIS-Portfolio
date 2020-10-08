@@ -180,12 +180,12 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 
 .home-bg-image {
   position: relative;
-  width: 612px;
-  height: 810px;
-  grid-area: 3 / 1 / 5 / 6;
+  width: 774px;
+  height: 946px;
+  grid-area: 2 / 1 / 5 / 6;
   z-index: 1;
   justify-self: start;
-  transform: rotate(20deg);
+  padding: 1.5rem;
 }
 
 .imageBox {
@@ -195,25 +195,28 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 }
 
 .imageBox img {
-  width: 612px;
-  height: 810px;
-  padding: 1.5rem;
+  width: 774px;
+  height: 946px;
 }
 
-.imageBefore img {
-  -webkit-filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.4));
-  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.4));
+.mtKenya-rgb {
+  box-shadow: inset 20px -20px 30px #434343;
+}
+
+.mtKenya-fcc {
+  box-shadow: inset 20px 20px 30px black;
 }
 
 .imageAfter {
-  width: 0;
-  transition: 2s;
+  height: 52%;
+  /* transition: 2s; */
   overflow: hidden;
 }
 
-.home-bg-image:hover .imageAfter {
+/*Controls the image slider effect*/
+/* .home-bg-image:hover .imageAfter {
   width: 50%;
-}
+} */
 
 /* HOME CONTENT */
 
