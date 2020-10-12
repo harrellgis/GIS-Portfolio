@@ -183,28 +183,45 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   width: 774px;
   height: 946px;
   grid-area: 2 / 1 / 5 / 6;
-  z-index: 1;
   justify-self: start;
-  padding: 1.5rem;
+  padding: 0 2rem;
 }
 
 .imageBox {
   position: absolute;
+  overflow: hidden;
   top: 0;
   left: 0;
 }
 
+.imageBox::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: rotate(13deg);
+}
+
+/*
+.imageBefore {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../Images/Background/mtKenya_Sentinel2_tcc_blender.jpg);
+} */
+
+/* .imageAfter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../Images/Background/mtKenya_Sentinel2_fcc_blender.jpg);
+  height: 52%; 
+}
+*/
+
 .imageBox img {
   width: 774px;
   height: 946px;
-}
-
-.mtKenya-rgb {
-  box-shadow: inset 20px -20px 30px #434343, inset -20px -20px 30px #434343;
-}
-
-.mtKenya-fcc {
-  box-shadow: inset 20px 20px 30px #ffffff;
 }
 
 .imageAfter {
@@ -216,13 +233,11 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 .home-banner {
   position: absolute;
   width: 100%;
-  height: 33rem;
-  top: 36.45rem;
-  left: 0px;
-  right: 0px;
-  width: 100%;
+  height: 35rem;
+  top: 37.45rem;
   background-color: 434343;
   z-index: -1;
+  transform: rotate(3deg);
 }
 /*Controls the image slider effect*/
 /* .home-bg-image:hover .imageAfter {
@@ -230,15 +245,19 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 } */
 
 /* HOME CONTENT */
+.home-content {
+  grid-area: 1 / 8 / -1 / 13;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-around;
+}
 
 .home-title {
-  grid-area: 3 / 8 / 4 / 13;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  justify-self: center;
-  align-self: center;
-  align-items: left;
+  margin-top: 8rem;
 }
 
 .home-title h1 {
@@ -246,7 +265,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   font-style: normal;
   font-weight: medium;
   font-size: 50px;
-  line-height: 4rem;
+  line-height: 70px;
   text-align: left;
   letter-spacing: 0.4rem;
   color: var(--main);
@@ -262,18 +281,29 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 /* Line-height, also known as leading, controls the amount of space between baselines
 in a block of text. For paragraphs, the ideal line-height is usually between 1.3x and 1.7x the font size */
 
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-grow: 0.25;
+  margin-bottom: 9rem;
+}
+
 /* Keep paragraph spacing between 0.75x and 1.25x of the type size*/
 .intro-text {
-  grid-area: 4 / 8 / 5 / 13;
   align-items: left;
-  font-size: 15px;
+  justify-self: start;
+  margin: 1rem 0;
+}
+
+.intro-text p {
+  font-size: 20px;
   line-height: 20px;
   letter-spacing: 0.2rem;
   line-height: 25px;
-  color: #777777;
-  min-height: 5rem;
-  justify-self: start;
-  padding-top: 1rem;
+  color: #f1f3f6;
+  max-width: 35rem;
+  /* margin-bottom: 3rem; */
 }
 
 .primary-button:hover {
@@ -298,12 +328,11 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 }
 
 .projects-button {
-  grid-area: 4 / 8 / 5 / 13;
   padding: 12px 35px;
   justify-self: start;
-  align-self: center;
 }
 
+/* PROJECT LINK CARDS */
 .page-title {
   font-style: normal;
   font-weight: bold;
@@ -313,7 +342,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   color: var(--main);
 }
 
-/* PROJECT LINK CARDS */
 #proj-cards {
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -414,7 +442,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 /* PROJECTS SECTION */
 .projects-grid {
   display: grid;
-  min-height: 1024px;
+  min-height: 50rem;
   grid-template-rows: [first] 5rem [two] auto [three];
 }
 
@@ -773,10 +801,10 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 
 .contact-content h3 {
   font-family: Lato;
-  width: 50rem;
+  max-width: 38rem;
   text-transform: none;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 30px;
   letter-spacing: 0.1em;
   color: #ffffff;
@@ -808,6 +836,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   left: 0px;
   right: 0px;
   background-color: rgba(255, 255, 255, 0.8);
+  z-index: 3;
 }
 
 .footer {
@@ -819,7 +848,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 2;
 }
 
 .copyright-mark {
