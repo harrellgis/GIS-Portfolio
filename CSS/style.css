@@ -299,45 +299,49 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 
 /* Keep paragraph spacing between 0.75x and 1.25x of the type size*/
 .intro-text {
-  align-items: left;
   justify-self: start;
   margin: 0.5rem 0;
 }
 
 .intro-text p {
   font-size: 20px;
-  line-height: 20px;
+  font-style: normal;
+  line-height: 30px;
   letter-spacing: 0.2rem;
-  line-height: 25px;
   color: #f1f3f6;
-  max-width: 35rem;
+  max-width: 40rem;
   /* margin-bottom: 3rem; */
-}
-
-.primary-button:hover {
-  background-color: var(--hover2);
 }
 
 .primary-button {
   position: relative;
   height: 65px;
-  width: 200px;
-  padding: 22px 20px;
-  margin: 10px 0px;
+  width: 230px;
+  padding: 20px 15px;
+  /* margin: 10px 0px; */
   overflow: hidden;
-  color: #fff;
+  color: var(--main);
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 2px;
-  border-radius: 40px;
-  background: #21383e;
+  border-radius: 8px;
+  background: white;
+  border: 3px solid var(--hover2);
+}
+
+.primary-button:hover {
+  background-color: var(--hover2);
+  color: var(--links);
 }
 
 .projects-button {
-  padding: 12px 35px;
+  /* padding: 12px 35px; */
+  background: none;
+  color: var(--links);
   justify-self: start;
+  margin: 1rem 0;
 }
 
 /* PROJECT LINK CARDS */
@@ -579,7 +583,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 .aboutme-grid {
   display: grid;
   grid-gap: 1rem;
-  grid-template-rows: [first] 5rem [one] 1fr [two] 1fr [three] 1fr[last];
+  grid-template-rows: [first] 7rem [one] 1fr [two] 1fr [three] 1fr[last];
   grid-template-columns: repeat(12, 1fr);
   max-height: 1024px;
 }
@@ -594,12 +598,14 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   grid-area: 2 / 1 / 5 / 4;
   justify-self: left;
   align-self: center;
-  width: 280px;
-  height: 280px;
+  width: 400px;
+  height: 659px;
+  /* width: 280px;
+  height: 280px; */
 }
 
 .aboutme-text {
-  grid-area: 2 / 6 / 5 / 8;
+  grid-area: 2 / 7 / 5 / 9;
   display: block;
   justify-self: center;
   text-align: left;
@@ -816,6 +822,11 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   line-height: 30px;
   letter-spacing: 0.1em;
   color: #ffffff;
+}
+
+.contact-button {
+  background: none;
+  color: var(--main);
 }
 
 .contact-links {
