@@ -31,6 +31,8 @@ html {
   padding-right: 20px;
   padding-left: 20px;
   max-width: 1440px;
+  /* overflow: hidden; */
+  /* This may be a key to why containers wont align, something to do with mobile menu? */
 }
 
 /* NAVBAR */
@@ -112,7 +114,7 @@ html {
 }
 
 .burger {
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -146,10 +148,9 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 .home-grid {
   display: grid;
   grid-gap: 0.5rem;
-  grid-template-rows: [first] 55px [one] 4.5rem [two] 35% [three] 35% [four] 8rem [last];
+  grid-template-rows: [first] 55px [one] 6rem [two] 35% [three] 35% [four] 8rem [last];
   grid-template-columns: repeat(12, 1fr);
-  justify-items: center;
-  align-content: center;
+  place-items: center;
 }
 
 /*SOCIAL LINKS*/
@@ -157,8 +158,8 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  grid-area: 2 / 12 / 4 / 13;
+  justify-content: space-around;
+  grid-area: 2 / 12 / 3 / 13;
   justify-self: end;
   align-self: flex-start;
 }
@@ -177,7 +178,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   position: relative;
   width: 774px;
   height: 946px;
-  grid-area: 2 / 3 / 5 / 6;
+  grid-area: 2 / 3 / -1 / 6;
   transform: scale(0.9);
   z-index: -1;
   /* box-shadow: inset 20px -20px 30px #434343, inset -20px -20px 30px #434343; */
@@ -234,8 +235,8 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 .home-banner {
   position: absolute;
   width: 100%;
-  height: 33.5rem;
-  top: 36.4rem;
+  height: 30rem;
+  top: 558px;
   background-color: 434343;
   z-index: -2;
   /* transform: rotate(3deg); */
@@ -250,7 +251,6 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   grid-area: 1 / 8 / -1 / 13;
   display: flex;
   flex-direction: column;
-  align-items: left;
   justify-content: space-around;
 }
 
@@ -258,7 +258,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin-top: 6rem;
+  margin-bottom: 3rem;
 }
 
 .home-title h1 {
@@ -286,8 +286,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  flex-grow: 0.25;
-  margin-bottom: 10rem;
 }
 
 /* Keep paragraph spacing between 0.75x and 1.25x of the type size*/
@@ -345,7 +343,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 }
 
 #proj-cards {
-  margin: 6.5rem 0;
+  margin: 7rem 0;
 }
 
 .project-cards {
@@ -567,12 +565,11 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 /* ABOUT ME SECTION */
 #about-me {
   margin-top: 5rem;
-  margin-bottom: 15rem;
+  margin-bottom: 17rem;
 }
 
 .aboutme-grid {
   display: grid;
-  /* grid-gap: 1rem; */
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(12, 1fr);
   max-height: 1024px;
@@ -588,6 +585,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   grid-area: 2 / 1 / 5 / 4;
   width: 400px;
   height: 659px;
+  transform: scale(0.9);
 }
 
 .aboutme-text {
@@ -982,16 +980,18 @@ make the page-container stay the full width of the page. */
     position: absolute;
     top: 55px;
     right: 0px;
-    width: 35%;
+    width: 50%;
     height: 450px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 1);
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translateX(100%);
+    transform: translateX(110%);
     transition: transform 0.8s ease-in;
+    z-index: -2;
   }
 
   .nav-links .nav-link {
