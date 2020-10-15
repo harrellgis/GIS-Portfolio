@@ -78,7 +78,7 @@ html {
 .nav-links {
   display: flex;
   height: 55px;
-  width: 40%;
+  width: 50%;
   align-items: center;
   justify-content: space-around;
 }
@@ -126,6 +126,7 @@ html {
   height: 40px;
   visibility: hidden;
   right: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 .burger div {
@@ -186,7 +187,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   width: 774px;
   height: 946px;
   grid-area: 3 / 8 / 5 / 11;
-  transform: scale(0.9);
+  transform: scale(1);
   z-index: -1;
   /* box-shadow: inset 20px -20px 30px #434343, inset -20px -20px 30px #434343; */
   /* transform: rotate(3deg); */
@@ -207,13 +208,13 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   transform: rotate(13deg);
 } */
 
-/*
 .imageBefore {
+  /* height: 48%; */
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
-  background-image: url(../Images/Background/mtKenya_Sentinel2_tcc_blender.jpg);
-} */
+  /* transform: rotate(180deg); */
+}
 
 /* .imageAfter {
   position: absolute;
@@ -226,6 +227,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 
 .imageAfter {
   height: 52%;
+  /* visibility: hidden; */
   /* transition: 2s; */
 }
 
@@ -254,14 +256,14 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 60rem;
+  height: 946px;
 }
 
 .home-title {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  /* margin-bottom: 3rem; */
+  margin-top: 2rem;
 }
 
 .home-title h1 {
@@ -289,8 +291,8 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 .banner-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height: 20rem;
+  justify-content: space-between;
+  height: 23rem;
 }
 
 .intro-text {
@@ -332,7 +334,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   background: none;
   color: var(--links);
   justify-self: start;
-  margin: 1.5rem 0;
+  /* margin: 1.5rem 0; */
 }
 
 /* PROJECT LINK CARDS */
@@ -356,7 +358,10 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   grid-gap: 0.5rem;
   justify-items: center;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  );
   min-height: 35rem;
 }
 
@@ -461,7 +466,10 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   grid-gap: 0.4rem;
   justify-items: center;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  );
   grid-row-start: 2;
 }
 
@@ -664,7 +672,10 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   height: 65px;
 }
 
-.aboutme-credentials .aboutme-card:hover .face.face1 .content {
+.aboutme-credentials
+  .aboutme-card:hover
+  .face.face1
+  .content {
   transform: translateY(-20px);
   background: var(--main);
   border-radius: 100%;
@@ -703,7 +714,11 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   transform: translateY(-50px);
 }
 
-.aboutme-credentials .aboutme-card .face.face2 .content a:hover {
+.aboutme-credentials
+  .aboutme-card
+  .face.face2
+  .content
+  a:hover {
   background: #333;
   color: #fff;
 }
@@ -789,12 +804,14 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 .contact-content {
   background-image: url(/Images/Background/Contact_Background.png);
   background-size: cover;
-  min-height: 900px;
+  background-attachment: fixed;
+  background-position: center center;
+  min-height: 1000px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  padding: 4.5rem 0 3rem 0;
+  padding: 6rem 0;
 }
 
 .contact-content h3 {
@@ -828,7 +845,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 }
 
 .contact-button {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 /* FOOTER */
@@ -858,6 +875,21 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   font-size: 12px;
   padding: 12px;
 }
+
+/* ***************MEDIA QUERIES******************* */
+/* https://www.smashingmagazine.com/2013/07/simple
+-responsive-images-with-css-background-images/ */
+
+/* @media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-moz-min-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) { 
+    /* styles for Retina-type displays */
+/* } */
 
 @media screen and (max-width: 1024px) {
   .imageBox img {
@@ -977,6 +1009,14 @@ make the page-container stay the full width of the page. */
   .burger {
     visibility: visible;
     cursor: pointer;
+  }
+
+  #nav-wrapper {
+    position: fixed;
+  }
+
+  #navbar {
+    position: fixed;
   }
 
   .nav-links {
