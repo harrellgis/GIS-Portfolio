@@ -31,7 +31,7 @@ html {
   padding-right: 20px;
   padding-left: 20px;
   max-width: 1440px;
-  /* overflow: hidden; */
+  overflow: hidden;
   /* This may be a key to why containers wont align, something to do with mobile menu? */
 }
 
@@ -188,6 +188,7 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   height: 946px;
   grid-area: 3 / 8 / 5 / 11;
   transform: scale(1);
+  transition: 2s;
   z-index: -1;
   /* box-shadow: inset 20px -20px 30px #434343, inset -20px -20px 30px #434343; */
   /* transform: rotate(3deg); */
@@ -236,15 +237,6 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   height: 946px;
 }
 
-.home-banner {
-  position: absolute;
-  width: 100%;
-  height: 40rem;
-  top: 45rem;
-  background-color: 434343;
-  z-index: -2;
-}
-
 /*Controls the image slider effect*/
 /* .home-bg-image:hover .imageAfter {
   height: 52%;
@@ -288,6 +280,16 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 in a block of text. For paragraphs, the ideal line-height is usually between 1.3x and 1.7x the font size */
 
 /* Keep paragraph spacing between 0.75x and 1.25x of the type size*/
+
+.home-banner {
+  position: absolute;
+  width: 100%;
+  height: 40rem;
+  top: 721px;
+  background-color: 434343;
+  z-index: -2;
+}
+
 .banner-content {
   display: flex;
   flex-direction: column;
@@ -583,7 +585,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(12, 1fr);
-  max-height: 1024px;
+  max-height: 1220px;
 }
 
 .aboutme.page-title {
@@ -596,7 +598,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   grid-area: 2 / 1 / 5 / 4;
   width: 400px;
   height: 659px;
-  transform: scale(0.9);
+  transform: scale(0.8);
 }
 
 .aboutme-text {
@@ -816,7 +818,8 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 
 .contact-content h3 {
   font-family: Lato;
-  max-width: 38rem;
+  min-width: 20rem;
+  padding: 0 2rem;
   text-transform: none;
   font-weight: 600;
   font-size: 20px;
@@ -891,79 +894,59 @@ only screen and (min-resolution: 2dppx) {
     /* styles for Retina-type displays */
 /* } */
 
-@media screen and (max-width: 1024px) {
-  .imageBox img {
+@media screen and (max-width: 1300px) {
+  .home-bg-image {
     transform: scale(0.8);
-    transition: 1s;
   }
+}
 
-  .imageBefore .imageAfter {
-    transform: scale(0.8);
+@media screen and (max-width: 1024px) {
+  #about-me {
+    margin-top: 5rem;
+    margin-bottom: 8rem;
   }
 
   .portrait {
     grid-area: 2 / 3 / 3 / 6;
     justify-self: center;
-    /* align-self: start; */
-    width: 280px;
-    height: 280px;
+    transform: scale(0.8);
   }
 
   .aboutme-text {
-    grid-area: 3 / 3 / 5 / 6;
-    padding-top: 4.5rem;
+    grid-area: 2 / 8 / 3 / -1;
   }
 
   .aboutme-credentials {
-    grid-area: 2 / 7 / 5 / 13;
+    flex-direction: row;
+    grid-area: 3 / 3 / 5 / 11;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .home-grid {
-    display: grid;
-    grid-gap: 0.5rem;
-    grid-template-rows: [first] 55px [one] 4rem [two] 17rem [three] 40rem [four] 5rem [five] 5rem [six] 5rem [seven] 8rem [last];
-    grid-template-columns: repeat(12, 1fr);
-    justify-items: center;
-    align-content: center;
-  }
-
-  .home-title {
-    grid-area: 3 / 1 / 4 / -1;
-    max-width: 480px;
-    padding: 0 2rem;
-    align-self: start;
-    justify-self: center;
-  }
-
-  .home-title h1 {
-    font-size: 40px;
-    line-height: 3rem;
-  }
-
-  .home-title .green {
-    font-size: 52px;
-    line-height: 3.5rem;
+  #home {
+    margin-bottom: 13rem;
   }
 
   .home-bg-image {
-    grid-area: 4 / 1 / 5 / -1;
-    place-self: center;
+    /* transform: scale(1.2); */
+    grid-area: 3 / 1 / 5 / -1;
   }
 
-  .intro-text {
-    grid-area: 5 / 1 / 7 / -1;
-    padding: 0;
-    max-width: 500px;
-    justify-self: center;
-    align-self: start;
+  .home-title {
+    margin-top: 8rem;
   }
 
-  .proj-button {
-    grid-area: 7 / 1 / 8 / -1;
-    justify-self: center;
-    width: 270px;
+  .home-content {
+    height: 85rem;
+    grid-area: 1 / 4 / -1 / 10;
+  }
+
+  .home-button {
+    align-self: center;
+  }
+
+  .home-banner {
+    height: 45rem;
   }
 }
 
@@ -971,41 +954,32 @@ only screen and (min-resolution: 2dppx) {
 the navbar still spans 100% (larger than the page container). I need to find out how to
 make the page-container stay the full width of the page. */
 @media screen and (max-width: 840px) {
-  /* ABOUT ME PAGE */
   .aboutme-grid {
     display: grid;
-    grid-gap: 1.5rem;
-    grid-template-rows: [first] 10rem [one] 5rem [two] 5rem [two] 5rem [three] 5rem [four] 15rem [five] 8rem [last];
+    grid-template-rows: repeat(8, 1fr);
     grid-template-columns: repeat(12, 1fr);
-    max-height: 2000px;
+    min-height: 1650px;
   }
 
   .portrait {
-    grid-area: 2 / 1 / 4 / -1;
-    justify-self: center;
+    transform: scale(0.7);
+    grid-area: 2 / 1 / 5 / -1;
+    align-self: center;
   }
 
   .aboutme-text {
-    grid-area: 4 / 1 / 6 / -1;
-    justify-self: center;
-    align-self: start;
+    grid-area: 4 / 1 / 9 / -1;
     padding-top: 2.5rem;
-    max-width: 450px;
   }
 
   .aboutme-credentials {
-    justify-self: center;
-    grid-area: 8 / 1 / 9 / -1;
-  }
-
-  .contact-grid {
-    grid-template-rows: [nav-start] 3rem [nav-end] 7.5rem [third-line] 1fr [fourth-line] 20rem [last-line];
-    min-height: 900px;
+    grid-area: 9 / 3 / 10 / 11;
+    margin-bottom: 5rem;
+    align-self: center;
   }
 }
 
 @media screen and (max-width: 768px) {
-  /* Navbar */
   .burger {
     visibility: visible;
     cursor: pointer;
@@ -1041,13 +1015,9 @@ make the page-container stay the full width of the page. */
     width: 100%;
   }
 
-  /* .aboutme-credentials .aboutme-card:hover .face.face1 .content { 
-    This might be the key, a hover triggering a child element to change style
-  */
-
-  /* .nav-links .nav-link:hover {
+  .nav-links .nav-link:hover {
     background: var(--main);
-  } */
+  }
 
   .nav-link .nav-link-wrap {
     display: flex;
@@ -1067,14 +1037,20 @@ make the page-container stay the full width of the page. */
 }
 
 @media screen and (max-width: 686px) {
-  .projects-grid {
-    grid-template-rows: [first] 5rem [two] auto [three] 8rem [last];
+  .home-bg-image {
+    transform: scale(0.6);
   }
 
-  .projects-container .view-more-wrapper {
-    justify-content: center;
-    align-self: center;
-    margin: 8rem 0;
+  .home-banner {
+    top: 738px;
+  }
+
+  .projects-grid {
+    min-height: 1540px;
+  }
+
+  .aboutme-credentials {
+    grid-area: 9 / 1 / 10 / -1;
   }
 }
 
