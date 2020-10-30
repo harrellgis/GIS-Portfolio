@@ -37,9 +37,6 @@ html {
 /* NAVBAR */
 #nav-wrapper {
   position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
   height: 55px;
   width: 100%;
   background-color: var(--main);
@@ -132,7 +129,7 @@ html {
   width: 35px;
   height: 5px;
   border-radius: 50px;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .burger :nth-child(2) {
@@ -175,8 +172,8 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
 }
 
 .social-links img {
-  height: 33px;
-  width: 33px;
+  height: 28px;
+  width: 28px;
   margin: 0.3rem 0;
 }
 
@@ -269,7 +266,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   width: 100%;
   height: 40rem;
   top: 43.3rem;
-  background-color: 434343;
+  background-color: #434343;
   z-index: -2;
 }
 
@@ -567,7 +564,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 
 .aboutme-grid {
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: [first] 5rem [second] repeat(3, 1fr);
   grid-template-columns: repeat(12, 1fr);
   max-height: 1220px;
 }
@@ -587,7 +584,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 
 .aboutme-text {
   grid-area: 2 / 6 / 5 / 9;
-  display: block;
   justify-self: center;
   text-align: left;
   align-self: center;
@@ -629,7 +625,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 .aboutme-credentials .aboutme-card .face.face1 {
   width: 120px;
   height: 120px;
-  /* margin: auto; */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -639,7 +634,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 }
 
 .aboutme-credentials .aboutme-card:hover .face.face1 {
-  /* background: #5c4afffb; */
   transform: translateY(0px);
   transform: scale(1.05);
 }
@@ -668,14 +662,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   width: 120px;
   height: 120px;
   opacity: 1;
-}
-
-.aboutme-credentials .aboutme-card .face.face1 .content h3 {
-  margin: 10px 0 0;
-  padding: 0;
-  color: #ffffff;
-  text-align: center;
-  font-size: 1.3em;
 }
 
 .aboutme-credentials .aboutme-card .face.face2 {
@@ -709,18 +695,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   color: #fff;
 }
 
-.subheader {
-  font-family: Montseratte, sans-serif;
-  font-style: normal;
-  font-weight: medium;
-  font-size: 25px;
-  line-height: 26px;
-  letter-spacing: 1px;
-  text-transform: capitalize;
-  padding: 0.5rem 0;
-  color: var(--accent);
-}
-
 .ed .content {
   align-self: left;
 }
@@ -735,7 +709,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   font-size: 20px;
   line-height: 22px;
   color: #21383e;
-  /* var(--primary); */
   padding: 0.2rem 0;
 }
 
@@ -754,14 +727,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 .department {
   font-style: italic;
   font-weight: 500;
-  font-size: 15px;
-  line-height: 18px;
-  padding: 0.5rem 0;
-}
-
-.minor {
-  font-style: normal;
-  font-weight: normal;
   font-size: 15px;
   line-height: 18px;
   padding: 0.5rem 0;
@@ -887,6 +852,7 @@ only screen and (min-resolution: 2dppx) {
 /* } */
 
 @media screen and (max-width: 1300px) {
+  /* HOME SECTION  */
   .home-bg-image {
     grid-area: 3 / 5 / 5 / -1;
     transform: scale(0.8);
@@ -903,14 +869,14 @@ only screen and (min-resolution: 2dppx) {
 }
 
 @media screen and (max-width: 1024px) {
+  /* ABOUT ME SECTION  */
   #about-me {
     margin-top: 5rem;
     margin-bottom: 8rem;
   }
 
   .portrait {
-    grid-area: 2 / 3 / 3 / 5;
-    justify-self: center;
+    grid-area: 2 / 2 / 3 / 5;
     transform: scale(0.8);
   }
 
@@ -928,16 +894,17 @@ only screen and (min-resolution: 2dppx) {
 /* Collapse to single-column */
 /* Add inset shadow on home image */
 @media screen and (max-width: 1000px) {
+  /* HOME SECTION  */
   #home {
     margin-bottom: 12rem;
   }
 
   .home-grid {
-    grid-template-rows: [first] 55px [one] 8rem [two] 1fr [three] 1fr [four] 1fr [five] 8rem [last];
+    grid-template-rows: [first] 55px [one] auto [two] 1fr [three] 1fr [four] 1fr [five] 8rem [last];
   }
 
   .social-links {
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
 
   .home-bg-image {
@@ -957,7 +924,8 @@ only screen and (min-resolution: 2dppx) {
 
   .home-content {
     height: 48rem;
-    grid-area: 1 / 3 / 5 / 11;
+    grid-area: 1 / 1 / 5 / -1;
+    max-width: 39rem;
     justify-content: space-between;
   }
 
@@ -970,8 +938,8 @@ only screen and (min-resolution: 2dppx) {
   }
 
   .home-banner {
-    top: 37rem;
-    height: 53rem;
+    top: 36.5rem;
+    height: 52.55rem;
   }
 
   .banner-content {
@@ -979,26 +947,32 @@ only screen and (min-resolution: 2dppx) {
   }
 }
 
-/* Around here, the grids stop conforming to the page-container and become smaller. However,
-the navbar still spans 100% (larger than the page container). I need to find out how to
-make the page-container stay the full width of the page. */
 @media screen and (max-width: 840px) {
+  /* PROJECTS SECTION  */
+  #projects {
+    margin-bottom: 8rem;
+  }
+
+  /* ABOUT ME SECTION  */
   .aboutme-grid {
     display: grid;
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: [first] 5rem [second] repeat(7, 1fr) [last];
     grid-template-columns: repeat(12, 1fr);
-    min-height: 1650px;
+    min-height: 1500px;
   }
 
   .portrait {
     transform: scale(0.7);
     grid-area: 2 / 1 / 5 / -1;
+    justify-self: center;
     align-self: center;
+    margin-top: 4rem;
   }
 
   .aboutme-text {
     grid-area: 4 / 1 / 9 / -1;
     padding-top: 2.5rem;
+    margin-top: 4rem;
   }
 
   .aboutme-credentials {
@@ -1045,10 +1019,6 @@ make the page-container stay the full width of the page. */
     width: 100%;
   }
 
-  /* .nav-links .nav-link:hover {
-    background: var(--main);
-  } */
-
   .nav-link .nav-link-wrap {
     display: flex;
     flex-direction: row;
@@ -1061,16 +1031,13 @@ make the page-container stay the full width of the page. */
     color: var(--main);
   }
 
-  /* .nav-link a:hover {
-    color: var(--links);
-  } */
-
+  /* HOME SECTION  */
   .home-title {
     margin-top: 0;
   }
 
   .contact-content h3 {
-    padding: 0 3.5rem;
+    padding: 0 3rem;
   }
 }
 
@@ -1083,9 +1050,15 @@ make the page-container stay the full width of the page. */
     grid-area: 9 / 1 / -1 / -1;
     justify-content: space-around;
   }
+
+  .contact-content h3 {
+    font-size: 18px;
+    padding: 0 2rem;
+  }
 }
 
 @media screen and (max-width: 470px) {
+  /* HOME SECTION  */
   #home {
     margin-bottom: 0;
   }
@@ -1102,7 +1075,7 @@ make the page-container stay the full width of the page. */
 
   .home-banner {
     top: 29rem;
-    height: 46rem;
+    height: 45.09rem;
   }
 
   .home-content {
@@ -1124,21 +1097,24 @@ make the page-container stay the full width of the page. */
 
   .intro-text p {
     font-size: 14px;
-    /* letter-spacing: 0.3rem; */
     line-height: 1.5rem;
+  }
+
+  /* PROJECT SECTION  */
+  #proj-cards {
+    margin-top: 0;
   }
 
   #projects {
     margin-bottom: 15rem;
   }
-
-  /* .aboutme-credentials {
-    grid-area: 9 / 1 / -1 / -1;
-  } */
 }
 
+/* MOBILE LAYOUT */
 @media screen and (max-width: 425px) {
+  /* HOME SECTION  */
   .social-links {
+    height: 6rem;
     transform: scale(0.65);
   }
 
@@ -1147,29 +1123,41 @@ make the page-container stay the full width of the page. */
   }
 
   .home-banner {
-    top: 30rem;
-    height: 45rem;
+    top: 29rem;
+    height: 44rem;
   }
 
   .home-content {
     height: 43rem;
   }
 
+  /* PROJECT CARDS SECTION  */
   #proj-cards {
     margin-top: 0;
   }
 
+  /* PROJECTS SECTION  */
+  #projects {
+    margin-bottom: 12rem;
+  }
+
+  .projects-grid {
+    min-height: 100rem;
+  }
+
+  /* ABOUT ME SECTION  */
   .aboutme-grid {
     min-height: 1600px;
   }
 
-  .aboutme-text {
-    grid-area: 4 / 1 / 9 / -1;
-    padding: 1rem 0;
+  .aboutme-grid h1 {
+    margin-bottom: 3rem;
+    margin-left: 20px;
   }
 
-  .portrait {
-    grid-area: 2 / 1 / 5 / -1;
+  .aboutme-text {
+    grid-area: 5 / 1 / -1 / -1;
+    padding: 1rem 0;
   }
 
   .aboutme-text p {
@@ -1179,12 +1167,124 @@ make the page-container stay the full width of the page. */
 
   .aboutme-credentials {
     grid-column: 1 / -1;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 0;
   }
 
+  .aboutme-credentials .aboutme-card {
+    margin: 1rem 0;
+  }
+
+  .aboutme-credentials .aboutme-card .face {
+    width: 240px;
+    height: 160px;
+    transition: 0.5s;
+  }
+
+  .abtme-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .aboutme-credentials
+    .aboutme-card:hover
+    .face.face1
+    .content {
+    width: 96px;
+    height: 96px;
+  }
+
+  .aboutme-credentials .aboutme-card .face.face2 .content {
+    padding-top: 2rem;
+  }
+
+  .degree {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .school {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .department {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .focus-list li {
+    font-size: 12px;
+  }
+
+  .tools-list li {
+    font-size: 12px;
+  }
+
+  /* CONTACT SECTION  */
   .contact-content h3 {
     font-size: 18px;
     padding: 0 2rem;
   }
+}
+
+@media screen and (max-width: 375px) {
+  .home-title {
+    /* padding: 0 1rem; */
+  }
+
+  .home-title h1 {
+    font-size: 22px;
+    letter-spacing: 0.1rem;
+    padding: 0.8rem 0;
+  }
+
+  .home-bg-image {
+    transform: scale(0.4);
+  }
+
+  .home-title .green {
+    font-size: 40px;
+    letter-spacing: 0.1rem;
+  }
+
+  .intro-text {
+    min-width: 300px;
+  }
+
+  .page-title {
+    margin-left: 0;
+  }
+
+  .aboutme-grid h1 {
+    margin-left: 0;
+  }
+
+  .aboutme-text {
+    padding: 1rem;
+    margin-top: 6rem;
+  }
+
+  .aboutme-text p {
+    padding: 0;
+    min-width: 300px;
+  }
+
+  .aboutme-credentials {
+    margin-top: 3rem;
+  }
+
+  .project-cards {
+    padding: 0;
+  }
+
+  .contact-content h3 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
 }
 
 /* LINK FADE ANIMATION */
