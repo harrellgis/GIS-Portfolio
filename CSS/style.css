@@ -1102,6 +1102,10 @@ only screen and (min-resolution: 2dppx) {
   #projects {
     margin-bottom: 15rem;
   }
+
+  .aboutme-grid {
+    min-height: 1600px;
+  }
 }
 
 /* MOBILE LAYOUT */
@@ -1228,57 +1232,6 @@ only screen and (min-resolution: 2dppx) {
 }
 
 @media screen and (max-width: 375px) {
-  .home-title h1 {
-    font-size: 22px;
-    letter-spacing: 0.1rem;
-    padding: 0.8rem 0;
-  }
-
-  .home-bg-image {
-    transform: scale(0.4);
-  }
-
-  .home-title .green {
-    font-size: 40px;
-    letter-spacing: 0.1rem;
-  }
-
-  .intro-text {
-    min-width: 300px;
-  }
-
-  .page-title {
-    margin-left: 0;
-  }
-
-  .aboutme-grid h1 {
-    margin-left: 0;
-  }
-
-  .aboutme-text {
-    padding: 1rem;
-    margin-top: 7rem;
-  }
-
-  .aboutme-text p {
-    padding: 0;
-    min-width: 300px;
-  }
-
-  .aboutme-credentials {
-    margin-top: 3rem;
-  }
-
-  .project-cards {
-    padding: 0;
-  }
-
-  .contact-content h3 {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 320px) {
   .burger {
     transform: scale(0.75);
   }
@@ -1296,17 +1249,26 @@ only screen and (min-resolution: 2dppx) {
     grid-gap: 0;
   }
 
+  .home-title .green {
+    font-size: 40px;
+    letter-spacing: 0.1rem;
+  }
+
+  .page-title {
+    margin-left: 0;
+  }
+
+  .aboutme-grid h1 {
+    margin-left: 0;
+  }
+
   .home-title h1 {
     padding: 0.3rem;
   }
 
-  .home-bg-image {
-    transform: scale(0.35);
-  }
-
   .home-banner {
-    top: 26rem;
-    height: 46rem;
+    top: 26.5rem;
+    height: 45.5rem;
   }
 
   .banner-content {
@@ -1315,9 +1277,8 @@ only screen and (min-resolution: 2dppx) {
 
   .home-content {
     padding: 0;
-    max-width: 18rem;
+    max-width: 19rem;
     height: 44rem;
-    justify-self: start;
     padding-bottom: 3rem;
   }
 
@@ -1381,7 +1342,6 @@ only screen and (min-resolution: 2dppx) {
   }
 
   .aboutme-text {
-    max-width: 18.5rem;
     padding: 1rem 0;
   }
 
@@ -1390,8 +1350,8 @@ only screen and (min-resolution: 2dppx) {
   }
 
   .aboutme-text p {
-    max-width: 14rem;
     padding: 0 1rem;
+    min-width: 18rem;
   }
 
   .projects-grid {
@@ -1436,9 +1396,23 @@ only screen and (min-resolution: 2dppx) {
     padding: 6px;
   }
 
-  .contact-content {
-    justify-content: space-around;
-    padding-top: 12rem;
+  .contact-content h3 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .home-bg-image {
+    transform: scale(0.35);
+  }
+
+  .home-banner {
+    top: 27.5rem;
+    height: 44.5rem;
+  }
+
+  .intro-text {
+    padding-left: 0.5rem;
   }
 }
 
