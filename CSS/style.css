@@ -1250,7 +1250,7 @@ only screen and (min-resolution: 2dppx) {
   }
 
   .home-title .green {
-    font-size: 40px;
+    font-size: 38px;
     letter-spacing: 0.1rem;
   }
 
@@ -1276,7 +1276,6 @@ only screen and (min-resolution: 2dppx) {
   }
 
   .home-content {
-    padding: 0;
     max-width: 19rem;
     height: 44rem;
     padding-bottom: 3rem;
@@ -1341,6 +1340,10 @@ only screen and (min-resolution: 2dppx) {
     transform: scale(0.65);
   }
 
+  .aboutme-grid {
+    min-height: 1700px;
+  }
+
   .aboutme-text {
     padding: 1rem 0;
   }
@@ -1361,7 +1364,7 @@ only screen and (min-resolution: 2dppx) {
   .projects-container {
     grid-template-columns: repeat(
       auto-fit,
-      minmax(285px, 1fr)
+      minmax(260px, 1fr)
     );
   }
 
@@ -1397,11 +1400,13 @@ only screen and (min-resolution: 2dppx) {
   }
 
   .contact-content h3 {
-    font-size: 16px;
+    font-size: 14px;
+    min-width: 16rem;
+    padding: 0 0.5rem;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 320px) {
   .home-bg-image {
     transform: scale(0.35);
   }
@@ -1413,6 +1418,15 @@ only screen and (min-resolution: 2dppx) {
 
   .intro-text {
     padding-left: 0.5rem;
+  }
+
+  .project-cards {
+    padding: 0;
+  }
+
+  .aboutme-text p {
+    padding: 0 0.5rem;
+    min-width: 16rem;
   }
 }
 
