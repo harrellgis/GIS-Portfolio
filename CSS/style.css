@@ -1230,10 +1230,6 @@ only screen and (min-resolution: 2dppx) {
 }
 
 @media screen and (max-width: 375px) {
-  .home-title {
-    /* padding: 0 1rem; */
-  }
-
   .home-title h1 {
     font-size: 22px;
     letter-spacing: 0.1rem;
