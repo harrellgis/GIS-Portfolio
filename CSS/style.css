@@ -141,10 +141,6 @@ html {
 }
 
 /* HOME SECTION */
-/* Choose which elements span how far (title, call to action, mtKenya info, and give them all a span-property so
-each element doesn't need its own column and row property. Then this can be manipulated by media queries as found
-in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
-
 .grid {
   padding: 0;
 }
@@ -211,11 +207,6 @@ in: https://css-tricks.com/things-ive-learned-css-grid-layout/ */
   width: 774px;
   height: 946px;
 }
-
-/*Controls the image slider effect*/
-/* .home-bg-image:hover .imageAfter {
-  height: 52%;
-} */
 
 /* HOME CONTENT */
 .home-content {
@@ -365,7 +356,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   border-radius: 40px;
   box-shadow: 20px 20px 40px rgba(55, 84, 170, 0.1),
     20px -20px 40px rgba(255, 255, 255, 1);
-  /* inset 4px 4px rgba(255, 255, 255, 0.5); */
 }
 
 .container .cards:hover {
@@ -749,7 +739,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 .contact-page {
   background-image: url(/Images/Background/Contact_Background.png);
   background-size: cover;
-  /* background-attachment: fixed; */
   background-position: center center;
   display: flex;
   align-items: center;
@@ -834,16 +823,14 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 /* https://www.smashingmagazine.com/2013/07/simple
 -responsive-images-with-css-background-images/ */
 
-/* @media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (min--moz-device-pixel-ratio: 2),
-only screen and (-moz-min-device-pixel-ratio: 2),
-only screen and (-o-min-device-pixel-ratio: 2/1),
-only screen and (min-device-pixel-ratio: 2),
-only screen and (min-resolution: 192dpi),
-only screen and (min-resolution: 2dppx) { 
-    /* styles for Retina-type displays */
-/* } */
+/* @media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-moz-min-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  /* styles for Retina-type displays } */
 
 @media screen and (max-width: 1300px) {
   /* HOME SECTION  */
@@ -919,7 +906,7 @@ only screen and (min-resolution: 2dppx) {
   .home-content {
     height: 48rem;
     grid-area: 1 / 1 / 5 / -1;
-    max-width: 39rem;
+    max-width: 35rem;
     justify-content: space-between;
   }
 
@@ -1026,10 +1013,6 @@ only screen and (min-resolution: 2dppx) {
   }
 
   /* HOME SECTION  */
-  .home-title {
-    margin-top: 0;
-  }
-
   .contact-content h3 {
     padding: 0 3rem;
   }
@@ -1038,6 +1021,10 @@ only screen and (min-resolution: 2dppx) {
 @media screen and (max-width: 686px) {
   #home {
     margin-bottom: 8rem;
+  }
+
+  .project-cards {
+    grid-gap: 4rem;
   }
 
   .aboutme-credentials {
@@ -1073,9 +1060,13 @@ only screen and (min-resolution: 2dppx) {
   }
 
   .home-content {
-    height: 40rem;
+    height: 43rem;
     grid-area: 1 / 1 / 5 / -1;
     padding: 0 1rem;
+  }
+
+  .home-title {
+    margin: 0;
   }
 
   .home-title h1 {
@@ -1099,12 +1090,74 @@ only screen and (min-resolution: 2dppx) {
     margin-top: 0;
   }
 
+  .projects-container {
+    grid-gap: 6rem;
+  }
+
   #projects {
     margin-bottom: 15rem;
   }
 
   .aboutme-grid {
-    min-height: 1600px;
+    min-height: 110rem;
+  }
+
+  .aboutme-credentials .aboutme-card {
+    margin: 1rem 0;
+  }
+
+  .aboutme-credentials .aboutme-card .face {
+    width: 240px;
+    height: 160px;
+    transition: 0.5s;
+  }
+
+  .abtme-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .aboutme-credentials
+    .aboutme-card:hover
+    .face.face1
+    .content {
+    width: 96px;
+    height: 96px;
+  }
+
+  .aboutme-credentials .aboutme-card .face.face2 .content {
+    padding-top: 2rem;
+  }
+
+  .aboutme-credentials .aboutme-card .face.face2 .ed {
+    padding: 2rem 1rem;
+  }
+
+  .degree {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .school {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .department {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .focus-list li {
+    font-size: 12px;
+  }
+
+  .tools-list li {
+    font-size: 12px;
+  }
+
+  .contact-page {
+    min-height: 75rem;
   }
 }
 
@@ -1127,10 +1180,6 @@ only screen and (min-resolution: 2dppx) {
 
   .banner-content {
     margin-bottom: 0.5rem;
-  }
-
-  .home-content {
-    height: 41rem;
   }
 
   /* PROJECT CARDS SECTION  */
@@ -1174,57 +1223,15 @@ only screen and (min-resolution: 2dppx) {
     margin-bottom: 0;
   }
 
-  .aboutme-credentials .aboutme-card {
-    margin: 1rem 0;
-  }
-
-  .aboutme-credentials .aboutme-card .face {
-    width: 240px;
-    height: 160px;
-    transition: 0.5s;
-  }
-
-  .abtme-icon {
-    width: 52px;
-    height: 52px;
-  }
-
-  .aboutme-credentials
-    .aboutme-card:hover
-    .face.face1
-    .content {
-    width: 96px;
-    height: 96px;
-  }
-
-  .aboutme-credentials .aboutme-card .face.face2 .content {
-    padding-top: 2rem;
-  }
-
-  .degree {
-    font-size: 15px;
-    line-height: 20px;
-  }
-
-  .school {
-    font-size: 12px;
-    line-height: 16px;
-  }
-
-  .department {
-    font-size: 12px;
-    line-height: 16px;
-  }
-
-  .focus-list li {
-    font-size: 12px;
-  }
-
-  .tools-list li {
-    font-size: 12px;
+  .aboutme-credentials .aboutme-card .face.face2 .ed {
+    padding: 2rem 0;
   }
 
   /* CONTACT SECTION  */
+  .contact-page {
+    min-height: 70rem;
+  }
+
   .contact-content h3 {
     font-size: 18px;
     padding: 0 2rem;
@@ -1278,7 +1285,7 @@ only screen and (min-resolution: 2dppx) {
   .home-content {
     max-width: 19rem;
     height: 44rem;
-    padding-bottom: 3rem;
+    padding: 0 0 3rem 0;
   }
 
   .intro-text {
@@ -1400,8 +1407,6 @@ only screen and (min-resolution: 2dppx) {
   }
 
   .contact-content h3 {
-    font-size: 14px;
-    min-width: 16rem;
     padding: 0 0.5rem;
   }
 }
@@ -1409,11 +1414,16 @@ only screen and (min-resolution: 2dppx) {
 @media screen and (max-width: 320px) {
   .home-bg-image {
     transform: scale(0.35);
+    margin: 0;
   }
 
   .home-banner {
     top: 27.5rem;
-    height: 44.5rem;
+    height: 37rem;
+  }
+
+  .home-content {
+    padding: 3rem 0 0 0;
   }
 
   .intro-text {
@@ -1427,6 +1437,12 @@ only screen and (min-resolution: 2dppx) {
   .aboutme-text p {
     padding: 0 0.5rem;
     min-width: 16rem;
+  }
+
+  .contact-content h3 {
+    font-size: 15px;
+    min-width: 16rem;
+    padding: 0 0.5rem;
   }
 }
 
