@@ -551,11 +551,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   color: #fff;
 }
 
-/* .projects-container .view-more-wrapper {
-  justify-content: center;
-  /* align-self: center;
-} */
-
 /* ABOUT ME SECTION */
 #about-me {
   margin-top: 5rem;
@@ -597,8 +592,8 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   font-size: 18px;
   line-height: 28px;
   padding: 1rem 0;
-  min-width: 400px;
-  max-width: 500px;
+  min-width: 375px;
+  max-width: 450px;
 }
 
 .aboutme-credentials {
@@ -761,7 +756,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   flex-direction: column;
   justify-content: space-evenly;
   min-height: 1000px;
-  box-shadow: inset 0px 10px 15px #ffffff;
 }
 
 .contact-content {
@@ -784,7 +778,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   line-height: 30px;
   letter-spacing: 0.1em;
   color: var(--main);
-  opacity: 85%;
+  opacity: 90%;
 }
 
 .contact-links {
@@ -1000,7 +994,7 @@ only screen and (min-resolution: 2dppx) {
     position: absolute;
     top: 55px;
     right: 0px;
-    width: 50%;
+    width: 65%;
     height: 450px;
     background: rgba(255, 255, 255, 1);
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
@@ -1127,8 +1121,12 @@ only screen and (min-resolution: 2dppx) {
     height: 44rem;
   }
 
+  .banner-content {
+    margin-bottom: 0.5rem;
+  }
+
   .home-content {
-    height: 43rem;
+    height: 41rem;
   }
 
   /* PROJECT CARDS SECTION  */
@@ -1147,7 +1145,7 @@ only screen and (min-resolution: 2dppx) {
 
   /* ABOUT ME SECTION  */
   .aboutme-grid {
-    min-height: 1600px;
+    min-height: 1650px;
   }
 
   .aboutme-grid h1 {
@@ -1161,7 +1159,7 @@ only screen and (min-resolution: 2dppx) {
   }
 
   .aboutme-text p {
-    font-size: 15px;
+    font-size: 14px;
     padding: 0 2rem;
   }
 
@@ -1259,7 +1257,7 @@ only screen and (min-resolution: 2dppx) {
 
   .aboutme-text {
     padding: 1rem;
-    margin-top: 6rem;
+    margin-top: 7rem;
   }
 
   .aboutme-text p {
@@ -1281,6 +1279,167 @@ only screen and (min-resolution: 2dppx) {
 }
 
 @media screen and (max-width: 320px) {
+  .burger {
+    transform: scale(0.75);
+  }
+
+  .logo-wrapper {
+    justify-content: left;
+  }
+
+  #logo-desktop {
+    transform: scale(1.1);
+    margin-left: 0.5rem;
+  }
+
+  .home-grid {
+    grid-gap: 0;
+  }
+
+  .home-title h1 {
+    padding: 0.3rem;
+  }
+
+  .home-bg-image {
+    transform: scale(0.35);
+  }
+
+  .home-banner {
+    top: 26rem;
+    height: 46rem;
+  }
+
+  .banner-content {
+    margin-bottom: 0;
+  }
+
+  .home-content {
+    padding: 0;
+    max-width: 18rem;
+    height: 44rem;
+    justify-self: start;
+    padding-bottom: 3rem;
+  }
+
+  .intro-text {
+    min-width: 17rem;
+  }
+
+  .intro-text p {
+    font-size: 12px;
+    line-height: 1.3rem;
+  }
+
+  .banner-content {
+    padding-bottom: 4rem;
+  }
+
+  .home-button {
+    margin: 0;
+  }
+
+  .project-cards {
+    grid-gap: 0.6rem;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(260px, 1fr)
+    );
+    min-height: 30rem;
+  }
+
+  .container .cards {
+    max-width: 256px;
+    min-width: 224px;
+    margin: 20px;
+    padding: 16px 24px;
+  }
+
+  .container .cards .imgBx {
+    padding: 10px 0;
+  }
+
+  .imgBx img {
+    max-width: 96px;
+  }
+
+  .container .cards .contentBx h2 {
+    font-size: 15px;
+  }
+
+  .container .cards .contentBx p {
+    padding: 15px 0;
+    font-size: 13px;
+  }
+
+  .container .cards .contentBx a {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .portrait {
+    transform: scale(0.65);
+  }
+
+  .aboutme-text {
+    max-width: 18.5rem;
+    padding: 1rem 0;
+  }
+
+  .aboutme-credentials {
+    padding-top: 3rem;
+  }
+
+  .aboutme-text p {
+    max-width: 14rem;
+    padding: 0 1rem;
+  }
+
+  .projects-grid {
+    min-height: 90rem;
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(285px, 1fr)
+    );
+  }
+
+  .projects-container .card .face {
+    width: 240px;
+    height: 160px;
+  }
+
+  .projects-container .card .face.face1 .content h3 {
+    margin: 0;
+    padding-bottom: 0.7rem;
+    font-size: 1.2em;
+  }
+
+  .projects-container .card .face.face1 .content img {
+    transform: scale(0.75);
+  }
+
+  .projects-container .card .face.face2 {
+    transform: translateY(-60px);
+    padding: 20px;
+  }
+
+  .projects-container .card .face.face2 .content p {
+    padding: 0.8rem 0;
+    font-size: 13px;
+  }
+
+  .projects-container .card .face.face2 .content a {
+    margin: 0;
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .contact-content {
+    justify-content: space-around;
+    padding-top: 12rem;
+  }
 }
 
 /* LINK FADE ANIMATION */
