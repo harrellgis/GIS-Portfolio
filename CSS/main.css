@@ -1,0 +1,81 @@
+/*
+You can nest a child div in a parent div using CSS syntax
+i.e html tag or class . notation. However, you can replace
+the parent element name with & in dot notation. For example:
+
+.main
+    .main_paragraph
+
+becomes:
+.main
+    &_paragraph
+*/
+/*
+This compiles as just the element (i.e .main_paragraph) but if we want
+to compile with the parent element (i.e .main .main_paragraph) we need to 
+wrap 
+*/
+/*
+A partial is a sass file starting with _ that contains css
+and which sass does not generate a css file for. This allows
+you to compile snippets of css such as variables, colors, etc without
+sass creating a separate css file for each 
+*/
+/*
+Instead of mapping a variable, we can create functions which css will 
+automatically compile whatever the function returns. Functions return
+values
+*/
+/*
+Mix-ins are similar to functions in that you can set several styles such as 
+for flex-boxes. You can use these for things such as changing from light
+to dark themes, or for media queries. Mix-ins store styles
+*/
+*,
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgba(47, 47, 47, 0.9);
+  color: #f3f3f3;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.main .main_paragraph {
+  font-weight: 400;
+  padding: 1rem;
+}
+
+.main .main_paragraph:hover {
+  color: pink;
+}
+
+@media (max-width: 800px) {
+  .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
