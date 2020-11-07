@@ -970,7 +970,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 
   .imageAfter {
     top: -4rem;
-
     height: 100%;
     z-index: -1;
     /* padding: 0; */
@@ -1165,6 +1164,9 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 
 @media screen and (max-width: 470px) {
   /* HOME SECTION  */
+  .home-grid {
+    min-height: 95rem;
+  }
 
   .home-content {
     height: 40rem;
@@ -1182,6 +1184,20 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
     letter-spacing: 0.1rem;
   }
 
+  .home-bg-image {
+    top: 47rem;
+  }
+
+  .imageBox {
+    left: 50%;
+    margin-left: -387px;
+    transform: scale(0.5);
+  }
+
+  .imageAfter {
+    top: -7.3rem;
+  }
+
   .intro-text p {
     font-size: 14px;
     line-height: 1.5rem;
@@ -1189,7 +1205,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 
   .home-banner {
     top: 23.5rem;
-    height: 57rem;
+    height: 45.7rem;
   }
 
   /* PROJECT SECTION  */
@@ -1198,7 +1214,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   }
 
   .projects-container {
-    grid-gap: 6rem;
+    grid-gap: 2rem;
   }
 
   #projects {
@@ -1273,7 +1289,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   /* HOME SECTION  */
   .home-banner {
     top: 24.5rem;
-    height: 56rem;
+    height: 44.7rem;
   }
 
   /* PROJECT CARDS SECTION  */
