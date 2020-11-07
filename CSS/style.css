@@ -188,7 +188,7 @@ html {
   width: 774px;
   height: 946px;
   top: 14.4rem;
-  right: 1rem;
+  right: 2rem;
 }
 
 .imageBox {
@@ -964,9 +964,14 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
     margin-top: 0;
   }
 
-  .home-banner {
+  /* .home-banner {
     top: 28rem;
     height: 60.9rem;
+  } */
+
+  .home-banner {
+    top: 28.5rem;
+    height: 60.4rem;
   }
 
   .banner-content {
@@ -976,6 +981,16 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 }
 
 @media screen and (max-width: 840px) {
+  .home-bg-image {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .imageBox {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   /* PROJECTS SECTION  */
   #projects {
     margin-bottom: 8rem;
@@ -1062,7 +1077,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
     font-size: 11;
   }
 
-  /* HOME SECTION  */
+  /* CONTACT SECTION  */
   .contact-content h3 {
     padding: 0 3rem;
   }
@@ -1096,11 +1111,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
     padding: 0;
   }
 
-  .home-bg-image {
-    margin-top: 0;
-    grid-area: 4 / 1 / -1 / -1;
-  }
-
   .project-cards {
     grid-gap: 4rem;
   }
@@ -1118,16 +1128,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 
 @media screen and (max-width: 470px) {
   /* HOME SECTION  */
-  #home {
-    margin-bottom: 0;
-  }
-
-  .home-bg-image {
-    grid-area: 3 / 1 / -1 / -1;
-    transform: scale(0.75);
-    align-self: center;
-    margin-top: 8rem;
-  }
 
   .home-content {
     height: 40rem;
