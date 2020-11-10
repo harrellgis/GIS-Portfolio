@@ -96,17 +96,16 @@ html {
   letter-spacing: 3px;
   font-weight: normal;
   text-decoration: none;
-  margin: 0 0.75rem;
   padding: 0.65rem 1rem;
 }
 
-#contact {
+#contact-link {
   background-color: var(--accent2);
   border-radius: 1.5rem;
   color: var(--main);
 }
 
-#contact:hover {
+#contact-link:hover {
   background-color: white;
 }
 
@@ -365,7 +364,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 }
 
 #proj-cards {
-  margin: 8rem 0;
+  margin: 6rem 0;
 }
 
 .project-cards {
@@ -466,7 +465,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 /* PROJECTS SECTION */
 .projects-grid {
   display: grid;
-  min-height: 50rem;
+  min-height: 38rem;
   grid-template-rows: [first] 5rem [two] auto [three];
 }
 
@@ -787,7 +786,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-  min-height: 1000px;
+  min-height: 62.5rem;
 }
 
 .contact-content {
@@ -796,7 +795,7 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   flex-direction: column;
   justify-content: space-between;
   max-width: 45rem;
-  min-height: 850px;
+  min-height: 53rem;
   padding-top: 4rem;
 }
 
@@ -842,15 +841,15 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   bottom: 0rem;
   height: 10rem;
   background-color: var(--banner-color);
-  z-index: 1;
   opacity: 0.8;
+  z-index: 1;
 }
 
 .footer-wrapper {
   position: fixed;
   height: 30px;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0rem;
+  left: 0rem;
   right: 0px;
   background-color: rgba(255, 255, 255, 0.8);
   z-index: 3;
@@ -1294,6 +1293,11 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
     min-height: 70rem;
   }
 
+  .contact-content {
+    padding-top: 2rem;
+    min-height: 55rem;
+  }
+
   .footer-banner {
     height: 15rem;
   }
@@ -1353,9 +1357,9 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   }
 
   /* CONTACT SECTION  */
-  .contact-page {
+  /* .contact-page {
     min-height: 70rem;
-  }
+  } */
 
   .contact-content h3 {
     font-size: 18px;
