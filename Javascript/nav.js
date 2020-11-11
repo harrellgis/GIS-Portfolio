@@ -2,7 +2,7 @@
 const navSlide = () => {
   const burger = document.querySelector('.menu-btn');
   const nav = document.querySelector('.nav-links');
-  const navLinks = document.querySelectorAll('.nav-links a');
+  const navLinks = document.querySelectorAll('.nav-link-wrap a');
 
   burger.addEventListener('click', () => {
     //Toggle nav//
@@ -14,10 +14,11 @@ const navSlide = () => {
         link.style.animation = '';
       } else {
         link.style.animation =
-          `navLinkFade 1s ease forwards ${index / 7 + 0.5}s`;
+          `navLinkFade 0.8s ease forwards ${index / 7 + 0.5}s`;
       }
     });
   });
 };
 
 navSlide();
+
