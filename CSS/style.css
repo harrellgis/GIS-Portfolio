@@ -885,15 +885,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 /* https://www.smashingmagazine.com/2013/07/simple
 -responsive-images-with-css-background-images/ */
 
-/* @media only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (min--moz-device-pixel-ratio: 2),
-  only screen and (-moz-min-device-pixel-ratio: 2),
-  only screen and (-o-min-device-pixel-ratio: 2/1),
-  only screen and (min-device-pixel-ratio: 2),
-  only screen and (min-resolution: 192dpi),
-  only screen and (min-resolution: 2dppx) {
-  /* styles for Retina-type displays } */
-
 @media screen and (max-width: 1250px) {
   .nav-links {
     width: 65%;
@@ -1321,11 +1312,11 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
 
   /* PROJECTS SECTION  */
   #projects {
-    margin-bottom: 12rem;
+    margin-bottom: 8rem;
   }
 
   .projects-grid {
-    min-height: 100rem;
+    min-height: 70rem;
   }
 
   /* ABOUT ME SECTION  */
@@ -1470,10 +1461,6 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
     min-width: 18rem;
   }
 
-  .projects-grid {
-    min-height: 90rem;
-  }
-
   .projects-container {
     grid-template-columns: repeat(
       auto-fit,
@@ -1513,6 +1500,10 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
     padding: 6px;
   }
 
+  .proj-button {
+    margin-top: 3rem;
+  }
+
   .contact-page {
     min-height: 60rem;
   }
@@ -1524,6 +1515,10 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
   .contact-content h3 {
     padding: 0 0.8rem;
     min-height: 10rem;
+  }
+
+  .footer-banner {
+    height: 12rem;
   }
 }
 
