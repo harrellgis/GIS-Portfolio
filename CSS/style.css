@@ -1225,8 +1225,8 @@ in a block of text. For paragraphs, the ideal line-height is usually between 1.3
     margin-top: 0;
   }
 
-  .projects-container {
-    grid-gap: 3rem;
+  .proj-button {
+    margin-top: 5rem;
   }
 
   /* ABOUT ME SECTION  */
