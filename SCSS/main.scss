@@ -44,6 +44,19 @@ for flex-boxes. You can use these for things such as changing from light
 to dark themes, or for media queries. Mix-ins store styles
 */
 
+//EXTENSIONS***********
+/*
+Extensions allow you to inherit the styles from another element so you dont 
+have to re-type all of the same styles. Then you can add additional styles.
+*/
+
+//OPERATIONS***********
+/*
+You can do mathematical operations in SASS without having to use the CSS calc()
+method. However, you MUST use the same type (i.e px, rem, %, etc). For example
+width: 80% + 5%;
+*/
+
 @import "./resets";
 @import "./variables";
 
@@ -81,12 +94,20 @@ body {
   width: 80%;
   margin: 0 auto;
 
-  #{&}_paragraph {
-    font-weight: weight(regular);
+  #{&}_paragraph1 {
+    font-weight: weight(bold);
     padding: 1rem;
 
     &:hover {
       color: pink;
+    }
+  }
+
+  #{&}_paragraph2 {
+    @extend .main_paragraph1;
+
+    &:hover {
+      color: lightblue;
     }
   }
 

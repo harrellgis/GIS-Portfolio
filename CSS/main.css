@@ -31,6 +31,15 @@ Mix-ins are similar to functions in that you can set several styles such as
 for flex-boxes. You can use these for things such as changing from light
 to dark themes, or for media queries. Mix-ins store styles
 */
+/*
+Extensions allow you to inherit the styles from another element so you dont 
+have to re-type all of the same styles. Then you can add additional styles.
+*/
+/*
+You can do mathematical operations in SASS without having to use the CSS calc()
+method. However, you MUST use the same type (i.e px, rem, %, etc). For example
+width: 80% + 5%;
+*/
 *,
 html {
   -webkit-box-sizing: border-box;
@@ -62,13 +71,17 @@ body {
   margin: 0 auto;
 }
 
-.main .main_paragraph {
-  font-weight: 400;
+.main .main_paragraph1, .main .main_paragraph2 {
+  font-weight: 700;
   padding: 1rem;
 }
 
-.main .main_paragraph:hover {
+.main .main_paragraph1:hover, .main .main_paragraph2:hover {
   color: pink;
+}
+
+.main .main_paragraph2:hover {
+  color: lightblue;
 }
 
 @media (max-width: 800px) {
