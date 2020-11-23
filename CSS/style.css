@@ -303,7 +303,10 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
   width: 100%;
   height: 46rem;
   top: 43.2rem;
-  background-color: #434343;
+  /* background-color: #434343; */
+  background-image: url(/Images/Background/contourLines.png);
+  background-size: cover;
+  background-position: center center;
   z-index: -2;
   transition: 0.5s;
 }
@@ -317,15 +320,29 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
 }
 
 .intro-text {
+  position: relative;
   min-width: 360px;
 }
 
+.intro-text:before {
+  content: "";
+  position: absolute;
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
 .intro-text p {
+  position: relative;
   font-size: 18px;
   font-style: normal;
   line-height: 30px;
   letter-spacing: 0.2rem;
   color: #f1f3f6;
+  z-index: 1;
 }
 
 .primary-button {
@@ -349,7 +366,7 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
 }
 
 .home-button {
-  background: none;
+  background: #434343;
   color: var(--links);
   justify-self: start;
   margin-top: 4rem;
