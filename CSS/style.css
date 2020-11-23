@@ -327,6 +327,7 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
   content: "";
   position: absolute;
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   width: 100%;
   height: 100%;
   top: 0;
