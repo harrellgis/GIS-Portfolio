@@ -332,7 +332,6 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 0;
 }
 
 .intro-text p {
@@ -342,7 +341,6 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
   line-height: 30px;
   letter-spacing: 0.2rem;
   color: #f1f3f6;
-  z-index: 1;
 }
 
 .primary-button {
