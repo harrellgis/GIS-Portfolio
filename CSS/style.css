@@ -303,7 +303,6 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
   width: 100%;
   height: 46rem;
   top: 43.2rem;
-  /* background-color: #434343; */
   background-image: url(/Images/Background/contourLines.png);
   background-size: cover;
   background-position: center center;
@@ -327,11 +326,7 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
 .intro-text:before {
   content: "";
   position: absolute;
-  backdrop-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
+  backdrop-filter: blur(4px);
   width: 100%;
   height: 100%;
   top: 0;
