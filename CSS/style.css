@@ -332,6 +332,7 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
   height: 100%;
   top: 0;
   left: 0;
+  border-radius: 8px;
 }
 
 .intro-text p {
@@ -354,7 +355,7 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
   font-size: 18px;
   letter-spacing: 2px;
   border-radius: 8px;
-  background: white;
+  background: rgba(255, 255, 255, 0.7);
   border: 3px solid var(--hover);
 }
 
@@ -364,8 +365,8 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
 }
 
 .home-button {
-  background: #434343;
-  color: var(--links);
+  /* background: #434343;
+  color: var(--links); */
   justify-self: start;
   margin-top: 4rem;
 }
