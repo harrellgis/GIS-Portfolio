@@ -445,8 +445,6 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
 }
 
 .home-button {
-  /* background: #434343;
-  color: var(--links); */
   justify-self: start;
   margin-top: 4rem;
 }
@@ -924,10 +922,6 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
 .contact-links img:hover {
   transform: scale(1.1);
 }
-
-/* .contact-button {
-  background-color: rgba(255, 255, 255, 0.85);
-} */
 
 /* FOOTER */
 .footer-banner {
