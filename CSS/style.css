@@ -894,13 +894,15 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
 
 /* CONTACT SECTION */
 .contact-page {
+  position: absolute;
+  width: 100%;
   background-image: url(/Images/Background/Contact_Background.png);
   background-size: cover;
   background-position: center center;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   min-height: 62.5rem;
 }
 
@@ -911,7 +913,7 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
   justify-content: space-between;
   max-width: 45rem;
   min-height: 53rem;
-  padding-top: 4rem;
+  padding-top: 5rem;
 }
 
 .contact-content h3 {
@@ -947,11 +949,12 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
 
 /* FOOTER */
 .footer-banner {
-  position: absolute;
+  position: relative;
+  top: 52.5rem;
   width: 100%;
-  bottom: 0rem;
   height: 10rem;
   background-color: var(--banner-color);
+  opacity: 0.9;
   z-index: 1;
 }
 
