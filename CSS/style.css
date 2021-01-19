@@ -626,7 +626,7 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
 }
 
 .projects-container .card .face.face1 .content h3 {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   padding: 0;
   color: #ffffff;
   text-align: center;
@@ -1373,12 +1373,12 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
     height: 96px;
   }
 
-  .aboutme-credentials .aboutme-card .face.face2 .content {
-    padding-top: 2rem;
+  .aboutme-credentials {
+    margin-bottom: 0;
   }
 
   .aboutme-credentials .aboutme-card .face.face2 .ed {
-    padding: 2rem 0 0 1rem;
+    padding-left: 1rem;
   }
 
   .college {
@@ -1429,22 +1429,25 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
 
   .projects-grid {
     min-height: 70rem;
+    grid-gap: 1rem;
   }
 
   .projects-container {
-    grid-gap: 1.5rem;
+    grid-gap: 2rem;
   }
 
   .projects-container .card .face.face.face1 {
     transform: translateY(0px);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
 
   .projects-container .card .face.face1 .content {
-    opacity: 0.8;
+    opacity: 0.75;
   }
 
   .projects-container .card .face.face.face2 {
-    transform: translateY(-20px);
+    transform: translateY(-15px);
   }
 
   /* ABOUT ME SECTION  */
@@ -1468,10 +1471,6 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
     flex-direction: column;
     justify-content: space-around;
     margin-bottom: 0;
-  }
-
-  .aboutme-credentials .aboutme-card .face.face2 .ed {
-    padding: 2rem 0;
   }
 
   /* CONTACT SECTION  */
