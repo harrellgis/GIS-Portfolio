@@ -1431,6 +1431,22 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
     min-height: 70rem;
   }
 
+  .projects-container {
+    grid-gap: 1.5rem;
+  }
+
+  .projects-container .card .face.face.face1 {
+    transform: translateY(0px);
+  }
+
+  .projects-container .card .face.face1 .content {
+    opacity: 0.8;
+  }
+
+  .projects-container .card .face.face.face2 {
+    transform: translateY(-20px);
+  }
+
   /* ABOUT ME SECTION  */
   .aboutme-grid h1 {
     margin-bottom: 3rem;
@@ -1560,7 +1576,6 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
       auto-fit,
       minmax(260px, 1fr)
     );
-    grid-gap: 1.5rem;
   }
 
   .projects-container .card .face.face.face1 {
