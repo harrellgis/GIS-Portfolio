@@ -32,7 +32,7 @@
         </nav>
     </div>
 
-    <section class="main page-container">
+    <section class="main page-container"><!--Main Page Content-->
         <main class="main-grid">
             <h1 class="page-title">applying modern cartography to vintage maps of kenya</h1>
             <div class="main-content">
@@ -47,22 +47,32 @@
                     </div>
                 </div>
                 <div class="main-text">
-                    <p>A common operation amoung GIS users is creating shaded reliefs. Shaded reliefs are made
-                        by overlaying semi-transparent data such as thematic map layers onto elevation data in order
-                        to add topographic information to the original data.  
+                    <p>A common task among GIS users is to create shaded relief or hillshade maps. A shaded relief is a 3D
+                        representation of the earths surface which is used to enhance features with large topographic variation
+                        such as mountains, valleys, or plateaus. GIS software calculates shaded reliefs by illuminating
+                        a three dimensional surface with a point light source, mimicking sun elevation and azimuth angle. 
+                        Shaded relief maps are often used as base elevation layers and combined with semi-transparent thematic layers 
+                        in order to enhance the data with topographic information. 
                     </p>
                     
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo 
-                        explicabo aliquam eum qui doloribus minus consequatur facilis, itaque nam nulla 
-                        fugiat, harum dolorum officiis voluptates! Esse ipsum commodi eaque? Voluptas 
-                        aliquid sed similique saepe maiores, natus dolorum labore unde ex provident laboriosam 
-                        odio rerum iure, magnam accusantium illum, iste molestias!</p>
+                    <p>Although standard GIS software packages have the ability to create hillshades, the results are often noisy and harsh.
+                        Furthermore, because GIS software centers primarily on 2D rather than 3D representations of data (although this paradigm is shifting)
+                        users have limited control over the parameters used to calculate hillshades. However, a new approach to creating
+                        realistic shaded relief maps is being embraced by cartographers, and that approach is Blender3D. Blender is an 
+                        extremely powerful open-source software specifically designed for 3D modelling. Blender is able to simulate
+                        the complexities of light scattering, reflectance, and shadows in a way that conventional GIS software cannot. The result is 
+                        a far superior and more realistic looking hillshade. For a great tutorial on the basics of creating shaded reliefs in Blender, click 
+                        <a href="https://somethingaboutmaps.wordpress.com/2017/11/16/creating-shaded-relief-in-blender/">here</a>. 
+                    </p>
                     
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, 
-                        blanditiis illum deleniti, ab iure delectus cum libero voluptas aliquid quisquam 
-                        id corporis, quas facilis dolore modi facere neque soluta dolores ducimus quasi. 
-                        Dolor cumque quaerat eligendi sint doloribus et ullam nulla iste. Illo, alias 
-                        molestiae magni assumenda vero deserunt ducimus?</p>
+                    <p>The purpose of this project was to explore the process of creating shaded reliefs in Blender. After developing a sufficient workflow
+                        I decided to undertake a full refurbishment of a series of four 1980's vintage maps of Kenya created by the Kenya Soil Survey.
+                        The digital map files came from photographs of paper maps which had various damaged areas including discoloration, 
+                        folds, ink writing, and tears. After color correcting the original maps I used vector editing softwares to rebuild all map 
+                        elements including titles, map keys, and lables from scratch. Once the maps were georeferencing using QGIS, I was able to 
+                        extract the map's bounding box, which was used to obtain 30m SRTM elevation data in Google Earth Engine. Finally, the refurbished map Images
+                        and elevation data were combined in Blender to create an orthographic shaded relief map.  
+                    </p>
                 </div>
             </div>
         </main>
