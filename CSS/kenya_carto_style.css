@@ -177,7 +177,7 @@ html {
   grid-gap: 0.5rem;
   grid-template-rows: [first] 75px [one] 10rem [two] 1fr [three] 1fr [last];
   grid-template-columns: repeat(12, 1fr);
-  place-items: center;
+  align-items: center;
   min-height: 90rem;
 }
 
@@ -194,8 +194,7 @@ html {
 
 
 .main-content {
-  grid-area: 3 / 1 / 4 / 10;
-  align-self: start;
+  grid-area: 3 / 1 / 5 / -1;
 }
 
 .software {
@@ -245,6 +244,7 @@ html {
 
 .main-text {
   margin: 1.5rem 0;
+
 }
 
 .main-text p {
@@ -255,6 +255,43 @@ html {
   line-height: 28px;
   padding: 1rem 0;
 }
+
+.section1 p{
+  max-width: 70rem
+}
+
+.section1.figures{
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  );
+  margin: 3.5rem 0;
+}
+
+
+.section2 p{
+  max-width: 70rem
+}
+
+.figures p {
+ font-style: italic;
+ opacity: 0.5;
+}
+
+
+.section2.figures {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(600px, 1fr)
+  );
+  margin: 3.5rem 0;
+}
+
+
 
 
 /* FOOTER */
