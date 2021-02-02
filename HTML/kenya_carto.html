@@ -47,7 +47,8 @@
                     </div>
                 </div>
                 <div class="main-text">
-                    <div class="section1">
+                    <div class="section section1">
+                        <h2 class="s1 header">shaded reliefs</h2>
                         <p>A common task among GIS users is to create shaded relief or hillshade maps. A shaded relief is a 3D
                             representation of the earths surface which is used to enhance features with large topographic variation
                             such as mountains, valleys, or plateaus. GIS software calculates shaded reliefs by illuminating
@@ -66,7 +67,7 @@
                             <a href="https://somethingaboutmaps.wordpress.com/2017/11/16/creating-shaded-relief-in-blender/">here</a>. 
                         </p>
 
-                        <div class="section1 figures">
+                        <div class="figures">
                             <div class="figure">
                                 <img src="/Images/Projects/Kenya_topographicMaps/kenya_250DEM.png" alt="">
                                 <p class="fig-caption">Fig 1. SRTM derived DEM of Kenya resampled from 30m to 250m</p>
@@ -78,7 +79,8 @@
                         </div>
                     </div>
                     
-                    <div class="section2">
+                    <div class="section section2">
+                        <h2 class="s2 header">digital map refurbishment</h2>
                         <p>The purpose of this project was to explore the process of creating shaded reliefs in Blender. After developing a sufficient workflow
                             I decided to undertake the refurbishment of a series of four 1980's vintage maps of Kenya created by the Kenya Soil Survey.
                             The digital map images came from photographs of hard-copy maps which had various damaged areas including discoloration, 
@@ -88,8 +90,13 @@
                             of the map. This was accomplished by increasing font sizes, grouping map keys and legends, and repositioning elements to increase
                             whitespace.  
                         </p>
+                        <p> 
+                            Because the original map images did not contain spatial reference information, they had to be georeferenced in QGIS3.
+                            This allowed me to extract the map's bounding box, which was used to obtain 30m SRTM elevation data in Google Earth Engine. Finally, the refurbished map Images
+                            and elevation data were combined in Blender to create an orthographic shaded relief map.
+                        </p>
 
-                        <div class="section2 figures">
+                        <div class="figures">
                             <div class="figure">
                                 <img src="/Images/Projects/Kenya_topographicMaps/map_cropped.png" alt="">
                                 <p class="fig-caption">Fig 3. Color correcting and cropping the map image</p>
@@ -102,14 +109,69 @@
                                 <img src="/Images/Projects/Kenya_topographicMaps/map_elements1.png" alt="">
                                 <p class="fig-caption">Fig 5. All map elements rebuilt and repositioned</p>
                             </div>
+                            <div class="figure">
+                                <img src="/Images/Projects/Kenya_topographicMaps/map_georef.png" alt="">
+                                <p class="fig-caption">Fig 6. Georeferenced map and bounding box</p>
+                            </div>
+                            <div class="figure">
+                                <img src="/Images/Projects/Kenya_topographicMaps/kenya_GEE_DEM.png" alt="">
+                                <p class="fig-caption">Fig 7. Bounding coordinates used to generate a masked <br> DEM in Google Earth Engine</p>
+                            </div>
                         </div>
+                    </div>
 
-                        <p> 
-                            Because the map images did not inherently contain spatial reference information, they had to be georeferenced in order to  
-                            Once the maps were georeferenced using QGIS, I was able to 
-                            extract the map's bounding box, which was used to obtain 30m SRTM elevation data in Google Earth Engine. Finally, the refurbished map Images
-                            and elevation data were combined in Blender to create an orthographic shaded relief map.
+                    <div class="section section3">
+                        <h2 class="s3 header">rendering orthographic maps in blender</h2>
+                        <p>The purpose of this project was to explore the process of creating shaded reliefs in Blender. After developing a sufficient workflow
+                            I decided to undertake the refurbishment of a series of four 1980's vintage maps of Kenya created by the Kenya Soil Survey.
+                            The digital map images came from photographs of hard-copy maps which had various damaged areas including discoloration, 
+                            folds, and tears. I first addressed the damaged areas by color correcting the main map image with photo editing software before cropping
+                            it to a new background.
                         </p>
+
+                        <div class="figures">
+                            <div class="figure">
+                                <img src="/Images/Projects/Kenya_topographicMaps/kenya_DEM_blender.png" alt="">
+                                <p class="fig-caption">Fig 8. Bounding coordinates used to generate a masked <br> DEM in Google Earth Engine</p>
+                            </div>
+                            <div class="figure">
+                                <img src="/Images/Projects/Kenya_topographicMaps/kenya_ortho_blender.png" alt="">
+                                <p class="fig-caption">Fig 9. Bounding coordinates used to generate a masked <br> DEM in Google Earth Engine</p>
+                            </div>
+                            <div class="figure">
+                                <img src="/Images/Projects/Kenya_topographicMaps/kenya_oblique_blender.png" alt="">
+                                <p class="fig-caption">Fig 10. Bounding coordinates used to generate a masked <br> DEM in Google Earth Engine</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section section4">
+                        <h2 class="s4 header">Refurbished Maps</h2>
+                        <p>The purpose of this project was to explore the process of creating shaded reliefs in Blender. After developing a sufficient workflow
+                            I decided to undertake the refurbishment of a series of four 1980's vintage maps of Kenya created by the Kenya Soil Survey.
+                            The digital map images came from photographs of hard-copy maps which had various damaged areas including discoloration, 
+                            folds, and tears. I first addressed the damaged areas by color correcting the main map image with photo editing software before cropping
+                            it to a new background.
+                        </p>
+
+                        <div class="figures">
+                            <div class="figure">
+                                <img src="/Images/Projects/Kenya_topographicMaps/kenya_infoBase_1980.jpg" alt="">
+                                <p class="fig-caption">Fig 11. Information base for the Exploratory Soil Map and Agro-climatic Zone Map of Kenya</p>
+                            </div>
+                            <div class="figure">
+                                <img src="/Images/Projects/Kenya_topographicMaps/kenya_agSoils_1980.jpg" alt="">
+                                <p class="fig-caption">Fig 12. Exploratory Soil Map of Kenya with Agro-climatic Zones (for land evaluation purposes</p>
+                            </div>
+                            <div class="figure">
+                                <img src="/Images/Projects/Kenya_topographicMaps/kenya_agZones_1980.jpg" alt="">
+                                <p class="fig-caption">Fig 13. Agro-climatic zone map of Kenya</p>
+                            </div>
+                            <div class="figure">
+                                <img src="/Images/Projects/Kenya_topographicMaps/kenya_soils_1980.jpg" alt="">
+                                <p class="fig-caption">Fig 14. Exploratory Soil Map of Kenya</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
