@@ -276,6 +276,9 @@ html {
   margin: 3.5rem 0;
 }
 
+.section1 .figures .figure {
+  transform: scale(0.9);
+}
 
 .section p{
   max-width: 70rem
@@ -295,10 +298,14 @@ html {
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(
-    auto-fit,
-    minmax(600px, 1fr)
+    auto-fill,
+    minmax(500px, 1fr)
   );
   margin: 3.5rem 0;
+}
+
+.section2 .figures .figure {
+  transform: scale(0.9);
 }
 
 .section .figures .figure {
@@ -313,10 +320,14 @@ html {
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(
-    auto-fit,
-    minmax(600px, 1fr)
+    auto-fill,
+    minmax(400px, 1fr)
   );
   margin: 3.5rem 0;
+}
+
+.section3 .figures .figure {
+  transform: scale(0.9);
 }
 
 .section4 {
@@ -328,11 +339,14 @@ html {
   justify-items: center;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(600px, 1fr)
+    minmax(500px, 1fr)
   );
   margin: 3.5rem 0;
 }
 
+.section4 .figures .figure {
+  transform: scale(0.9);
+}
 
 
 /* FOOTER */
@@ -397,6 +411,55 @@ html {
 /* ***************MEDIA QUERIES******************* */
 /* https://www.smashingmagazine.com/2013/07/simple
 -responsive-images-with-css-background-images/ */
+@media screen and (max-width: 768px) {
+  /* HOME SECTION  */
+  .menu-btn {
+    display: flex;
+  }
+
+  #nav-wrapper {
+    position: fixed;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 55px;
+    right: 0px;
+    width: 50%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(101%);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: transform 0.6s ease-in;
+    z-index: 3;
+  }
+
+  #contact-link {
+    background: none;
+  }
+
+  .nav-link a {
+    color: var(--main);
+    font-size: 15;
+    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+    opacity: 0;
+  }
+
+  .nav-link a:hover {
+    font-size: 17px;
+  }
+
+  .nav-link:hover #hover-pin {
+    display: none;
+  }
+}
 
 /* NAV TOGGLE */
 .nav-active {
