@@ -175,9 +175,9 @@ html {
 .main-grid {
   display: grid;
   grid-gap: 0.5rem;
-  grid-template-rows: [first] 75px [one] 10rem [two] 1fr [three] 1fr [last];
+  grid-template-rows: [first] 75px [one] 10rem [two] 1fr [three] 1fr [four] 1fr [five] 1fr [last];
   grid-template-columns: repeat(12, 1fr);
-  place-items: center;
+  align-items: center;
   min-height: 90rem;
 }
 
@@ -192,6 +192,118 @@ html {
   color: var(--main);
 }
 
+
+.main-content {
+  grid-area: 3 / 1 / -1 / -1;
+}
+
+.software {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.subheader {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 42px;
+  text-transform: capitalize;
+  color: var(--main);
+  margin: 1.5rem 1rem 1.5rem 0;
+}
+
+/* SOFTWARE ICONS  */
+.icons {
+  display: flex;
+  flex-direction: row;
+  min-width: 8rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icons img {
+  height: 28px;
+  width: 28px;
+}
+
+.icons img:hover {
+  transform: scale(1.1);
+}
+
+/* MAIN TEXT  */
+.main-text {
+  margin: 1.5rem 0;
+}
+
+.main-text p {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 1rem 0;
+}
+
+.header {
+  margin: 1.5rem 0;
+  text-transform: capitalize;
+}
+
+/* SECTION 1  */
+
+.section1 {
+  grid-area: 3 / 1 / 4 / -1;
+}
+
+.section1 .figures{
+  
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  );
+  margin: 3.5rem 0;
+}
+
+.section1 .figures .figure {
+  transform: scale(0.9);
+}
+
+.section p{
+  max-width: 70rem
+}
+
+.figures p {
+ font-style: italic;
+ opacity: 0.5;
+}
+
+/* SECTION 2  */
+
+.section2 {
+  grid-area: 4 / 1 / 5 / -1;
+}
+
+.section2 .figures {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(500px, 1fr)
+  );
+  margin: 3.5rem 0;
+}
+
+.section2 .figures .figure {
+  transform: scale(0.9);
+}
+
+.section .figures .figure {
+  padding: 1rem;
+}
 
 
 /* FOOTER */
@@ -256,6 +368,56 @@ html {
 /* ***************MEDIA QUERIES******************* */
 /* https://www.smashingmagazine.com/2013/07/simple
 -responsive-images-with-css-background-images/ */
+
+@media screen and (max-width: 768px) {
+  /* HOME SECTION  */
+  .menu-btn {
+    display: flex;
+  }
+
+  #nav-wrapper {
+    position: fixed;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 55px;
+    right: 0px;
+    width: 50%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(101%);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: transform 0.6s ease-in;
+    z-index: 3;
+  }
+
+  #contact-link {
+    background: none;
+  }
+
+  .nav-link a {
+    color: var(--main);
+    font-size: 15;
+    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+    opacity: 0;
+  }
+
+  .nav-link a:hover {
+    font-size: 17px;
+  }
+
+  .nav-link:hover #hover-pin {
+    display: none;
+  }
+}
 
 /* NAV TOGGLE */
 .nav-active {

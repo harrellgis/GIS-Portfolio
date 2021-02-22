@@ -35,6 +35,75 @@
     <section class="main page-container">
         <main class="main-grid">
             <h1 class="page-title">rising waters of lake baringo: a time series</h1>
+            <div class="main-content">
+                <div class="software">
+                    <h2 class="subheader">software tools:</h2>
+                    <div class="icons">
+                        <a href="https://www.qgis.org/en/site/"><img src="../Images/Icons/qgis3-logo.png" alt="qgis3-logo" class="qgis"></a>
+                        <a href="https://earthengine.google.com/"><img src="../Images/Icons/GEE-icon.png" alt="GEE-logo" class="gee"></a> 
+                    </div>
+                </div>
+                <div class="main-text">
+                    <div class="section section1">
+                        <h2 class="s1 header">shaded reliefs</h2>
+                        <p>A common task among GIS users is to create shaded relief or hillshade maps. A shaded relief is a 3D
+                            representation of the earths surface which is used to enhance features with large topographic variation
+                            such as mountains, valleys, or plateaus. GIS software calculates shaded reliefs by illuminating
+                            an elevation surface with a point light source, mimicking sun altitude and azimuth angle. 
+                            Shaded relief maps are often used as base layers and combined with semi-transparent thematic layers 
+                            in order to enhance the data with topographic information. 
+                        </p>
+ 
+                        <p>Although standard GIS software packages have the ability to create hillshades, the results are often noisy and harsh.
+                            Furthermore, because GIS software centers primarily on 2D rather than 3D representations of data,
+                            users have limited control over the parameters used to create hillshades. However, a new approach for creating
+                            realistic shaded relief maps is being popularized by cartographers, and that approach utilizes Blender3D. Blender is an 
+                            extremely powerful open-source software specifically designed for 3D modelling. Blender has the ability to simulate
+                            the complexities of light scattering, reflectance, and shadows in a 3D environment in a way that GIS software does not. The results are 
+                            are far superior and more realistic looking hillshades. For a great tutorial on the basics of creating shaded reliefs in Blender, click 
+                            <a href="https://somethingaboutmaps.wordpress.com/2017/11/16/creating-shaded-relief-in-blender/">here</a>. 
+                        </p>
+
+                        <div class="figures">
+                            <div class="figure">
+                                <img src="/Images/Projects/Kenya_topographicMaps/kenya_250DEM.png" alt="">
+                                <p class="fig-caption">Fig 1. SRTM derived DEM of Kenya resampled from 30m to 250m</p>
+                            </div>
+                            <div class="figure">
+                                <img src="/Images/Projects/Kenya_topographicMaps/kenya_250DEM_render.png" alt="">
+                                <p class="fig-caption">Fig 2. Shaded relief of Kenya produced in Blender3D</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section section2">
+                        <h2 class="s2 header">digital map refurbishment</h2>
+                        <p>The purpose of this project was to explore the process of creating shaded reliefs in Blender. After developing a sufficient workflow
+                            I decided to undertake the refurbishment of a series of four 1980's vintage maps of Kenya created by the Kenya Soil Survey.
+                            The digital map images came from photographs of hard-copy maps which had various damaged areas including discoloration, 
+                            folds, and tears. I first addressed the damaged areas by color correcting the main map image with photo editing software before cropping
+                            it to a new background. Next, vector editing software was used to rebuild all map 
+                            elements including titles, legends, map keys, and lables from scratch. Specific attention was paid to improving the overall readability
+                            of the map. This was accomplished by increasing font sizes, grouping map keys and legends, and repositioning elements to increase
+                            whitespace.  
+                        </p>
+                        <p> 
+                            Because the original map images did not contain spatial reference information, they had to be georeferenced in QGIS3.
+                            This allowed me to extract the map's bounding box, which was used to obtain 30m SRTM elevation data in Google Earth Engine. Finally, the refurbished map Images
+                            and elevation data were combined in Blender to create an orthographic shaded relief map.
+                        </p>
+
+                        <div class="figures">
+                            <div class="figure">
+                                <video width="720" height="540" controls>
+                                    <source src="../Images/Projects/Baringo_lakeLevels/baringo_SAR_2016-2020.mp4" type="video/mp4">
+                                  Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
     </section>
 
