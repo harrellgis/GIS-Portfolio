@@ -24,6 +24,13 @@ html {
   --hover: #1178d8;
   --hover-light: #2784db;
 }
+.nav-container {
+  position: relative;
+  margin: 0 auto;
+  overflow: visible;
+  padding-right: 40px;
+  padding-left: 40px;
+}
 
 .page-container {
   position: relative;
@@ -76,7 +83,7 @@ html {
 .nav-links {
   display: flex;
   height: 55px;
-  width: 45%;
+  width: 35%;
   align-items: center;
   justify-content: space-between;
 }
