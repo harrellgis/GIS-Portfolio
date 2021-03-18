@@ -206,11 +206,14 @@ html {
 .subheader {
   font-style: normal;
   font-weight: bold;
-  font-size: 28px;
-  line-height: 42px;
   text-transform: capitalize;
   color: var(--main);
   margin: 1.5rem 1rem 1.5rem 0;
+}
+
+.software .subheader {
+  font-size: 25px;
+  line-height: 42px;
 }
 
 /* SOFTWARE ICONS  */
@@ -247,6 +250,10 @@ html {
   margin: 1.5rem 0;
 }
 
+.main-text h2 {
+  font-size: 28px;
+}
+
 .main-text p {
   font-family: Lato;
   font-style: normal;
@@ -262,11 +269,10 @@ html {
 }
 
 .section1 {
-  grid-area: 3 / 1 / 4 / -1;
+  grid-area: 4 / 1 / 5 / -1;
 }
 
-.section1 .figures{
-  
+.section1 .figures {
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(
@@ -280,20 +286,15 @@ html {
   transform: scale(0.9);
 }
 
-.section p{
-  max-width: 70rem
-}
-
-.figures p {
- font-style: italic;
- opacity: 0.5;
+.section .figures .figure {
+  padding: 1rem;
 }
 
 .section2 {
-  grid-area: 4 / 1 / 5 / -1;
+  grid-area: 3 / 1 / 4 / -1;
 }
 
-.section2 .figures {
+.section2 .figures{
   display: grid;
   justify-items: center;
   align-items: center;
@@ -308,8 +309,13 @@ html {
   transform: scale(0.9);
 }
 
-.section .figures .figure {
-  padding: 1rem;
+.section p{
+  max-width: 70rem
+}
+
+.figures p {
+ font-style: italic;
+ opacity: 0.5;
 }
 
 .section3 {

@@ -36,36 +36,23 @@
         <main class="main-grid">
             <h1 class="page-title">applying modern cartography to vintage maps of kenya</h1>
             <div class="main-content">
-                <div class="software">
-                    <h2 class="subheader">software tools:</h2>
-                    <div class="icons">
-                        <a href="https://www.qgis.org/en/site/"><img src="../Images/Icons/qgis3-logo.png" alt="qgis3-logo" class="qgis"></a>
-                        <a href="https://earthengine.google.com/"><img src="../Images/Icons/GEE-icon.png" alt="GEE-logo" class="gee"></a>
-                        <a href="https://www.gimp.org/"><img src="../Images/Icons/gimp-logo.png" alt="gimp-logo" class="gimp"></a>
-                        <a href="https://www.figma.com/"><img src="../Images/Icons/figma-logo.png" alt="figma-logo" class="figma"></a>
-                        <a href="https://www.blender.org/"><img src="../Images/Icons/blender-logo.png" alt="blender-logo" class="blender"></a> 
-                    </div>
-                </div>
                 <div class="main-text">
                     <div class="section section1">
-                        <h2 class="s1 header">shaded reliefs</h2>
-                        <p>A common task among GIS users is to create shaded relief or hillshade maps. A shaded relief is a 3D
-                            representation of the earths surface which is used to enhance features with large topographic variation
-                            such as mountains, valleys, or plateaus. GIS software calculates shaded reliefs by illuminating
-                            an elevation surface with a point light source, mimicking sun altitude and azimuth angle. 
-                            Shaded relief maps are often used as base layers and combined with semi-transparent thematic layers 
-                            in order to enhance the data with topographic information. 
-                        </p>
- 
-                        <p>Although standard GIS software packages have the ability to create hillshades, the results are often noisy and harsh.
-                            Furthermore, because GIS software centers primarily on 2D rather than 3D representations of data,
-                            users have limited control over the parameters used to create hillshades. However, a new approach for creating
-                            realistic shaded relief maps is being popularized by cartographers, and that approach utilizes Blender3D. Blender is an 
-                            extremely powerful open-source software specifically designed for 3D modelling. Blender has the ability to simulate
-                            the complexities of light scattering, reflectance, and shadows in a 3D environment in a way that GIS software does not. The results are 
-                            are far superior and more realistic looking hillshades. For a great tutorial on the basics of creating shaded reliefs in Blender, click 
-                            <a href="https://somethingaboutmaps.wordpress.com/2017/11/16/creating-shaded-relief-in-blender/">here</a>. 
-                        </p>
+                        <h2 class="s1 header">shaded reliefs & blender3D</h2>
+                        <p>The objective of this project was to learn how to create textured shaded reliefs in Blender. A shaded relief or hillshade,
+                            is a 3D representation of the earths surface which is used to enhance features with large topographic variation. GIS software 
+                            calculates shaded reliefs by illuminating an elevation surface with a light source, mimicking sun altitude 
+                            and azimuth angle. Shaded relief maps are often used as base layers and combined with semi-transparent thematic layers 
+                            in order to enhance data with topographic information. </p>
+                            
+                        <p>Although standard GIS software packages have the ability to calculate hillshades, the results are often noisy and harsh.
+                            Furthermore, GIS users have limited control over the parameters used to create hillshades. However, a new approach for creating
+                            realistic shaded reliefs in Blender is being popularized by cartographers. Blender is an extremely powerful open-source software 
+                            specifically designed for 3D modelling. It has the ability to simulate complex light scattering, reflectance, and shadows in 
+                            a 3D environment in a way that GIS software does not. This results in far superior and more realistic looking shaded relief maps. 
+                            <br><br> 
+                            For a great tutorial on the basics of creating shaded reliefs in Blender, click 
+                            <a href="https://somethingaboutmaps.wordpress.com/2017/11/16/creating-shaded-relief-in-blender/">here</a>.</p>
 
                         <div class="figures">
                             <div class="figure">
@@ -78,17 +65,23 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="section section2">
-                        <h2 class="s2 header">digital map refurbishment</h2>
-                        <p>The purpose of this project was to explore the process of creating shaded reliefs in Blender. After developing a sufficient workflow
-                            I decided to undertake the refurbishment of a series of four 1980's vintage maps of Kenya created by the Kenya Soil Survey.
-                            The digital map images came from photographs of hard-copy maps which had various damaged areas including discoloration, 
-                            folds, and tears. I first addressed the damaged areas by color correcting the main map image with photo editing software before cropping
-                            it to a new background. Next, vector editing software was used to rebuild all map 
-                            elements including titles, legends, map keys, and lables from scratch. Specific attention was paid to improving the overall readability
-                            of the map. This was accomplished by increasing font sizes, grouping map keys and legends, and repositioning elements to increase
-                            whitespace.  
+                        <h2 class="s2 header">methods & tools</h2>
+                        <div class="software">
+                            <h2 class="subheader">software:</h2>
+                            <div class="icons">
+                                <a href="https://www.qgis.org/en/site/"><img src="../Images/Icons/qgis3-logo.png" alt="qgis3-logo" class="qgis"></a>
+                                <a href="https://earthengine.google.com/"><img src="../Images/Icons/GEE-icon.png" alt="GEE-logo" class="gee"></a>
+                                <a href="https://www.gimp.org/"><img src="../Images/Icons/gimp-logo.png" alt="gimp-logo" class="gimp"></a>
+                                <a href="https://www.figma.com/"><img src="../Images/Icons/figma-logo.png" alt="figma-logo" class="figma"></a>
+                                <a href="https://www.blender.org/"><img src="../Images/Icons/blender-logo.png" alt="blender-logo" class="blender"></a> 
+                            </div>
+                        </div>
+                        <p>The inspiration for this project came from a series of four 1980's vintage maps of Kenya created by the Kenya Soil Survey.
+                            The digital map images came from photographs of hard-copy maps which had various defects including discoloration, 
+                            crease marks, and tears. The first step, was to address the damaged areas by color correcting the main map image before cropping
+                            it to a transparent background.
                         </p>
                         <p> 
                             Because the original map images did not contain spatial reference information, they had to be georeferenced in QGIS3.
@@ -137,12 +130,12 @@
 
                     <div class="section section4">
                         <h2 class="s4 header">Refurbished Maps</h2>
-                        <p>The purpose of this project was to explore the process of creating shaded reliefs in Blender. After developing a sufficient workflow
+                        <!-- <p>The purpose of this project was to explore the process of creating shaded reliefs in Blender. After developing a sufficient workflow
                             I decided to undertake the refurbishment of a series of four 1980's vintage maps of Kenya created by the Kenya Soil Survey.
                             The digital map images came from photographs of hard-copy maps which had various damaged areas including discoloration, 
                             folds, and tears. I first addressed the damaged areas by color correcting the main map image with photo editing software before cropping
                             it to a new background.
-                        </p>
+                        </p> -->
 
                         <div class="figures">
                             <div class="figure">
