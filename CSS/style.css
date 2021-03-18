@@ -24,13 +24,6 @@ html {
   --hover: #1178d8;
   --hover-light: #2784db;
 }
-.nav-container {
-  position: relative;
-  margin: 0 auto;
-  overflow: visible;
-  padding-right: 40px;
-  padding-left: 40px;
-}
 
 .page-container {
   position: relative;
@@ -83,7 +76,7 @@ html {
 .nav-links {
   display: flex;
   height: 55px;
-  width: 35%;
+  width: 55%;
   align-items: center;
   justify-content: space-between;
 }
@@ -220,10 +213,11 @@ html {
 /* HOME IMAGE  */
 .home-bg-image {
   position: absolute;
+  transform: scale(0.85);
   width: 774px;
   height: 946px;
-  top: 14.4rem;
-  right: 6.5rem;
+  top: 14.3rem;
+  right: 6rem;
 }
 
 .imageBox {
@@ -1008,7 +1002,7 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
   .home-bg-image {
     top: 14.25rem;
     overflow: hidden;
-    transform: scale(0.85) translateX(10%);
+    /* transform: scale(0.85) translateX(10%); */
     right: 1rem;
   }
 
