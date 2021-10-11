@@ -200,6 +200,10 @@ html {
   margin-left: 0.5rem;
 }
 
+.social-links a.instagram {
+  visibility: hidden;
+}
+
 .social-links img {
   height: 28px;
   width: 28px;
@@ -456,9 +460,10 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
   font-weight: bold;
   font-size: 35px;
   line-height: 42px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin-left: 20px;
   color: var(--main);
+  opacity: 0.8;
 }
 
 #proj-cards {
@@ -961,6 +966,10 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
   background-color: var(--banner-color);
   opacity: 0.9;
   z-index: 1;
+}
+
+.footer-banner a.instagram {
+  visibility: hidden;
 }
 
 .footer-wrapper {
