@@ -590,9 +590,6 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
 }
 
 /* REMOVE THIS AS MORE PROJECTS ARE ADDED*/
-.projects-container .card:nth-child(4) {
-  display: none;
-}
 .projects-container .card:nth-child(5) {
   display: none;
 }
@@ -655,6 +652,12 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
 
 .projects-container .card:nth-child(3) .face.face1 {
   background-image: url(/Images/Projects/Baringo_lakeLevels/project_cardFace.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.projects-container .card:nth-child(4) .face.face1 {
+  background-image: url(/Images/Projects/Naro_Moru/project_cardFace.png);
   background-size: cover;
   background-position: center center;
 }
@@ -743,7 +746,7 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 28px;
   padding: 1rem 0;
   min-width: 375px;
