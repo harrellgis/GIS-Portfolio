@@ -265,6 +265,62 @@ html {
   text-transform: capitalize;
 }
 
+img{
+  display: block;
+  margin: auto;
+}
+
+.image_cont{
+  margin: 2rem 0;
+}
+
+.image_cont.dataImages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#drone_images_img {
+  width: 650px;
+  height: 550px;
+}
+
+#track_images_img {
+  width: 750px;
+  height: 650px;
+}
+
+#survey_data_img {
+  width: 550px;
+  height: 650px;
+}
+
+#feature_details_img {
+  width: 450px;
+  height: 350px;
+}
+
+#naroMoru_ortho_img {
+  width: 550px;
+  height: 650px;
+}
+
+#naroMoru_ortho_img {
+  width: 450px;
+  height: 500px;
+}
+
+#naroMoru_DSM_img {
+  width: 470px;
+  height: 570px;
+}
+
+#naroMoru_3D_img {
+  width: 570px;
+  height: 520px;
+  margin-top: 4rem;
+}
+
 .section1 {
   grid-area: 1 / 1 / 2 / -1;
 }
@@ -277,16 +333,29 @@ html {
 grid-area: 3 / 1 / 4 / -1;
 }
 
-.datasetTable, th, td {
-        border: 1px solid grey;
+.table {
+  margin: 1.5rem 0;
+}
+
+table {
+  margin: auto;
+}
+
+table, th, td {
+        border: 1px solid rgba(218, 218, 218, 0.52);
         border-collapse: collapse;
         height: 40px;
         text-align: left;
         padding-left: 10px;
 }
 
-.datasetTable th {
-    background-color: rgb(218, 218, 218);
+table th {
+    background-color: rgba(218, 218, 218, 0.303);
+    text-transform: capitalize;
+}
+
+.accuracyTable {
+  margin-top: 3rem;
 }
 
 .section4 {
@@ -322,7 +391,7 @@ grid-area: 10 / 1 / -1 / -1;
 /* FOOTER */
 .footer-banner {
     position: relative;
-    top: 52.5rem;
+    /* top: 52.5rem; */
     width: 100%;
     height: 10rem;
     display: flex;

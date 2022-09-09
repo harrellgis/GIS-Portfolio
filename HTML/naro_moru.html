@@ -76,28 +76,30 @@
                             Mavic Pro Platinum Drone.
                         </p>
 
-                        <table style="width:50%" class="datasetTable">
-                            <tr>
-                                <th>date</th>
-                                <td>17/11/2021 at 19:14:17</td>
-                            </tr>
-                            <tr>
-                                <th>area covered</th>
-                                <td>0.111941 km2</td>
-                            </tr>
-                            <tr>
-                                <th>processing time</th>
-                                <td>31.0m:35.0s</td>
-                            </tr>
-                            <tr>
-                                <th>capture start</th>
-                                <td>25/07/2021 at 17:04:37</td>
-                            </tr>
-                            <tr>
-                                <th>capture end</th>
-                                <td>25/07/2021 at 17:17:38</td>
-                            </tr>
-                        </table>
+                        <div class="table datasetTable">
+                            <table style="width:60%">
+                                <tr>
+                                    <th>date</th>
+                                    <td>17/11/2021 at 19:14:17</td>
+                                </tr>
+                                <tr>
+                                    <th>area covered</th>
+                                    <td>0.111941 km2</td>
+                                </tr>
+                                <tr>
+                                    <th>processing time</th>
+                                    <td>31.0m:35.0s</td>
+                                </tr>
+                                <tr>
+                                    <th>capture start</th>
+                                    <td>25/07/2021 at 17:04:37</td>
+                                </tr>
+                                <tr>
+                                    <th>capture end</th>
+                                    <td>25/07/2021 at 17:17:38</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
 
                     <div class="section section4">
@@ -107,43 +109,87 @@
                             source software used for processing drone imagery.
                         </p>
 
-                        <table style="width:50%" class="processingTable">
-                            <tr>
-                                <th>date</th>
-                                <td>17/11/2021 at 19:14:17</td>
-                            </tr>
-                            <tr>
-                                <th>area covered</th>
-                                <td>0.111941 km2</td>
-                            </tr>
-                            <tr>
-                                <th>processing time</th>
-                                <td>31.0m:35.0s</td>
-                            </tr>
-                            <tr>
-                                <th>capture start</th>
-                                <td>25/07/2021 at 17:04:37</td>
-                            </tr>
-                            <tr>
-                                <th>capture end</th>
-                                <td>25/07/2021 at 17:17:38</td>
-                            </tr>
-                        </table>
+                        <div class="image_cont odm_pipeline">
+                            <img id="odm_pipeline_img" src="/Images/Projects/Naro_Moru/ODM_pipeline.png" alt="">
+                        </div>
+
+                        <div class="table processingTable">
+                            <table style="width:60%">
+                                <tr>
+                                    <th>reconstructed images</th>
+                                    <td>215 over 215 shots (100.0%)</td>
+                                </tr>
+                                <tr>
+                                    <th>Reconstructed Points (Sparse)</th>
+                                    <td>122926 over 128620 points (95.6%)</td>
+                                </tr>
+                                <tr>
+                                    <th>Reconstructed Points (Dense)</th>
+                                    <td>5,090,342 points</td>
+                                </tr>
+                                <tr>
+                                    <th>Average Ground Sampling Distance (GSD)</th>
+                                    <td>1.5 cm</td>
+                                </tr>
+                                <tr>
+                                    <th>Detected Features</th>
+                                    <td>10,917 features</td>
+                                </tr>
+                                <tr>
+                                    <th>Reconstructed Features</th>
+                                    <td>1,365 features</td>
+                                </tr>
+                                <tr>
+                                    <th>Geographic Reference</th>
+                                    <td>GPS</td>
+                                </tr>
+                                <tr>
+                                    <th>GPS Errors</th>
+                                    <td>1.35 meters</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="image_cont drone_images">
+                            <img id="drone_images_img" src="/Images/Projects/Naro_Moru/drone_images.jpeg" alt="">
+                        </div>
                     </div>
 
                     <div class="section section5">
                         <h2 class="s5 header">track details</h2>
 
-                        <table style="width:50%" class="tracksTable">
-                            <tr>
-                                <th>date</th>
-                                <td>17/11/2021 at 19:14:17</td>
-                            </tr>
-                            <tr>
-                                <th>area covered</th>
-                                <td>0.111941 km2</td>
-                            </tr>
-                        </table>
+                        <div class="image_cont track_images">
+                            <img id="track_images_img" src="/Images/Projects/Naro_Moru/drone_tracks.png" alt="">
+                        </div>
+
+                        <div class="table tracksTable">
+                            <table style="width:60%">
+                                <tr>
+                                    <th>length</th>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <th>count</th>
+                                    <td>84284</td>
+                                    <td>20703</td>
+                                    <td>8272</td>
+                                    <td>3832</td>
+                                    <td>2327</td>
+                                    <td>1395</td>
+                                    <td>810</td>
+                                    <td>453</td>
+                                    <td>322</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
 
                     <div class="section section6">
@@ -156,6 +202,10 @@
                             to capture multiple flight paths and multiple image angles when modeling areas with large amounts 
                             of vegetation. 
                         </p>
+
+                        <div class="image_cont survey_data">
+                            <img id="survey_data_img" src="/Images/Projects/Naro_Moru/survey_data.png" alt="">
+                        </div>
                     </div>
 
                     <div class="section section7">
@@ -168,58 +218,101 @@
                             ground control points (GCPs) which were not included in this study.
                         </p>
 
-                        <table style="width:50%" class="GCPTable">
-                            <tr>
-                                <th>date</th>
-                                <td>17/11/2021 at 19:14:17</td>
-                            </tr>
-                            <tr>
-                                <th>area covered</th>
-                                <td>0.111941 km2</td>
-                            </tr>
-                            <tr>
-                                <th>processing time</th>
-                                <td>31.0m:35.0s</td>
-                            </tr>
-                            <tr>
-                                <th>capture start</th>
-                                <td>25/07/2021 at 17:04:37</td>
-                            </tr>
-                            <tr>
-                                <th>capture end</th>
-                                <td>25/07/2021 at 17:17:38</td>
-                            </tr>
-                        </table>
+                        <div class="table GCPTable">
+                            <table style="width:60%">
+                                <tr>
+                                    <th>GPS</th>
+                                    <th>mean</th>
+                                    <th>sigma</th>
+                                    <th>RMS error</th>
+                                </tr>
+                                <tr>
+                                    <td>X Error (meters)</td>
+                                    <td>0.001</td>
+                                    <td>0.473</td>
+                                    <td>0.473</td>
+                                </tr>
+                                <tr>
+                                    <td>Y Error (meters)</td>
+                                    <td>0.002</td>
+                                    <td>0.374</td>
+                                    <td>0.374</td>
+                                </tr>
+                                <tr>
+                                    <td>Z Error (meters)</td>
+                                    <td>0.000</td>
+                                    <td>1.386</td>
+                                    <td>1.386</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <th>total</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1.346</td>
+                                </tr>
+                            </table>
+                        </div>
 
-                        <table style="width:50%" class="accuracyTable">
-                            <tr>
-                                <th>date</th>
-                                <td>17/11/2021 at 19:14:17</td>
-                            </tr>
-                            <tr>
-                                <th>area covered</th>
-                                <td>0.111941 km2</td>
-                            </tr>
-                        </table>
+                        <div class="table accuracyTable">
+                            <table style="width:60%" class="accuracyTable">
+                                <tr>
+                                    <th style="width:50%">Horizontal Accuracy CE90 (meters)</th>
+                                    <td>0.922</td>
+                                </tr>
+                                <tr>
+                                    <th style="width:50%">Vertical Accuracy LE90 (meters)</th>
+                                    <td>2.027</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
 
                     <div class="section section8">
                         <h2 class="s8 header">feature details</h2>
 
-                        <table style="width:50%" class="featuresTable">
-                            <tr>
-                                <th>date</th>
-                                <td>17/11/2021 at 19:14:17</td>
-                            </tr>
-                            <tr>
-                                <th>area covered</th>
-                                <td>0.111941 km2</td>
-                            </tr>
-                        </table>
+                        <div class="image_cont feature_details">
+                            <img id="feature_details_img" src="/Images/Projects/Naro_Moru/feature_details.jpeg" alt="">
+                        </div>
+
+                        <div class="table featuresTable">
+                            <table style="width:60%" class="featuresTable">
+                                <tr>
+                                    <th></th>
+                                    <th>min</th>
+                                    <th>max</th>
+                                    <th>mean</th>
+                                    <th>median</th> 
+                                </tr>
+                                <tr>
+                                    <th>detected</th>
+                                    <td>8035</td>
+                                    <td>13175</td>
+                                    <td>10581</td>
+                                    <td>10917</td>
+                                </tr>
+                                <tr>
+                                    <th>reconstructed</th>
+                                    <td>234</td>
+                                    <td>3921</td>
+                                    <td>1522</td>
+                                    <td>1365</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
 
                     <div class="section section9">
                         <h2 class="s9 header">data products</h2>
+
+                        <div class="image_cont dataImages">
+                            <img id="naroMoru_ortho_img" src="/Images/Projects/Naro_Moru/naroMoru_orthophoto.png" alt="">
+                            <img id="naroMoru_DSM_img" src="/Images/Projects/Naro_Moru/naroMoru_DSM.png" alt="">
+                        </div>
+
+                        <div class="image_cont">
+                            <img id="naroMoru_3D_img" src="/Images/Projects/Naro_Moru/naroMoru_3D.jpeg" alt="">
+                        </div>
                     </div>
 
                     <div class="section section10">
