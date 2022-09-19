@@ -41,33 +41,218 @@
             <div class="main-content">
                 <div class="main-text">
                     <div class="section section1">
-                        <h2 class="s1 header">what is structure from motion?</h2>
+                        <h2 class="s1 header">background</h2>
                         <p>
-                            Structure from motion (SFM) is a photogrammetry technique used for estimating 
-                            3D objects from overlapping image sequences. Combining images with spatial 
-                            information allows for the creation of highly-accurate geospatial products. 
-                            Whereas commercially available satellite products provide image resolutions in 
-                            the tens of meters, SFM can provide resolutions measured in centimeters. 
-                            This enables the creation of high quality data such as orthographic images, 
-                            digital elevation models (DEMs), and digital surface models (DSMs), 
-                            which serve as the foundation for environmental remote sensing analysis.
+                            Even with the proliferation of modern remote sensing platforms, there remains a constant 
+                            tradeoff between data coverage and data accuracy. While many lower resolution platforms 
+                            provide global coverage and high revisit rates, their data products are often not appropriate 
+                            for regional or site-specific analysis.
                         </p>
+                        <div class="background_img">
+                            <img src="/Images/Projects/Forest_Classification/satellite_resolution.jpeg" alt="">
+                        </div>
                         <p>
-                            This project was conducted on a small-scale agroforestry plot in the town of Naro Moru 
-                            in central Kenya. The purpose of the project was to use drone imagery and structure 
-                            from motion (SFM) to produce a variety of geospatial data products that could be used 
-                            by the landowner for agricultural and land-use planning purposes. 
+                            Some of the unresolved issues with the use of low/medium resolution products such as SPOT (20m), 
+                            Landsat (30m), or MODIS (250m) are their inability to model small-scale features, and the limits 
+                            of their application for highly heterogeneous landscapes. As can be seen in figure 1, the course 
+                            resolution of MODIS or Landsat pixels may not be able to capture the complexity of mixed land covers. 
+                            The statistical methods used by these platforms to classify land cover (i.e. majority land cover) 
+                            may result in large amounts of data loss. 
+                        </p>
+                        <div class="NAIP">
+                            <img src="/Images/Projects/Forest_Classification/NCDA_logo.jpeg" alt="">
+                            <p>
+                                The National Agricultural Imagery Program (NAIP) provides high-resolution 4-band aerial imagery, 
+                                with a ground sample distance of 1 meter for the conterminous United States. Since 2009 this 
+                                program has provided national coverage every three years, which makes it a highly accurate and 
+                                reliable environmental monitoring tool.
+                            </p>
+                        </div>
+                        <p>
+                            The North Carolina Department of Agriculture and Consumer Services (NCAG&CS) uses this imagery for 
+                            a variety of applications including emergency services, agricultural, and forest resource monitoring. 
+                            Using NAIP imagery, this project will provide the NCAG&CS with a improved tree canopy classification 
+                            method which can aid in land management practices such as timber harvesting, restoration, 
+                            fire management and other critical activities.
                         </p>
                     </div>
 
                     <div class="section section2">
-                        <h2 class="s2 header">methods & tools</h2>
-                        <div class="software">
-                            <h2 class="subheader">software:</h2>
-                            <div class="icons">
-                                <a href="https://opendronemap.org/"><img src="../Images/Icons/odm-logo.png" alt="odm-logo" class="odm"></a>
-                            </div>
+                        <h2 class="s2 header">problem</h2>
+                        <p>
+                            In 2016, the NC Agricultural Dept. hired a GIS contractor to develop a data product known as the 2016 
+                            Tree Canopy Project. The goal of this project was to use NAIP imagery to extract tree canopy cover at 
+                            1m resolution across the state of North Carolina.
+                        </p>
+                        <div class="problem_list">
+                            <p>Problem areas within the dataset:</p>
+                            <ul>
+                                <li>Shadows cast by topography</li>
+                                <li>Mixed forests</li>
+                                <li>Agricultural lands</li>
+                            </ul>
                         </div>
+                        <div class="problem_images">
+                            <img src="/Images/Projects/Forest_Classification/mtMitchell_1.jpeg" alt="">
+                            <img src="/Images/Projects/Forest_Classification/mtMitchel_2.jpeg" alt="">
+                        </div>
+                        <p>
+                            The null data likely comes from dark and/or heterogeneous landcover, making it hard to distinguish 
+                            between class spectral values.
+                        </p>
+                        <p>
+                            The goal of this project was to create an improved semi-automated supervised tree canopy classification 
+                            methodology in order to provide a higher quality data product than the one produced by the 2016 NAIP Tree 
+                            Canopy Project. The final data products were displayed in a web application with swipe functionality to 
+                            allow users to compare between the 2016 and improved 2018 tree canopy classification models.
+                        </p>
+                    </div>
+
+                    <div class="section section3">
+                        <h2 class="s3 header">considerations & requirements</h2>
+                        <div class="requirements_list">
+                            <ul>
+                                <li>600GB of raw NAIP imagery for the State of North Carolina</li>
+                                <li>Approximately 3,564 8-bit 4 band images</li>
+                                <li>Required to use NC State VCL (Virtual Computing Library) Infrastructure with a storage capacity of 100GB</li>
+                                <li>Imagery must be transferred over the web</li>
+                                <li>The classification process is semi-automated, meaning tasks such as collecting training polygons must be done manually</li>
+                                <li>Random Trees Algorithm</li>
+                                <ul>
+                                    <li>Computationally Efficient</li>
+                                    <li>Resistant to over fitting</li>
+                                    <li>Ability to incorporate non-spectral information</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="section section4">
+                        <h2 class="s4 header">image acquisition methods</h2>
+                        <div class="s4_images">
+                            <img src="/Images/Projects/Forest_Classification/geojson.jpeg" alt="">
+                            <img src="/Images/Projects/Forest_Classification/descartes_labs.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="section section5">
+                        <h2 class="s5 header">image classification methods</h2>
+                        <div class="s5_images">
+                            <ol>
+                                <li>RGB, NIR, and Derived Texture Variables (StDev, GLCM)</li>
+                                <li>Single-Vector Decomposition Principal
+                                    Component Analysis</li>
+                                <li>Resample top 6 Principal Components</li>
+                                <li>Create training polygons</li>
+                                <li>Run Random Trees Classifier</li>
+                                <li>Post-ClassificationProcessing</li>
+                                <ol type="a">
+                                    <li>Focal majority filter</li>
+                                    <li>Smoothing and
+                                        clumping</li>
+                                    <li>Generalize class
+                                        boundaries</li>
+                                </ol>
+                            </ol>
+                            <img src="/Images/Projects/Forest_Classification/classification_methods.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="section section6">
+                        <h2 class="s6 header">image classification workflow</h2>
+                        <div class="s6_images">
+                            <img src="/Images/Projects/Forest_Classification/classification_workflow.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="section section7">
+                        <h2 class="s7 header">web application development</h2>
+                        <p>
+                            The images below show a web application developed using ArcGIS Web AppBuilder. The application 
+                            allows the user to compare the 2016 Tree Canopy Project data model with the 2018 data model 
+                            developed in this project. The data products were hosted using REST services and allow the user 
+                            to interact with the data using basic GIS tools such as a layer viewer, image slider, area/length 
+                            measurements, and shapefile viewer.
+                        </p>
+                        <div class="s7_images">
+                            <img src="/Images/Projects/Forest_Classification/webApp_dev1.jpeg" alt="">
+                            <img src="/Images/Projects/Forest_Classification/webApp_dev2.jpeg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="section section8">
+                        <h2 class="s8 header">classification results</h2>
+                        <div class="results_1">
+                            <p>
+                                The improved 2018 model addresses the specific shortcomings of the 2016 model especially in the highly 
+                                variable topographies found in DuPont State Forest:
+                            </p>
+                            <img src="/Images/Projects/Forest_Classification/classificationResults_1.jpeg" alt="">
+                        </div>
+                        <div class="results_2">
+                            <p>
+                                Furthermore, the 2018 model was better able to distinguish between fully mature forests and low-lying 
+                                shrubs in areas of Bladen Lakes State Forest:
+                            </p>
+                            <img src="/Images/Projects/Forest_Classification/classificationResults_2.jpeg" alt="">
+                        </div>
+                        <div class="results_3">
+                            <img src="/Images/Projects/Forest_Classification/classificationResults_3.jpeg" alt="">
+                            <p>
+                                Figure 7 compares the area proportions between the 2016 and 2018 models in acres. In the Bladen Lakes 
+                                classification, the 2018 model showed an increase in the area classified as 'no tree canopy' by 10% 
+                                and a subsequent decrease in the area classified as 'tree canopy'. The 2018 classification model for 
+                                the DuPont State Forest showed an 8°/o increase in the area classified as 'tree canopy.
+                            </p>
+                        </div>
+                        
+                    </div>
+
+                    <div class="section section9">
+                        <h2 class="s9 header">discussion</h2>
+                        <p>
+                            The results produced by the 2018 classification demonstrate the strengths of the Random Trees classification 
+                            algorithm. Specifically, the algorithm's resistance to overfitting allowed it to create a much higher accuracy 
+                            classification. As can be seen in the Bladen Lakes example (Figure 6), the 2016 model resulted in the 
+                            over-classification of tree canopy areas. This is especially apparent in areas of forest at different stages of 
+                            development as well as in areas that had large amounts of vegetation, but did not contain mature tree canopies. 
+                            In the DuPont State Forest example (Figure 6), the 2018 model greatly improved the classification accuracy of 
+                            mixed forests and areas containing shadows cast by the mountainous topography.
+                        </p>
+                        <p>
+                            These initial results also reveal useful patterns for the further development of the model. Specifically, 
+                            as can be seen in the Bladen Lakes results, the land cover classes that are most often misclassified include 
+                            grass and cultivated areas. This is likely due to the similarities in the spectral characteristics of these 
+                            classes to forested land cover. Further refinement of training samples as well as the possible inclusion of 
+                            alternate texture variables could further increase the accuracy of the model.
+                        </p>
+                        <ul>
+                            <li>This workflow is particularly applicable to site-specific analysis</li>
+                            <li>This method would need to be streamlined (i.e. single software) to improve
+                                scalability</li>
+                            <li>Accuracy assessment would be beneficial to make results more empirical</li>
+                        </ul>
+                    </div>
+
+                    <div class="section section10">
+                        <h2 class="s10 header">conclusion</h2>
+                        <p>
+                            This method of image classification demonstrates a 'proof of concept' for efficiently producing high accuracy 
+                            land classification models. Further development of these applications would provide a valuable land management 
+                            tool for tracking multi-year land use change. This method could be applied to other land-cover types and use 
+                            cases. For example, defining crop areas, flood inundation, land-use classifications.
+                        </p>
+                        <p>
+                            Finally, the main limiting factor for utilizing this classification method is computational power. 
+                            The incorporation of parallel processing and high performance computing (HPC) would drastically decrease the 
+                            processing time required by this methodology. One promising avenue for the further development of this model 
+                            is the Google Earth Engine platform. Not only does Earth Engine give users access to the entire catalog of NAIP 
+                            imagery for North Carolina, its HPC architecture allows for complex geo-processing to be conducted at large 
+                            spatial scales more efficiently. Developing a model compatible with Google Earth Engine would allow multiyear 
+                            analysis of NAIP imagery. An increase in the temporal scale of this project would provide interesting insights 
+                            into the dynamics of forest growth and could provide valuable information for timber harvesting and restoration 
+                            activities.
+                        </p>
                     </div>
                 </div>
             </div>
