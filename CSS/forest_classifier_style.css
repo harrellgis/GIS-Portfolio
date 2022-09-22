@@ -175,7 +175,7 @@ html {
 .main-grid {
   display: grid;
   grid-gap: 0.5rem;
-  grid-template-rows: [first] 75px [one] 10rem [two] 1fr [three] 1fr [four] 1fr [five] 1fr [six] 1fr [seven] 1fr [eight] 1fr [nine] 1fr [last];
+  grid-template-rows: [first] 75px [one] 10rem [two] 1fr [three] 1fr [four] 1fr [five] 1fr [six] 1fr [seven] 1fr [eight] 1fr [nine] 1fr [ten] 1fr [eleven] 1fr [twelve] 1fr [last];
   grid-template-columns: repeat(12, 1fr);
   place-items: center;
   min-height: 90rem;
@@ -213,7 +213,7 @@ html {
 }
 
 .main-content {
-  grid-area: 2 / 1 / -1 / -1;
+  grid-area: 3 / 1 / -1 / -1;
 }
 
 .software {
@@ -276,7 +276,59 @@ html {
 }
 
 .section1 {
+  grid-area: 3 / 1 / 4 / -1;
+}
+
+.section2 {
   grid-area: 4 / 1 / 5 / -1;
+}
+
+.section3 {
+  grid-area: 5 / 1 / 6 / -1;
+}
+
+.section4 {
+  grid-area: 6 / 1 / 7 / -1;
+}
+
+.section5 {
+  grid-area: 7 / 1 / 8 / -1;
+}
+
+.section6 {
+  grid-area: 8 / 1 / 9 / -1;
+}
+
+.section7 {
+  grid-area: 9 / 1 / 10 / -1;
+}
+
+.section8 {
+  grid-area: 10 / 1 / 11 / -1;
+}
+
+.section9 {
+  grid-area: 11 / 1 / 12 / -1;
+}
+
+.section10 {
+  grid-area: 12 / 1 / -1 / -1;
+}
+
+.NAIP {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.image_cont img {
+  display: block;
+  margin: auto;
+  padding: 2rem;
+}
+
+.results_3 img {
+  transform: scale(0.65);
 }
 
 
@@ -284,7 +336,7 @@ html {
 /* FOOTER */
 .footer-banner {
     position: relative;
-    top: 52.5rem;
+    bottom: 0rem;
     width: 100%;
     height: 10rem;
     display: flex;
@@ -314,6 +366,7 @@ html {
     transform: scale(1.1);
   }
   
+
   .footer-wrapper {
     position: fixed;
     height: 30px;
