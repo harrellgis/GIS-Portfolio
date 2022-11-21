@@ -266,13 +266,13 @@ html {
 
 /* HOME CONTENT */
 .home-content {
-  grid-area: 3 / 2 / -1 / 6;
+  grid-area: 3 / 2 / -1 / 7;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-self: start;
-  height: 54rem;
-  margin-top: 2rem;
+  height: 44rem;
+  margin-top: 10rem;
 }
 
 .home-title {
@@ -594,6 +594,10 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
   display: none;
 }
 
+.projects-container .card:nth-child(3) {
+  display: none;
+}
+
 .projects-container .card .face {
   border-radius: 18px;
   transition: 0.5s;
@@ -905,7 +909,7 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
 .contact-page {
   position: absolute;
   width: 100%;
-  background-image: url(/Images/Background/Contact_Background.png);
+  /*background-image: url(/Images/Background/Contact_Background.png);*/
   background-size: cover;
   background-position: center center;
   display: flex;
