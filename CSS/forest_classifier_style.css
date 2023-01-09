@@ -396,6 +396,79 @@ html {
 /* ***************MEDIA QUERIES******************* */
 /* https://www.smashingmagazine.com/2013/07/simple
 -responsive-images-with-css-background-images/ */
+@media screen and (max-width: 1250px) {
+  /* HOME SECTION  */
+  .nav-links {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 1000px) {
+  /* NAVBAR */
+  #nav-wrapper {
+    height: 55px;
+  }
+
+  #navbar {
+    height: 55px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+}
+
+@media screen and (max-width: 768px) {
+  /* HOME SECTION  */
+  .menu-btn {
+    display: flex;
+  }
+
+  #nav-wrapper {
+    position: fixed;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 55px;
+    right: 0px;
+    width: 50%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(101%);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: transform 0.6s ease-in;
+    z-index: 3;
+  }
+
+  #contact-link {
+    background: none;
+  }
+
+  .nav-link a {
+    color: var(--main);
+    font-size: 15;
+    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+    opacity: 0;
+  }
+
+  .nav-link a:hover {
+    font-size: 17px;
+  }
+
+  .nav-link:hover #hover-pin {
+    display: none;
+  }
+}
 
 /* NAV TOGGLE */
 .nav-active {

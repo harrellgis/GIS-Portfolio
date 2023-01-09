@@ -429,6 +429,30 @@ html {
 /* ***************MEDIA QUERIES******************* */
 /* https://www.smashingmagazine.com/2013/07/simple
 -responsive-images-with-css-background-images/ */
+@media screen and (max-width: 1250px) {
+  /* HOME SECTION  */
+  .nav-links {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 1000px) {
+  /* NAVBAR */
+  #nav-wrapper {
+    height: 55px;
+  }
+
+  #navbar {
+    height: 55px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+}
+
 @media screen and (max-width: 768px) {
   /* HOME SECTION  */
   .menu-btn {
