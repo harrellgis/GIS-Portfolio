@@ -233,7 +233,7 @@ html {
 .icons {
   display: flex;
   flex-direction: row;
-  min-width: 20rem;
+  min-width: 13rem;
   justify-content: space-around;
   align-items: center;
 }
@@ -507,6 +507,10 @@ html {
   }
 
   .section3 .figures{
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  
+  .section4 .figures{
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
