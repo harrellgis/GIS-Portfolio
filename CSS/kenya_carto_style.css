@@ -302,7 +302,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 /*************************** SECTION 2 *******************************/
@@ -321,10 +321,6 @@ html {
   margin: 3.5rem 0;
 }
 
-.section2 .figures .figure {
-  transform: scale(0.9);
-}
-
 .section p {
   max-width: 70rem
 }
@@ -335,11 +331,12 @@ html {
  font-size: 15px;
 }
 
+/*************************** SECTION 3 *******************************/
+
 .section3 {
   grid-area: 5 / 1 / 6 / -1;
 }
 
-/*************************** SECTION 3 *******************************/
 .section3 .figures{
   display: grid;
   justify-items: center;
@@ -348,10 +345,6 @@ html {
     minmax(400px, 1fr)
   );
   margin: 3.5rem 0;
-}
-
-.section3 .figures .figure {
-  transform: scale(0.9);
 }
 
 .section4 {
@@ -368,11 +361,6 @@ html {
   );
   margin: 3.5rem 0;
 }
-
-.section4 .figures .figure {
-  transform: scale(0.9);
-}
-
 
 /* FOOTER */
 .footer-banner {
@@ -517,7 +505,27 @@ html {
   .section2 .figures{
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
+
+  .section3 .figures{
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
 }
+
+@media screen and (max-width: 470px) {
+  .page-title {
+    font-size: 25px;
+    line-height: 35px;
+    font-weight: bold;
+
+  }
+  
+  .subtitle {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: bold;
+
+  }
+};
 
 @media screen and (max-width: 375px) {
   
