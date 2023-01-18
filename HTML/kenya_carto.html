@@ -42,11 +42,10 @@
                 <div class="main-text">
                     <div class="section section1">
                         <h2 class="s1 header">shaded reliefs & blender3D</h2>
-                        <p>The objective of this project was to learn how to create textured shaded reliefs in Blender. A shaded relief or hillshade,
-                            is a 3D representation of the earths surface which is used to enhance features with large topographic variation. GIS software 
-                            calculates shaded reliefs by illuminating an elevation surface with a light source, mimicking sun altitude 
-                            and azimuth angle. Shaded relief maps are often used as base layers and combined with semi-transparent thematic layers 
-                            in order to enhance data with topographic information. </p>
+                        <p>A shaded relief or hillshade, is a 3D representation of the earths surface which is used to enhance features with 
+                            large topographic variation. GIS software calculates shaded reliefs by illuminating an elevation surface with a 
+                            light source, mimicking sun altitude and azimuth angle. Shaded relief maps are often used as base layers and 
+                            combined with semi-transparent thematic layers in order to enhance data with topographic information. </p>
                             
                         <p>Although standard GIS software packages have the ability to calculate hillshades, the results are often noisy and harsh.
                             Furthermore, GIS users have limited control over the parameters used to create hillshades. However, a new approach for creating
@@ -57,13 +56,38 @@
                             For a great tutorial on the basics of creating shaded reliefs in Blender, click 
                             <a href="https://somethingaboutmaps.wordpress.com/2017/11/16/creating-shaded-relief-in-blender/">here</a>.</p>
 
+<!--
+<img
+  srcset="elva-fairy-480w.jpg 480w, elva-fairy-800w.jpg 800w"
+  sizes="(max-width: 600px) 480px,
+         800px"
+  src="elva-fairy-800w.jpg"
+  alt="Elva dressed as a fairy" />
+
+  <picture>
+  <source media="(min-width:650px)" srcset="img_pink_flowers.jpg">
+  <source media="(min-width:465px)" srcset="img_white_flower.jpg">
+  <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+</picture>
+-->
+
                         <div class="figures">
                             <div class="figure">
-                                <img src="/Images/Projects/Kenya_topographicMaps/kenya_250DEM.png" alt="">
-                                <p class="fig-caption">Fig 1. SRTM derived DEM of Kenya resampled from 30m to 250m</p>
+                                <picture class="dem">
+                                    <source media="(min-width:1280px)" srcset="/Images/Projects/Kenya_topographicMaps/kenya_250DEM_lg.png">
+                                    <source media="(min-width:768px)" srcset="/Images/Projects/Kenya_topographicMaps/kenya_250DEM_med.png">
+                                    <source media="(min-width:375px)" srcset="/Images/Projects/Kenya_topographicMaps/kenya_250DEM_sm.png">
+                                    <img src="/Images/Projects/Kenya_topographicMaps/kenya_250DEM_sm.png" alt="">
+                                </picture>
+                                <p class="fig-caption">Fig 1. 250m SRTM derived DEM of Kenya</p>
                             </div>
                             <div class="figure">
-                                <img src="/Images/Projects/Kenya_topographicMaps/kenya_250DEM_render.png" alt="">
+                                <picture class="dem">
+                                    <source media="(min-width:1280px)" srcset="/Images/Projects/Kenya_topographicMaps/kenya_250DEM_render_lg.png">
+                                    <source media="(min-width:768px)" srcset="/Images/Projects/Kenya_topographicMaps/kenya_250DEM_render_med.png">
+                                    <source media="(min-width:375px)" srcset="/Images/Projects/Kenya_topographicMaps/kenya_250DEM_render_sm.png">
+                                    <img src="/Images/Projects/Kenya_topographicMaps/kenya_250DEM_render_sm.png" alt="">
+                                </picture>
                                 <p class="fig-caption">Fig 2. Shaded relief of Kenya produced in Blender3D</p>
                             </div>
                         </div>
@@ -94,15 +118,30 @@
 
                         <div class="figures">
                             <div class="figure">
-                                <img src="/Images/Projects/Kenya_topographicMaps/map_elements2.png" alt="">
-                                <p class="fig-caption">Fig 3. Building vector objects for key, legend, and map lables</p>
+                                <picture class="method">
+                                    <source media="(min-width:1280px)" srcset="/Images/Projects/Kenya_topographicMaps/map_elements2_lg.png">
+                                    <source media="(min-width:768px)" srcset="/Images/Projects/Kenya_topographicMaps/map_elements2_med.png">
+                                    <source media="(min-width:375px)" srcset="/Images/Projects/Kenya_topographicMaps/map_elements2_sm.png">
+                                    <img src="/Images/Projects/Kenya_topographicMaps/map_elements2_sm.png" alt="">
+                                </picture>
+                                <p class="fig-caption">Fig 3. Building map elements (key, legend, lables) with Figma</p>
                             </div>
                             <div class="figure">
-                                <img src="/Images/Projects/Kenya_topographicMaps/mapRefurb_workflow.png" alt="">
-                                <p class="fig-caption">Fig 4. Georeferencing in QGIS to obtain bounding</p>
+                                <picture class="method">
+                                    <source media="(min-width:1280px)" srcset="/Images/Projects/Kenya_topographicMaps/mapRefurb_workflow_lg.png">
+                                    <source media="(min-width:768px)" srcset="/Images/Projects/Kenya_topographicMaps/mapRefurb_workflow_med.png">
+                                    <source media="(min-width:375px)" srcset="/Images/Projects/Kenya_topographicMaps/mapRefurb_workflow_sm.png">
+                                    <img src="/Images/Projects/Kenya_topographicMaps/mapRefurb_workflow_sm.png" alt="">
+                                </picture>
+                                <p class="fig-caption">Fig 4. Georeferencing in QGIS to obtain bounding box</p>
                             </div>
                             <div class="figure">
-                                <img src="/Images/Projects/Kenya_topographicMaps/kenya_GEE_DEM.png" alt="">
+                                <picture class="method">
+                                    <source media="(min-width:1280px)" srcset="/Images/Projects/Kenya_topographicMaps/kenya_GEE_DEM_lg.png">
+                                    <source media="(min-width:768px)" srcset="/Images/Projects/Kenya_topographicMaps/kenya_GEE_DEM_med.png">
+                                    <source media="(min-width:375px)" srcset="/Images/Projects/Kenya_topographicMaps/kenya_GEE_DEM_sm.png">
+                                    <img src="/Images/Projects/Kenya_topographicMaps/kenya_GEE_DEM_sm.png" alt="">
+                                </picture>
                                 <p class="fig-caption">Fig 5. Bounding coordinates used to generate a masked <br> DEM in Google Earth Engine</p>
                             </div>
                         </div>
@@ -127,8 +166,8 @@
                             <div class="figure">
                                 <img src="/Images/Projects/Kenya_topographicMaps/kenya_oblique_blender.png" alt="">
                             </div>
-                            <p class="fig-caption">Fig 6. Using the DEM to create a displacement plane with image texture in Blender </p>
                         </div>
+                        <p class="fig-caption">Fig 6. Using the DEM to create a displacement plane with image texture in Blender </p>
                     </div>
 
                     <div class="section section4">
@@ -204,7 +243,7 @@
 
     <div class="footer-wrapper">
         <footer class="footer page-container">
-            <p class="copyright-mark">&copy; 2021 Christopher Harrell</p><!--Copyright Mark-->
+            <p class="copyright-mark">&copy; 2023 Christopher Harrell</p><!--Copyright Mark-->
         </footer>
     </div>
 

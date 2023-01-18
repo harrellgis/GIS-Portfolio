@@ -175,7 +175,7 @@ html {
 .main-grid {
   display: grid;
   grid-gap: 0.5rem;
-  grid-template-rows: [first] 75px [one] 10rem [two] 1fr [three] 1fr [four] 1fr [five] 1fr [last];
+  grid-template-rows: [first] 75px [one] 13rem [two] 1fr [three] 1fr [four] 1fr [five] 1fr [last];
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
   min-height: 90rem;
@@ -203,6 +203,7 @@ html {
   text-transform: capitalize;
   justify-self: start;
   color: var(--main);
+  margin: 1rem 0;
 }
 
 .main-content {
@@ -280,6 +281,8 @@ html {
   text-transform: capitalize;
 }
 
+/*************************** SECTION 1 *******************************/
+
 .section1 {
   grid-area: 4 / 1 / 5 / -1;
 }
@@ -287,21 +290,22 @@ html {
 .section1 .figures {
   display: grid;
   justify-items: center;
+  align-items: center;
   grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
+    auto-fill,
+    minmax(500px, 1fr)
   );
   margin: 3.5rem 0;
 }
 
-.section1 .figures .figure {
-  transform: scale(0.9);
-}
-
-.section .figures .figure {
+.figures .figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 1rem;
 }
 
+/*************************** SECTION 2 *******************************/
 .section2 {
   grid-area: 3 / 1 / 4 / -1;
 }
@@ -321,19 +325,21 @@ html {
   transform: scale(0.9);
 }
 
-.section p{
+.section p {
   max-width: 70rem
 }
 
 .figures p {
  font-style: italic;
  opacity: 0.5;
+ font-size: 15px;
 }
 
 .section3 {
   grid-area: 5 / 1 / 6 / -1;
 }
 
+/*************************** SECTION 3 *******************************/
 .section3 .figures{
   display: grid;
   justify-items: center;
@@ -352,6 +358,7 @@ html {
   grid-area: 6 / 1 / -1 / -1;
 }
 
+/*************************** SECTION 4 *******************************/
 .section4 .figures{
   display: grid;
   justify-items: center;
@@ -426,7 +433,7 @@ html {
     font-size: 12px;
   }
 
-/* ***************MEDIA QUERIES******************* */
+/****************MEDIA QUERIES********************/
 /* https://www.smashingmagazine.com/2013/07/simple
 -responsive-images-with-css-background-images/ */
 @media screen and (max-width: 1250px) {
@@ -454,6 +461,7 @@ html {
 }
 
 @media screen and (max-width: 768px) {
+
   /* HOME SECTION  */
   .menu-btn {
     display: flex;
@@ -501,35 +509,48 @@ html {
   .nav-link:hover #hover-pin {
     display: none;
   }
+
+  .section1 .figures {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .section2 .figures{
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
 }
+
+@media screen and (max-width: 375px) {
+  
+};
+  
 
 /* NAV TOGGLE */
 .nav-active {
     transform: translateX(0%);
   }
   
-  /* LINK FADE ANIMATION */
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0px);
-    }
+/* LINK FADE ANIMATION */
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
   }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
   
-  /* BURGER ANIMATION */
-  .menu-btn.open .menu-btn_burger {
-    transform: translateX(-50px);
-    background: transparent;
-  }
-  
-  .menu-btn.open .menu-btn_burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-  }
-  
-  .menu-btn.open .menu-btn_burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-  }
+/* BURGER ANIMATION */
+.menu-btn.open .menu-btn_burger {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.menu-btn.open .menu-btn_burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn_burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
