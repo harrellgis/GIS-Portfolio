@@ -32,15 +32,17 @@
         </nav>
     </div>
 
+    <div class="hero-image"></div>
+
     <section class="main page-container"><!--Main Page Content-->
         <main class="main-grid">
-            <div class="titles">
+            <div class="titles page-container">
                 <h1 class="page-title">applying modern cartography to vintage maps of kenya</h1>
                 <h2 class="subtitle">using 3D modelling software to transform a 1980's map series into topographic art</h2>
             </div>
-            <div class="main-content">
+            <div class="main-content page-container">
                 <div class="main-text">
-                    <div class="section section1">
+                    <div id="intro" class="section section1">
                         <h2 class="s1 header">shaded reliefs & blender3D</h2>
                         <p>A shaded relief or hillshade, is a 3D representation of the earths surface which is used to enhance features with 
                             large topographic variation. GIS software calculates shaded reliefs by illuminating an elevation surface with a 
@@ -55,21 +57,6 @@
                             <br><br> 
                             For a great tutorial on the basics of creating shaded reliefs in Blender, click 
                             <a href="https://somethingaboutmaps.wordpress.com/2017/11/16/creating-shaded-relief-in-blender/">here</a>.</p>
-
-<!--
-<img
-  srcset="elva-fairy-480w.jpg 480w, elva-fairy-800w.jpg 800w"
-  sizes="(max-width: 600px) 480px,
-         800px"
-  src="elva-fairy-800w.jpg"
-  alt="Elva dressed as a fairy" />
-
-  <picture>
-  <source media="(min-width:650px)" srcset="img_pink_flowers.jpg">
-  <source media="(min-width:465px)" srcset="img_white_flower.jpg">
-  <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
-</picture>
--->
 
                         <div class="figures">
                             <div class="figure">
@@ -93,7 +80,7 @@
                         </div>
                     </div>
 
-                    <div class="section section2">
+                    <div id="methods" class="section section2">
                         <h2 class="s2 header">methods & tools</h2>
                         <div class="software">
                             <h2 class="subheader">software:</h2>
@@ -105,15 +92,17 @@
                                 <a href="https://www.blender.org/"><img src="../Images/Icons/blender-logo.png" alt="blender-logo" class="blender"></a> 
                             </div>
                         </div>
-                        <p>The inspiration for this project came from a series of four 1980's vintage maps of Kenya created by the Kenya Soil Survey.
-                            The digital map images came from photographs of hard-copy maps which had various defects including discoloration, 
-                            crease marks, and tears. The first step, was to address the damaged areas by color correcting the main map image before cropping
-                            it to a transparent background.
+                        <p>The inspiration for this project started with a series of four 1980's vintage maps of Kenya created by the Kenya Soil Survey.
+                            Because the hard-copy maps had various defects including discoloration, crease marks, and tears, I opted to completely digitally recreate
+                            the maps using a variety of photo editing and design software. The first step, was to color correct the main map image before cropping 
+                            it to a transparent background. I then redesigned all of the map elements in Figma to give them a more modern cartographic style. 
+                            Once all of the map elements were completed, they were arranged into the final map image.  
                         </p>
                         <p> 
-                            Because the original map images did not contain spatial reference information, they had to be georeferenced in QGIS3.
-                            This allowed me to extract the map's bounding box, which was used to obtain 30m SRTM elevation data in Google Earth Engine. Finally, the refurbished map Images
-                            and elevation data were combined in Blender to create an orthographic shaded relief map.
+                            Because the images did not contain spatial reference information, I georeferenced them in QGIS3 which allowed me to extract the 
+                            map's bounding coordinates. I then used these coordinates to obtain 30m SRTM elevation data in Google Earth Engine. 
+                            Finally, the refurbished map Images and elevation data were combined in Blender to create an orthographic shaded relief map
+                            (<a href="#refurb_maps">see Refurbished Maps section</a>).
                         </p>
 
                         <div class="figures">
@@ -147,13 +136,20 @@
                         </div>
                     </div>
 
-                    <div class="section section3">
+                    <div id="rendering" class="section section3">
                         <h2 class="s3 header">rendering orthographic maps in blender</h2>
-                        <p>The purpose of this project was to explore the process of creating shaded reliefs in Blender. After developing a sufficient workflow
-                            I decided to undertake the refurbishment of a series of four 1980's vintage maps of Kenya created by the Kenya Soil Survey.
-                            The digital map images came from photographs of hard-copy maps which had various damaged areas including discoloration, 
-                            folds, and tears. I first addressed the damaged areas by color correcting the main map image with photo editing software before cropping
-                            it to a new background.
+                        <p>In order to work with the map in Blender, I first had to create a displacement plane. This was acheived by  
+                            creating a plane object with the same aspect ratio as the DEM I had generated previously. By manipulating
+                            the "material" of the plane object I added the map image, while simultaneously using the DEM to create a 
+                            displacement texture on the plane. I adjusted the strength and midlevel settings as needed to get the desired 
+                            topographic effect.
+
+                            After I had created my displacement plane, the next step was to give it a light source. For this, I created additional
+                            "diffusion" lamps, which give off a softer light than the default light options. I positioned and rotated the lamps as desired 
+                            as well as increasing the number of light bounces to achieve the desired level of illumination of my map.
+                            
+                            The final step was to render my map with the highest number of render samples that my CPU would allow. Additionally,
+                            I utilized Blender's denoising feature available in the render settings to produce a smooth final map. 
                         </p>
 
                         <div class="figures">
@@ -185,15 +181,8 @@
                         <p class="fig-caption">Fig 6. Using the DEM to create a displacement plane with image texture in Blender </p>
                     </div>
 
-                    <div class="section section4">
+                    <div id="refurb_maps" class="section section4">
                         <h2 class="s4 header">Refurbished Maps</h2>
-                        <!-- <p>The purpose of this project was to explore the process of creating shaded reliefs in Blender. After developing a sufficient workflow
-                            I decided to undertake the refurbishment of a series of four 1980's vintage maps of Kenya created by the Kenya Soil Survey.
-                            The digital map images came from photographs of hard-copy maps which had various damaged areas including discoloration, 
-                            folds, and tears. I first addressed the damaged areas by color correcting the main map image with photo editing software before cropping
-                            it to a new background.
-                        </p> -->
-
                         <div class="figures">
                             <div class="figure">
                                 <picture>
@@ -202,7 +191,6 @@
                                     <source media="(min-width:375px)" srcset="/Images/Projects/Kenya_topographicMaps/kenya_infoBase_1980_orig_sm.png">
                                     <img src="/Images/Projects/Kenya_topographicMaps/kenya_infoBase_1980_orig_sm.png" alt="">
                                 </picture>
-                                <p class="fig-caption">Fig 7. Information base for the Exploratory Soil Map and Agro-climatic Zone Map of Kenya</p>
                             </div>
                             <div class="figure">
                                 <picture>
@@ -211,6 +199,7 @@
                                     <source media="(min-width:375px)" srcset="/Images/Projects/Kenya_topographicMaps/kenya_infoBase_1980_sm.jpg">
                                     <img src="/Images/Projects/Kenya_topographicMaps/kenya_infoBase_1980_sm.jpg" alt="">
                                 </picture>
+                                <p class="fig-caption">Fig 7. Information base for the Exploratory Soil Map and Agro-climatic Zone Map of Kenya</p>
                             </div>
                             <div class="figure">
                                 <picture>
@@ -219,7 +208,6 @@
                                     <source media="(min-width:375px)" srcset="/Images/Projects/Kenya_topographicMaps/kenya_agSoils_1980_orig_sm.png">
                                     <img src="/Images/Projects/Kenya_topographicMaps/kenya_agSoils_1980_orig_sm.png" alt="">
                                 </picture>
-                                <p class="fig-caption">Fig 8. Exploratory Soil Map of Kenya with Agro-climatic Zones (for land evaluation purposes</p>
                             </div>
                             <div class="figure">
                                 <picture>
@@ -228,6 +216,7 @@
                                     <source media="(min-width:375px)" srcset="/Images/Projects/Kenya_topographicMaps/kenya_agSoils_1980_sm.jpg">
                                     <img src="/Images/Projects/Kenya_topographicMaps/kenya_agSoils_1980_sm.jpg" alt="">
                                 </picture>
+                                <p class="fig-caption">Fig 8. Exploratory Soil Map of Kenya with Agro-climatic Zones (for land evaluation purposes)</p>
                             </div>
                             <div class="figure">
                                 <picture>
@@ -236,7 +225,7 @@
                                     <source media="(min-width:375px)" srcset="/Images/Projects/Kenya_topographicMaps/kenya_agZones_1980_orig_sm.png">
                                     <img src="/Images/Projects/Kenya_topographicMaps/kenya_agZones_1980_orig_sm.png" alt="">
                                 </picture>
-                                <p class="fig-caption">Fig 9. Agro-climatic zone map of Kenya</p>
+
                             </div>
                             <div class="figure">
                                 <picture class="method">
@@ -245,6 +234,7 @@
                                     <source media="(min-width:375px)" srcset="/Images/Projects/Kenya_topographicMaps/kenya_agZones_1980_sm.jpg">
                                     <img src="/Images/Projects/Kenya_topographicMaps/kenya_agZones_1980_sm.jpg" alt="">
                                 </picture>
+                                <p class="fig-caption">Fig 9. Agro-climatic zone map of Kenya</p>
                             </div>
                             <div class="figure">
                                 <picture class="method">
@@ -253,7 +243,6 @@
                                     <source media="(min-width:375px)" srcset="/Images/Projects/Kenya_topographicMaps/kenya_soils_1980_orig_sm.png">
                                     <img src="/Images/Projects/Kenya_topographicMaps/kenya_soils_1980_orig_sm.png" alt="">
                                 </picture>
-                                <p class="fig-caption">Fig 10. Exploratory Soil Map of Kenya</p>
                             </div>
                             <div class="figure">
                                 <picture class="method">
@@ -262,6 +251,7 @@
                                     <source media="(min-width:375px)" srcset="/Images/Projects/Kenya_topographicMaps/kenya_soils_1980_sm.jpg">
                                     <img src="/Images/Projects/Kenya_topographicMaps/kenya_soils_1980_sm.jpg" alt="">
                                 </picture>
+                                <p class="fig-caption">Fig 10. Exploratory Soil Map of Kenya</p>
                             </div>
                         </div>
                     </div>
@@ -287,13 +277,6 @@
                 src="../Images/Icons/linkedin-logo_white.svg"
                 alt="linkedin logo"/>
             </a>
-            <!--Insta link-->
-            <a href="#" class="instagram">
-                <img
-                class="contact instagram-svg"
-                src="../Images/Icons/Instagram-logo_white.svg"
-                alt="instagram logo"/>
-            </a>
         </div>
     </div>
 
@@ -304,7 +287,7 @@
     </div>
 
 <!--JS Scripts-->
-<script src="../Javascript/nav.js"></script>
-<script src="../Javascript/burger.js"></script>
+<script src="/Javascript/nav.js"></script>
+<script src="/Javascript/burger.js"></script>
 </body>
 </html>
