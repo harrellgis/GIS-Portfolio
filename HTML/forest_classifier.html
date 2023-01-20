@@ -32,6 +32,8 @@
         </nav>
     </div>
 
+    <div class="hero-image"></div>
+
     <section class="main page-container">
         <main class="main-grid">
             <div class="titles">
@@ -86,7 +88,7 @@
                         </p>
                         <div class="problem_list">
                             <p>Problem areas within the dataset:</p>
-                            <ul>
+                            <ul class="list">
                                 <li>Shadows cast by topography</li>
                                 <li>Mixed forests</li>
                                 <li>Agricultural lands</li>
@@ -110,15 +112,15 @@
 
                     <div class="section section3">
                         <h2 class="s3 header">considerations & requirements</h2>
-                        <div class="requirements_list">
-                            <ul>
+                        <div class="requirements_list list">
+                            <ul class="list">
                                 <li>600GB of raw NAIP imagery for the State of North Carolina</li>
                                 <li>Approximately 3,564 8-bit 4 band images</li>
                                 <li>Required to use NC State VCL (Virtual Computing Library) Infrastructure with a storage capacity of 100GB</li>
                                 <li>Imagery must be transferred over the web</li>
                                 <li>The classification process is semi-automated, meaning tasks such as collecting training polygons must be done manually</li>
                                 <li>Random Trees Algorithm</li>
-                                <ul>
+                                <ul class="sublist">
                                     <li>Computationally Efficient</li>
                                     <li>Resistant to over fitting</li>
                                     <li>Ability to incorporate non-spectral information</li>
@@ -138,7 +140,7 @@
                     <div class="section section5">
                         <h2 class="s5 header">image classification methods</h2>
                         <div class="s5_images image_cont">
-                            <ol>
+                            <ol class="list">
                                 <li>RGB, NIR, and Derived Texture Variables (StDev, GLCM)</li>
                                 <li>Single-Vector Decomposition Principal
                                     Component Analysis</li>
@@ -146,7 +148,7 @@
                                 <li>Create training polygons</li>
                                 <li>Run Random Trees Classifier</li>
                                 <li>Post-ClassificationProcessing</li>
-                                <ol type="a">
+                                <ol class="sublist">
                                     <li>Focal majority filter</li>
                                     <li>Smoothing and
                                         clumping</li>
@@ -226,7 +228,7 @@
                             classes to forested land cover. Further refinement of training samples as well as the possible inclusion of 
                             alternate texture variables could further increase the accuracy of the model.
                         </p>
-                        <ul>
+                        <ul class="list">
                             <li>This workflow is particularly applicable to site-specific analysis</li>
                             <li>This method would need to be streamlined (i.e. single software) to improve
                                 scalability</li>
@@ -277,19 +279,12 @@
                 src="../Images/Icons/linkedin-logo_white.svg"
                 alt="linkedin logo"/>
             </a>
-            <!--Insta link-->
-            <a href="#" class="instagram">
-                <img
-                class="contact instagram-svg"
-                src="../Images/Icons/Instagram-logo_white.svg"
-                alt="instagram logo"/>
-            </a>
         </div>
     </div>
 
     <div class="footer-wrapper">
         <footer class="footer page-container">
-            <p class="copyright-mark">&copy; 2021 Christopher Harrell</p><!--Copyright Mark-->
+            <p class="copyright-mark">&copy; 2023 Christopher Harrell</p><!--Copyright Mark-->
         </footer>
     </div>
 

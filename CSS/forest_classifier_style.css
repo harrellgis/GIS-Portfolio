@@ -175,10 +175,22 @@ html {
 .main-grid {
   display: grid;
   grid-gap: 0.5rem;
-  grid-template-rows: [first] 75px [one] 10rem [two] 1fr [three] 1fr [four] 1fr [five] 1fr [six] 1fr [seven] 1fr [eight] 1fr [nine] 1fr [ten] 1fr [eleven] 1fr [twelve] 1fr [last];
+  grid-template-rows: [first] 75px [one] 15rem [two] 1fr [three] 1fr [four] 1fr [five] 1fr [six] 1fr [seven] 1fr [eight] 1fr [nine] 1fr [ten] 1fr [eleven] 1fr [twelve] 1fr [last];
   grid-template-columns: repeat(12, 1fr);
   place-items: center;
   min-height: 90rem;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0px;
+  height: 30vh;
+  width: 100%;
+  z-index: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/Images/Projects/Forest_Classification/hero_forest_img2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .titles {
@@ -189,7 +201,7 @@ html {
   line-height: 42px;
   text-transform: capitalize;
   justify-self: start;
-  color: var(--main);
+  margin: 0 auto;
 }
 
 .page-title {
@@ -199,7 +211,7 @@ html {
   line-height: 42px;
   text-transform: capitalize;
   justify-self: start;
-  color: var(--main);
+  color: var(--links);
 }
 
 .subtitle {
@@ -209,7 +221,7 @@ html {
   line-height: 42px;
   text-transform: capitalize;
   justify-self: start;
-  color: var(--main);
+  color: var(--links);
 }
 
 .main-content {
@@ -275,41 +287,69 @@ html {
   text-transform: capitalize;
 }
 
+.list {
+  margin-left: 3rem;
+}
+
+.list .sublist {
+  margin-left: 3rem;
+}
+
+/*************************** SECTION 1 *******************************/
+
 .section1 {
   grid-area: 3 / 1 / 4 / -1;
 }
+
+/*************************** SECTION 2 *******************************/
 
 .section2 {
   grid-area: 4 / 1 / 5 / -1;
 }
 
+/*************************** SECTION 3 *******************************/
+
 .section3 {
   grid-area: 5 / 1 / 6 / -1;
 }
+
+/*************************** SECTION 4 *******************************/
 
 .section4 {
   grid-area: 6 / 1 / 7 / -1;
 }
 
+/*************************** SECTION 5 *******************************/
+
 .section5 {
   grid-area: 7 / 1 / 8 / -1;
 }
+
+/*************************** SECTION 6 *******************************/
 
 .section6 {
   grid-area: 8 / 1 / 9 / -1;
 }
 
+/*************************** SECTION 7 *******************************/
+
 .section7 {
   grid-area: 9 / 1 / 10 / -1;
 }
+
+/*************************** SECTION 8 *******************************/
 
 .section8 {
   grid-area: 10 / 1 / 11 / -1;
 }
 
+/*************************** SECTION 9 *******************************/
+
 .section9 {
   grid-area: 11 / 1 / 12 / -1;
 }
+
+/*************************** SECTION 10 *******************************/
 
 .section10 {
   grid-area: 12 / 1 / -1 / -1;
@@ -349,7 +389,7 @@ html {
   }
 
   .contact-links {
-    width: 8rem;
+    width: 5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -470,33 +510,49 @@ html {
   }
 }
 
+@media screen and (max-width: 470px) {
+  .page-title {
+    font-size: 25px;
+    line-height: 35px;
+    font-weight: bold;
+
+  }
+  
+  .subtitle {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: bold;
+
+  }
+}
+
 /* NAV TOGGLE */
 .nav-active {
     transform: translateX(0%);
   }
   
-  /* LINK FADE ANIMATION */
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0px);
-    }
+/* LINK FADE ANIMATION */
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
   }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
   
-  /* BURGER ANIMATION */
-  .menu-btn.open .menu-btn_burger {
-    transform: translateX(-50px);
-    background: transparent;
-  }
-  
-  .menu-btn.open .menu-btn_burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-  }
-  
-  .menu-btn.open .menu-btn_burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-  }
+/* BURGER ANIMATION */
+.menu-btn.open .menu-btn_burger {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.menu-btn.open .menu-btn_burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn_burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
