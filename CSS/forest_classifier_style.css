@@ -175,7 +175,7 @@ html {
 .main-grid {
   display: grid;
   grid-gap: 0.5rem;
-  grid-template-rows: [first] 75px [one] 15rem [two] 1fr [three] 1fr [four] 1fr [five] 1fr [six] 1fr [seven] 1fr [eight] 1fr [nine] 1fr [ten] 1fr [eleven] 1fr [twelve] 1fr [last];
+  grid-template-rows: [first] 75px [one] 18rem [two] 1fr [three] 1fr [four] 1fr [five] 1fr [six] 1fr [seven] 1fr [eight] 1fr [nine] 1fr [ten] 1fr [eleven] 1fr [twelve] 1fr [last];
   grid-template-columns: repeat(12, 1fr);
   place-items: center;
   min-height: 90rem;
@@ -299,6 +299,12 @@ html {
 
 .section1 {
   grid-area: 3 / 1 / 4 / -1;
+}
+
+.naip {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 /*************************** SECTION 2 *******************************/
