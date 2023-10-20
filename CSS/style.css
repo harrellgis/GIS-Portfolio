@@ -661,7 +661,7 @@ Keep paragraph spacing between 0.75x and 1.25x of the type size*/
 }
 
 .projects-container .card:nth-child(4) .face.face1 {
-  background-image: url(/Images/Projects/Naro_Moru/project_cardFace.png);
+  background-image: url(/Images/Projects/Naro_Moru/project_cardFace_sm.png);
   background-size: cover;
   background-position: center center;
 }

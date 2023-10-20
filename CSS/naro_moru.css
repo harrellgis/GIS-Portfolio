@@ -175,10 +175,22 @@ html {
 .main-grid {
   display: grid;
   grid-gap: 0.5rem;
-  grid-template-rows: [first] 75px [one] 10rem [two] 1fr [three] 1fr [four] 1fr [five] 1fr [six] 1fr [seven] 1fr [eight] 1fr [nine] 1fr [ten] 1fr [last];
+  grid-template-rows: [first] 75px [one] 20rem [two] 1fr [three] 1fr [four] 1fr [five] 1fr [six] 1fr [seven] 1fr [eight] 1fr [nine] 1fr [ten] 1fr [last];
   grid-template-columns: repeat(12, 1fr);
   place-items: center;
   min-height: 90rem;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0px;
+  height: 30vh;
+  width: 100%;
+  z-index: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/Images/Projects/Naro_Moru/project_cardFace_lg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .titles {
@@ -199,7 +211,7 @@ html {
   line-height: 42px;
   text-transform: capitalize;
   justify-self: start;
-  color: var(--main);
+  color: var(--links);
 }
 
 .main-content {
@@ -271,7 +283,6 @@ html {
   margin: auto;
 }
 
-
 .image_cont{
   margin: 2rem 0;
 }
@@ -282,46 +293,41 @@ html {
   justify-content: space-between;
 }
 
-#drone_images_img {
+.drone_images {
   width: 650px;
   height: 550px;
 }
 
-#track_images_img {
+.track_images {
   width: 750px;
   height: 650px;
 }
 
-#survey_data_img {
+.survey_data {
   width: 550px;
   height: 650px;
 }
 
-#feature_details_img {
+.feature_details {
   width: 450px;
   height: 350px;
 }
 
-#naroMoru_ortho_img {
+.naroMoru_ortho {
   width: 550px;
   height: 650px;
 }
 
-#naroMoru_ortho_img {
-  width: 450px;
-  height: 500px;
-}
-
-#naroMoru_DSM_img {
+.naroMoru_DSM {
   width: 470px;
   height: 570px;
 }
 
-#naroMoru_3D_img {
+.naroMoru_3D {
   width: 570px;
   height: 520px;
   margin-top: 4rem;
-}
+} */
 
 .section1 {
   grid-area: 1 / 1 / 2 / -1;
