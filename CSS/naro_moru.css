@@ -187,10 +187,10 @@ html {
   height: 30vh;
   width: 100%;
   z-index: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/Images/Projects/Naro_Moru/project_cardFace_lg.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/Images/Projects/Naro_Moru/odm_orthophoto_1.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
 }
 
 .titles {
