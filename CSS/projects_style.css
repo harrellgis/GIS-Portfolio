@@ -214,6 +214,10 @@ html {
   }
   
   /* REMOVE THIS AS MORE PROJECTS ARE ADDED*/
+  .projects-container .card:nth-child(3) {
+    display: none;
+  }
+
   .projects-container .card:nth-child(5) {
     display: none;
   }
@@ -281,7 +285,7 @@ html {
   }
   
   .projects-container .card:nth-child(4) .face.face1 {
-    background-image: url(/Images/Projects/Naro_Moru/project_cardFace.png);
+    background-image: url(/Images/Projects/Naro_Moru/project_cardFace_med.png);
     background-size: cover;
     background-position: center center;
   }
